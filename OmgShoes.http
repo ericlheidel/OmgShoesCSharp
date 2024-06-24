@@ -1,0 +1,6 @@
+@OmgShoes_HostAddress = http://localhost:5212
+
+GET {{OmgShoes_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
