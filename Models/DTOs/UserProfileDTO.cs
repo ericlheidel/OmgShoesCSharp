@@ -11,7 +11,9 @@ public class UserProfileDTO
     public string? State { get; set; }
     public string? Avatar { get; set; }
     public string? Bio { get; set; }
+    public string? Address { get; set; }
     public bool IsAdmin { get; set; }
     public string? IdentityUserId { get; set; }
+    public List<string>? Roles { get; set; }
     public IdentityUser? IdentityUser { get; set; }
 }
