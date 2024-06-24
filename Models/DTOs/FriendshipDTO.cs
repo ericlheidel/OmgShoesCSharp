@@ -1,6 +1,6 @@
-namespace OmgShoes.Models;
+namespace OmgShoes.Models.DTOs;
 
-public class Friendship
+public class FriendshipDTO
 {
     public int Id { get; set; }
     public int UserId { get; set; }

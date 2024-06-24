@@ -1,6 +1,6 @@
-namespace OmgShoes.Models;
+namespace OmgShoes.Models.DTOs;
 
-public class Shoe
+public class ShoeDTO
 {
     public int Id { get; set; }
     public string? Name { get; set; }
