@@ -143,7 +143,6 @@ public class AuthController : ControllerBase
                 State = registration.State,
                 Avatar = registration.Avatar,
                 Bio = registration.Bio,
-                Address = registration.Address,
                 IsAdmin = false,
                 IdentityUserId = user.Id,
             });
