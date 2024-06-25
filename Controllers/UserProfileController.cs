@@ -39,4 +39,28 @@ public class UserProfileController : ControllerBase
                 IdentityUserId = up.IdentityUserId
             }).ToList());
     }
+
+    [HttpGet("withroles")]
+    // [Authorize]
+    public IActionResult GetWithRoles()
+    {
+        return Ok(_dbContext
+            .UserProfiles
+            .Include(up => up.IdentityUser)
+            .Select(up => new UserProfileDTO
+            {
+                Id = up.Id,
+                Email = up.Email,
+                Name = up.Name,
+                City = up.City,
+                State = up.State,
+                Avatar = up.Avatar,
+                Bio = up.Bio,
+                IsAdmin = up.IsAdmin,
+                IdentityUserId = up.IdentityUserId,
+                Roles = _dbContext.UserRoles
+                    .Where(ur => ur.UserId == up.IdentityUserId)
+                    .Select(ur => _dbContext.Roles.SingleOrDefault(r => r.Id == ur.RoleId).Name).ToList()
+            }));
+    }
 }
