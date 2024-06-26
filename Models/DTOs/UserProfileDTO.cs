@@ -15,4 +15,5 @@ public class UserProfileDTO
     public string? IdentityUserId { get; set; }
     public List<string>? Roles { get; set; }
     public IdentityUser? IdentityUser { get; set; }
+    public List<UserShoeDTO>? UserShoes { get; set; }
 }

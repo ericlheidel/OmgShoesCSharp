@@ -14,4 +14,5 @@ public class UserProfile
     public bool IsAdmin { get; set; }
     public string? IdentityUserId { get; set; }
     public IdentityUser? IdentityUser { get; set; }
+    public List<UserShoe>? UserShoes { get; set; }
 }

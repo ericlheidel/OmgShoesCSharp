@@ -1431,8 +1431,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
         {
             new UserShoe
             {
-                Id = 1,
-                UserId = 5,
+                Id = 6,
+                UserProfileId = 5,
                 ShoeId = 3,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1441,8 +1441,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 2,
-                UserId = 5,
+                Id = 7,
+                UserProfileId = 5,
                 ShoeId = 9,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1451,8 +1451,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 3,
-                UserId = 5,
+                Id = 8,
+                UserProfileId = 5,
                 ShoeId = 10,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1461,8 +1461,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 4,
-                UserId = 5,
+                Id = 9,
+                UserProfileId = 5,
                 ShoeId = 19,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1471,8 +1471,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 5,
-                UserId = 5,
+                Id = 10,
+                UserProfileId = 5,
                 ShoeId = 24,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1481,8 +1481,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 6,
-                UserId = 5,
+                Id = 11,
+                UserProfileId = 5,
                 ShoeId = 30,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1491,8 +1491,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 7,
-                UserId = 5,
+                Id = 12,
+                UserProfileId = 5,
                 ShoeId = 36,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1501,8 +1501,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 8,
-                UserId = 5,
+                Id = 13,
+                UserProfileId = 5,
                 ShoeId = 38,
                 Style = "Low",
                 ShoeSize = "11",
@@ -1511,8 +1511,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 9,
-                UserId = 5,
+                Id = 14,
+                UserProfileId = 5,
                 ShoeId = 39,
                 Style = "Low",
                 ShoeSize = "11",
@@ -1521,8 +1521,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 10,
-                UserId = 5,
+                Id = 15,
+                UserProfileId = 5,
                 ShoeId = 48,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1531,8 +1531,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 11,
-                UserId = 5,
+                Id = 16,
+                UserProfileId = 5,
                 ShoeId = 52,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1541,8 +1541,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 12,
-                UserId = 5,
+                Id = 17,
+                UserProfileId = 5,
                 ShoeId = 54,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1551,8 +1551,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 13,
-                UserId = 5,
+                Id = 18,
+                UserProfileId = 5,
                 ShoeId = 66,
                 Style = "Low",
                 ShoeSize = "12",
@@ -1561,8 +1561,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 14,
-                UserId = 5,
+                Id = 19,
+                UserProfileId = 5,
                 ShoeId = 68,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1571,8 +1571,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 15,
-                UserId = 5,
+                Id = 20,
+                UserProfileId = 5,
                 ShoeId = 73,
                 Style = "Low",
                 ShoeSize = "11",
@@ -1581,8 +1581,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 16,
-                UserId = 5,
+                Id = 21,
+                UserProfileId = 5,
                 ShoeId = 75,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1591,8 +1591,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 17,
-                UserId = 5,
+                Id = 22,
+                UserProfileId = 5,
                 ShoeId = 81,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1601,8 +1601,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 18,
-                UserId = 5,
+                Id = 23,
+                UserProfileId = 5,
                 ShoeId = 97,
                 Style = "Low",
                 ShoeSize = "11",
@@ -1611,8 +1611,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 19,
-                UserId = 5,
+                Id = 24,
+                UserProfileId = 5,
                 ShoeId = 99,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1621,8 +1621,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 20,
-                UserId = 5,
+                Id = 25,
+                UserProfileId = 5,
                 ShoeId = 100,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1631,8 +1631,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 21,
-                UserId = 5,
+                Id = 26,
+                UserProfileId = 5,
                 ShoeId = 101,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1641,8 +1641,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 22,
-                UserId = 5,
+                Id = 27,
+                UserProfileId = 5,
                 ShoeId = 103,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1651,8 +1651,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 23,
-                UserId = 5,
+                Id = 28,
+                UserProfileId = 5,
                 ShoeId = 104,
                 Style = "Low",
                 ShoeSize = "12",
@@ -1661,8 +1661,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 24,
-                UserId = 5,
+                Id = 29,
+                UserProfileId = 5,
                 ShoeId = 109,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1671,8 +1671,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 25,
-                UserId = 3,
+                Id = 36,
+                UserProfileId = 3,
                 ShoeId = 108,
                 Style = "Low",
                 ShoeSize = "14",
@@ -1681,8 +1681,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 26,
-                UserId = 3,
+                Id = 37,
+                UserProfileId = 3,
                 ShoeId = 113,
                 Style = "Low",
                 ShoeSize = "7.5",
@@ -1691,8 +1691,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 27,
-                UserId = 3,
+                Id = 38,
+                UserProfileId = 3,
                 ShoeId = 87,
                 Style = "Low",
                 ShoeSize = "9",
@@ -1701,8 +1701,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 28,
-                UserId = 4,
+                Id = 39,
+                UserProfileId = 4,
                 ShoeId = 73,
                 Style = "Low",
                 ShoeSize = "8.5",
@@ -1711,8 +1711,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 29,
-                UserId = 5,
+                Id = 40,
+                UserProfileId = 5,
                 ShoeId = 123,
                 Style = "Low",
                 ShoeSize = "9",
@@ -1721,8 +1721,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 30,
-                UserId = 5,
+                Id = 41,
+                UserProfileId = 5,
                 ShoeId = 30,
                 Style = "Low",
                 ShoeSize = "11.5",
@@ -1731,8 +1731,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 31,
-                UserId = 5,
+                Id = 42,
+                UserProfileId = 5,
                 ShoeId = 123,
                 Style = "Low",
                 ShoeSize = "10.5",
@@ -1741,8 +1741,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 32,
-                UserId = 6,
+                Id = 43,
+                UserProfileId = 6,
                 ShoeId = 11,
                 ShoeSize = "6.5",
                 ConditionId = 3,
@@ -1750,8 +1750,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 33,
-                UserId = 6,
+                Id = 44,
+                UserProfileId = 6,
                 ShoeId = 23,
                 ShoeSize = "7.5",
                 ConditionId = 1,
@@ -1759,8 +1759,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 34,
-                UserId = 1,
+                Id = 45,
+                UserProfileId = 1,
                 ShoeId = 38,
                 ShoeSize = "5.5",
                 ConditionId = 3,
@@ -1768,8 +1768,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 35,
-                UserId = 6,
+                Id = 46,
+                UserProfileId = 6,
                 ShoeId = 35,
                 ShoeSize = "7",
                 ConditionId = 1,
@@ -1777,8 +1777,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 36,
-                UserId = 6,
+                Id = 47,
+                UserProfileId = 6,
                 ShoeId = 120,
                 ShoeSize = "7.5",
                 ConditionId = 5,
@@ -1786,8 +1786,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 37,
-                UserId = 6,
+                Id = 48,
+                UserProfileId = 6,
                 ShoeId = 23,
                 ShoeSize = "7",
                 ConditionId = 1,
@@ -1795,8 +1795,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 38,
-                UserId = 2,
+                Id = 49,
+                UserProfileId = 2,
                 ShoeId = 25,
                 ShoeSize = "10.5",
                 ConditionId = 1,
@@ -1804,8 +1804,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 39,
-                UserId = 2,
+                Id = 50,
+                UserProfileId = 2,
                 ShoeId = 26,
                 ShoeSize = "10.5",
                 ConditionId = 1,
@@ -1813,8 +1813,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 40,
-                UserId = 2,
+                Id = 51,
+                UserProfileId = 2,
                 ShoeId = 27,
                 ShoeSize = "10.5",
                 ConditionId = 1,
@@ -1822,8 +1822,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 41,
-                UserId = 2,
+                Id = 52,
+                UserProfileId = 2,
                 ShoeId = 7,
                 ShoeSize = "10.5",
                 ConditionId = 1,
@@ -1831,8 +1831,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 42,
-                UserId = 2,
+                Id = 53,
+                UserProfileId = 2,
                 ShoeId = 8,
                 ShoeSize = "10.5",
                 ConditionId = 1,
@@ -1840,8 +1840,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 43,
-                UserId = 2,
+                Id = 54,
+                UserProfileId = 2,
                 ShoeId = 59,
                 ShoeSize = "10.5",
                 ConditionId = 1,
@@ -1849,8 +1849,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 44,
-                UserId = 2,
+                Id = 55,
+                UserProfileId = 2,
                 ShoeId = 60,
                 ShoeSize = "10.5",
                 ConditionId = 1,
@@ -1858,8 +1858,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 45,
-                UserId = 2,
+                Id = 56,
+                UserProfileId = 2,
                 ShoeId = 44,
                 ShoeSize = "10.5",
                 ConditionId = 1,
@@ -1867,8 +1867,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 46,
-                UserId = 2,
+                Id = 57,
+                UserProfileId = 2,
                 ShoeId = 43,
                 ShoeSize = "10.5",
                 ConditionId = 1,
@@ -1876,8 +1876,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 47,
-                UserId = 6,
+                Id = 58,
+                UserProfileId = 6,
                 ShoeId = 34,
                 ShoeSize = "6.5",
                 ConditionId = 3,
@@ -1885,8 +1885,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 48,
-                UserId = 6,
+                Id = 59,
+                UserProfileId = 6,
                 ShoeId = 75,
                 ShoeSize = "5.5",
                 ConditionId = 1,
@@ -1894,8 +1894,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 49,
-                UserId = 6,
+                Id = 60,
+                UserProfileId = 6,
                 ShoeId = 10,
                 ShoeSize = "6.5",
                 ConditionId = 1,
@@ -1903,8 +1903,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 50,
-                UserId = 6,
+                Id = 61,
+                UserProfileId = 6,
                 ShoeId = 9,
                 ShoeSize = "7",
                 ConditionId = 4,
@@ -1912,8 +1912,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 51,
-                UserId = 6,
+                Id = 62,
+                UserProfileId = 6,
                 ShoeId = 102,
                 ShoeSize = "6.5",
                 ConditionId = 2,
@@ -1921,8 +1921,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 52,
-                UserId = 6,
+                Id = 63,
+                UserProfileId = 6,
                 ShoeId = 107,
                 ShoeSize = "7",
                 ConditionId = 2,
@@ -1930,8 +1930,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 53,
-                UserId = 6,
+                Id = 64,
+                UserProfileId = 6,
                 ShoeId = 106,
                 ShoeSize = "7.5",
                 ConditionId = 4,
@@ -1939,8 +1939,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 54,
-                UserId = 6,
+                Id = 65,
+                UserProfileId = 6,
                 ShoeId = 96,
                 ShoeSize = "7.5",
                 ConditionId = 2,
@@ -1948,8 +1948,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 55,
-                UserId = 6,
+                Id = 66,
+                UserProfileId = 6,
                 ShoeId = 77,
                 ShoeSize = "6",
                 ConditionId = 1,
@@ -1957,8 +1957,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 56,
-                UserId = 2,
+                Id = 67,
+                UserProfileId = 2,
                 ShoeId = 18,
                 ShoeSize = "11.5",
                 ConditionId = 1,
@@ -1966,8 +1966,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 57,
-                UserId = 2,
+                Id = 68,
+                UserProfileId = 2,
                 ShoeId = 17,
                 ShoeSize = "11.5",
                 ConditionId = 1,
@@ -1975,8 +1975,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 58,
-                UserId = 2,
+                Id = 69,
+                UserProfileId = 2,
                 ShoeId = 31,
                 ShoeSize = "11",
                 ConditionId = 1,
@@ -1984,8 +1984,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 59,
-                UserId = 2,
+                Id = 70,
+                UserProfileId = 2,
                 ShoeId = 30,
                 ShoeSize = "11",
                 ConditionId = 1,
@@ -1993,8 +1993,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 60,
-                UserId = 2,
+                Id = 71,
+                UserProfileId = 2,
                 ShoeId = 102,
                 ShoeSize = "10",
                 ConditionId = 1,
@@ -2002,8 +2002,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 61,
-                UserId = 2,
+                Id = 72,
+                UserProfileId = 2,
                 ShoeId = 107,
                 ShoeSize = "10",
                 ConditionId = 1,
@@ -2011,8 +2011,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 62,
-                UserId = 2,
+                Id = 73,
+                UserProfileId = 2,
                 ShoeId = 94,
                 ShoeSize = "10.5",
                 ConditionId = 1,
@@ -2020,8 +2020,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 63,
-                UserId = 2,
+                Id = 74,
+                UserProfileId = 2,
                 ShoeId = 94,
                 ShoeSize = "11",
                 ConditionId = 1,
@@ -2029,8 +2029,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 64,
-                UserId = 2,
+                Id = 75,
+                UserProfileId = 2,
                 ShoeId = 64,
                 ShoeSize = "12",
                 ConditionId = 1,
@@ -2038,8 +2038,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 65,
-                UserId = 2,
+                Id = 76,
+                UserProfileId = 2,
                 ShoeId = 65,
                 ShoeSize = "12",
                 ConditionId = 1,
@@ -2047,8 +2047,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 66,
-                UserId = 1,
+                Id = 77,
+                UserProfileId = 1,
                 ShoeId = 54,
                 ShoeSize = "6.5",
                 ConditionId = 5,
@@ -2056,8 +2056,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 67,
-                UserId = 1,
+                Id = 78,
+                UserProfileId = 1,
                 ShoeId = 19,
                 ShoeSize = "7.5",
                 ConditionId = 1,
@@ -2065,8 +2065,8 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             },
             new UserShoe
             {
-                Id = 68,
-                UserId = 6,
+                Id = 79,
+                UserProfileId = 6,
                 ShoeId = 89,
                 ShoeSize = "7",
                 ConditionId = 3,
@@ -2079,7 +2079,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             new Comment
             {
                 Id = 1,
-                UserId = 5,
+                UserProfileId = 5,
                 UserShoeId = 43,
                 Text = "I love you!!",
                 TimeStamp = DateTime.Now.AddDays(-50),
@@ -2088,7 +2088,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             new Comment
             {
                 Id = 2,
-                UserId = 5,
+                UserProfileId = 5,
                 UserShoeId = 43,
                 Text = "WAITRESS!!!",
                 TimeStamp = DateTime.Now.AddDays(-37),
@@ -2097,7 +2097,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             new Comment
             {
                 Id = 3,
-                UserId = 5,
+                UserProfileId = 5,
                 UserShoeId = 6,
                 Text = "I AM THE RAT KING",
                 TimeStamp = DateTime.Now.AddDays(-100),
@@ -2106,7 +2106,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             new Comment
             {
                 Id = 4,
-                UserId = 5,
+                UserProfileId = 5,
                 UserShoeId = 6,
                 Text = "bustin rats is my gig",
                 TimeStamp = DateTime.Now.AddDays(-99),
@@ -2115,7 +2115,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             new Comment
             {
                 Id = 5,
-                UserId = 6,
+                UserProfileId = 6,
                 UserShoeId = 6,
                 Text = "did you seriously put nair in my shampoo?!",
                 TimeStamp = DateTime.Now.AddDays(-65),
@@ -2124,7 +2124,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             new Comment
             {
                 Id = 6,
-                UserId = 4,
+                UserProfileId = 4,
                 UserShoeId = 6,
                 Text = "I'm playing both sides!!!!",
                 TimeStamp = DateTime.Now.AddDays(-34),
@@ -2133,7 +2133,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             new Comment
             {
                 Id = 7,
-                UserId = 6,
+                UserProfileId = 6,
                 UserShoeId = 43,
                 Text = "LEAVE ME ALONE CHARLIE!!!",
                 TimeStamp = DateTime.Now.AddDays(-64),
@@ -2142,7 +2142,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             new Comment
             {
                 Id = 8,
-                UserId = 2,
+                UserProfileId = 2,
                 UserShoeId = 49,
                 Text = "I am a 5 ⭐️ man!!!",
                 TimeStamp = DateTime.Now.AddDays(-30),
@@ -2155,56 +2155,200 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             new Like
             {
                 Id = 1,
-                UserId = 6,
+                UserProfileId = 6,
                 UserShoeId = 11
             },
             new Like
             {
                 Id = 2,
-                UserId = 6,
+                UserProfileId = 6,
                 UserShoeId = 12
             },
             new Like
             {
                 Id = 3,
-                UserId = 4,
+                UserProfileId = 4,
                 UserShoeId = 6
             },
             new Like
             {
                 Id = 4,
-                UserId = 6,
+                UserProfileId = 6,
                 UserShoeId = 6
             },
             new Like
             {
                 Id = 5,
-                UserId = 5,
+                UserProfileId = 5,
                 UserShoeId = 49
             },
             new Like
             {
                 Id = 6,
-                UserId = 5,
+                UserProfileId = 5,
                 UserShoeId = 50
             },
             new Like
             {
                 Id = 7,
-                UserId = 5,
+                UserProfileId = 5,
                 UserShoeId = 52
             },
             new Like
             {
                 Id = 8,
-                UserId = 5,
+                UserProfileId = 5,
                 UserShoeId = 36
             },
             new Like
             {
                 Id = 9,
-                UserId = 5,
+                UserProfileId = 5,
                 UserShoeId = 37
+            },
+            new Like
+            {
+                Id = 10,
+                UserProfileId = 5,
+                UserShoeId = 37
+            },
+            new Like
+            {
+                Id = 11,
+                UserProfileId = 6,
+                UserShoeId = 36
+            },
+            new Like
+            {
+                Id = 12,
+                UserProfileId = 6,
+                UserShoeId = 38
+            },
+            new Like
+            {
+                Id = 13,
+                UserProfileId = 1,
+                UserShoeId = 43
+            },
+            new Like
+            {
+                Id = 14,
+                UserProfileId = 1,
+                UserShoeId = 44
+            },
+            new Like
+            {
+                Id = 15,
+                UserProfileId = 1,
+                UserShoeId = 46
+            },
+            new Like
+            {
+                Id = 16,
+                UserProfileId = 1,
+                UserShoeId = 47
+            },
+            new Like
+            {
+                Id = 17,
+                UserProfileId = 1,
+                UserShoeId = 48
+            },
+            new Like
+            {
+                Id = 18,
+                UserProfileId = 1,
+                UserShoeId = 58
+            },
+            new Like
+            {
+                Id = 19,
+                UserProfileId = 1,
+                UserShoeId = 59
+            },
+            new Like
+            {
+                Id = 20,
+                UserProfileId = 2,
+                UserShoeId = 43
+            },
+            new Like
+            {
+                Id = 21,
+                UserProfileId = 2,
+                UserShoeId = 44
+            },
+            new Like
+            {
+                Id = 22,
+                UserProfileId = 2,
+                UserShoeId = 46
+            },
+            new Like
+            {
+                Id = 23,
+                UserProfileId = 2,
+                UserShoeId = 47
+            },
+            new Like
+            {
+                Id = 24,
+                UserProfileId = 2,
+                UserShoeId = 48
+            },
+            new Like
+            {
+                Id = 25,
+                UserProfileId = 2,
+                UserShoeId = 58
+            },
+            new Like
+            {
+                Id = 26,
+                UserProfileId = 2,
+                UserShoeId = 59
+            },
+            new Like
+            {
+                Id = 27,
+                UserProfileId = 5,
+                UserShoeId = 43
+            },
+            new Like
+            {
+                Id = 28,
+                UserProfileId = 3,
+                UserShoeId = 44
+            },
+            new Like
+            {
+                Id = 29,
+                UserProfileId = 3,
+                UserShoeId = 46
+            },
+            new Like
+            {
+                Id = 30,
+                UserProfileId = 3,
+                UserShoeId = 47
+            },
+            new Like
+            {
+                Id = 31,
+                UserProfileId = 3,
+                UserShoeId = 48
+            },
+            new Like
+            {
+                Id = 32,
+                UserProfileId = 3,
+                UserShoeId = 58
+            },
+            new Like
+            {
+                Id = 33,
+                UserProfileId = 3,
+                UserShoeId = 59
             },
         });
 
