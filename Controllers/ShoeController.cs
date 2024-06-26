@@ -1,7 +1,4 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Update.Internal;
 using OmgShoes.Data;
 using OmgShoes.Models;
 using OmgShoes.Models.DTOs;
@@ -28,4 +25,22 @@ public class ShoeController : ControllerBase
             .ToList()
         );
     }
+
+    [HttpGet("{id}")]
+    // [Authorize]
+    public IActionResult GetById(int id)
+    {
+        Shoe shoe = _dbContext
+            .Shoes
+            .SingleOrDefault(s => s.Id == id);
+
+        if (shoe == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(shoe);
+    }
 }
+
+// create shoe
