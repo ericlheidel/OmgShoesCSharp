@@ -1,7 +1,5 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Update.Internal;
 using OmgShoes.Data;
 using OmgShoes.Models;
 using OmgShoes.Models.DTOs;
@@ -66,7 +64,7 @@ public class UserProfileController : ControllerBase
 
     [HttpGet("{id}")]
     // [Authorize]
-    public IActionResult GetProfileById(int id)
+    public IActionResult GetById(int id)
     {
         UserProfile userProfile = _dbContext
             .UserProfiles
@@ -83,16 +81,12 @@ public class UserProfileController : ControllerBase
 
     [HttpGet("{id}/likes")]
     // [Authorize]
-    public IActionResult GetProfileByIdWithShoeCollection(int id)
+    public IActionResult GetByIdWithShoeCollection(int id)
     {
         UserProfileDTO userProfileDTO = _dbContext
             .UserProfiles
             .Include(up => up.IdentityUser)
             .Where(up => up.Id == id)
-            // .Include(up => up.UserShoes)
-            //     .ThenInclude(us => us.Shoe)
-            // .Include(up => up.UserShoes)
-            //     .ThenInclude(us => us.Condition)
             .Select(up => new UserProfileDTO
             {
                 Id = up.Id,
@@ -149,7 +143,7 @@ public class UserProfileController : ControllerBase
 
     [HttpPut("{id}")]
     // [Authorize]
-    public IActionResult UpdateProfile(UserProfile userProfile, int id)
+    public IActionResult Update(UserProfile userProfile, int id)
     {
         UserProfile userProfileToUpdate =
         _dbContext
