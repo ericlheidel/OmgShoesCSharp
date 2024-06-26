@@ -149,7 +149,7 @@ public class UserProfileController : ControllerBase
 
     [HttpPut("{id}")]
     // [Authorize]
-    public IActionResult UpdateProfile(int id, UserProfile userProfile)
+    public IActionResult UpdateProfile(UserProfile userProfile, int id)
     {
         UserProfile userProfileToUpdate =
         _dbContext
@@ -159,10 +159,6 @@ public class UserProfileController : ControllerBase
         if (userProfileToUpdate == null)
         {
             return NotFound();
-        }
-        else if (id != userProfile.Id)
-        {
-            return BadRequest();
         }
 
         userProfileToUpdate.Name = userProfile.Name;
