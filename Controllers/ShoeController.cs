@@ -41,6 +41,14 @@ public class ShoeController : ControllerBase
 
         return Ok(shoe);
     }
-}
 
-// create shoe
+    [HttpPost]
+    // [Authorize]
+    public IActionResult Create(Shoe shoe)
+    {
+        _dbContext.Shoes.Add(shoe);
+        _dbContext.SaveChanges();
+
+        return Created($"api/shoe/{shoe.Id}", shoe);
+    }
+}
