@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace OmgShoes.Migrations
 {
     /// <inheritdoc />
-    public partial class FirstCreate : Migration
+    public partial class FifthCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -72,7 +72,7 @@ namespace OmgShoes.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    UserId = table.Column<int>(type: "integer", nullable: false),
+                    UserProfileId = table.Column<int>(type: "integer", nullable: false),
                     FriendId = table.Column<int>(type: "integer", nullable: false),
                     FriendName = table.Column<string>(type: "text", nullable: true),
                     FriendAvatar = table.Column<string>(type: "text", nullable: true)
@@ -80,20 +80,6 @@ namespace OmgShoes.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Friendships", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Likes",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    UserShoeId = table.Column<int>(type: "integer", nullable: false),
-                    UserId = table.Column<int>(type: "integer", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Likes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -112,24 +98,6 @@ namespace OmgShoes.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Shoes", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "UserShoes",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    UserId = table.Column<int>(type: "integer", nullable: false),
-                    ShoeId = table.Column<int>(type: "integer", nullable: false),
-                    Style = table.Column<string>(type: "text", nullable: true),
-                    ShoeSize = table.Column<string>(type: "text", nullable: true),
-                    ConditionId = table.Column<int>(type: "integer", nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_UserShoes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -269,7 +237,7 @@ namespace OmgShoes.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    UserId = table.Column<int>(type: "integer", nullable: false),
+                    UserProfileId = table.Column<int>(type: "integer", nullable: false),
                     UserShoeId = table.Column<int>(type: "integer", nullable: false),
                     Text = table.Column<string>(type: "text", nullable: true),
                     TimeStamp = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
@@ -279,9 +247,65 @@ namespace OmgShoes.Migrations
                 {
                     table.PrimaryKey("PK_Comments", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Comments_UserProfiles_UserId",
-                        column: x => x.UserId,
+                        name: "FK_Comments_UserProfiles_UserProfileId",
+                        column: x => x.UserProfileId,
                         principalTable: "UserProfiles",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserShoes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    UserProfileId = table.Column<int>(type: "integer", nullable: false),
+                    ShoeId = table.Column<int>(type: "integer", nullable: false),
+                    Style = table.Column<string>(type: "text", nullable: true),
+                    ShoeSize = table.Column<string>(type: "text", nullable: true),
+                    ConditionId = table.Column<int>(type: "integer", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserShoes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserShoes_Conditions_ConditionId",
+                        column: x => x.ConditionId,
+                        principalTable: "Conditions",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_UserShoes_Shoes_ShoeId",
+                        column: x => x.ShoeId,
+                        principalTable: "Shoes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_UserShoes_UserProfiles_UserProfileId",
+                        column: x => x.UserProfileId,
+                        principalTable: "UserProfiles",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Likes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    UserShoeId = table.Column<int>(type: "integer", nullable: false),
+                    UserProfileId = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Likes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Likes_UserShoes_UserShoeId",
+                        column: x => x.UserShoeId,
+                        principalTable: "UserShoes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -296,12 +320,12 @@ namespace OmgShoes.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f", 0, "f4781008-9c82-4392-8052-e33fee7a2ee3", "dee@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEJQcAIfVWsNN3F8JcSbDk3xEf0CoZn8VQkSBCm7FzlwDZF811Rp5E5qHWyWMVrweaA==", null, false, "1697db45-9df4-482d-96e0-06eb5a695f22", false, "Dee" },
-                    { "frt98wr5-0223-3ww7-t6rq-028g4r521d4e", 0, "f44b24eb-0a2b-4ddc-8f4a-9a747e8e57f5", "dennis@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEIp9yfQCaRGhOKH8dG0pPLZAYLvzX8Xwir4ckGrnbTgIBcfKsVvOCrKMe8+GWWl82g==", null, false, "854d7289-dffc-411c-b634-c45338b1f9ee", false, "Dennis" },
-                    { "hdp65oa9-3053-5ap0-z0hh-235t2a098h8q", 0, "f7cedff1-106e-4eb7-89da-8bf9b83d3e13", "frank@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEGa07Y1EtXdqgSF1mID9FrvE3/7NvQUNf2oR4ltlfL/CQSAj1dsmqyOHptEcp2WIHA==", null, false, "1c32fa6e-b2e2-415a-aa3d-03b6e8b83dcb", false, "Frank" },
-                    { "rfv98hu4-3206-4gga-t8ws-457k5v543l6r", 0, "893c85fc-4695-4489-ba0c-e68c42560edc", "the@waitress.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEE1YfnmAUIxcQV2EMGla+h0kGzDxs2zkUOBPWprdM1JlXdaaBCUe6IfNygvTVc8BJg==", null, false, "aa2500e0-fabb-4f30-93e6-6b90713c7a35", false, "Waitress" },
-                    { "rse05dd6-2058-3bg0-a3oo-204t2l308f3p", 0, "f6bd1b8e-9133-4d72-8ab4-d3e15c3476da", "ronald@macdonald.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEBFGPkLBJznykA0ocv009Q2ofun7Af38LzVjIhxlLXNoYYMvIhpnzxnfOYsdABcxhA==", null, false, "32224a59-eff7-44a7-921b-7fc16a137ad9", false, "Ronald" },
-                    { "wmo20ow7-0582-9pp1-i8sl-037h7w843j8r", 0, "b3315e3d-7621-413c-9176-484bd646fb8b", "charlie@kelly.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEBzrM0Uh89FiVgnC0t138hNxMvlxBeqC2t3W+DC0fdAvYzmpJVdIDw8BbQdkp9vCmw==", null, false, "88b064da-5442-4d13-98db-42bb7cae428a", false, "Charlie" }
+                    { "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f", 0, "db827866-2385-4966-aac2-c04b729df58d", "dee@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAECvbuan+HnJWlLfLFm4suhcrPcuDsObUH7vXpnTEtEIFJgDERZxtrlia8JW9JdTZ2Q==", null, false, "4b897534-2d69-4982-98dc-e99d805451ff", false, "Dee" },
+                    { "frt98wr5-0223-3ww7-t6rq-028g4r521d4e", 0, "bc0dd8ec-f50a-4f66-81d1-d14d2a6a428b", "dennis@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEOR4nDn0l4HIE+AOuyP3cav4UiWfoOsuQ0R+f6qE5RHDPYIl9Z/g7OPXiolNy7lSgA==", null, false, "efe76bf9-3f01-4dcf-80ba-b17e15adad9d", false, "Dennis" },
+                    { "hdp65oa9-3053-5ap0-z0hh-235t2a098h8q", 0, "af8891a1-cad2-4414-bbf2-e93f4e1d457b", "frank@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEIlOTV9Rb3pvgXXyVl9tprSQKgta3dInrqYTDWopSKsMie/eypEIUfZSGfQ5HRX2Sw==", null, false, "fa347dda-66f3-4b65-b15f-76abf6cb6ce4", false, "Frank" },
+                    { "rfv98hu4-3206-4gga-t8ws-457k5v543l6r", 0, "4643bfbf-7d85-4e69-913b-bdff19953fa2", "the@waitress.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEOjHiDqOsQKLGelW5HVCSzxfajwVv4FkPgNZH7/pq7Jfb9oy/hGuxSM6UQcyJuKjpg==", null, false, "9906dab1-3aec-4daf-8693-3f5d174cc570", false, "Waitress" },
+                    { "rse05dd6-2058-3bg0-a3oo-204t2l308f3p", 0, "bfd3cb63-1793-478e-a1e3-30ccfe7ef11c", "ronald@macdonald.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEOM4gukVs1xHiHC6XwADRvray70bZbMiemrBBUc6+dQ1rUuDY1etUU5FOy74WYTmiw==", null, false, "235589e2-b786-4387-980a-b4bfb70aee2b", false, "Ronald" },
+                    { "wmo20ow7-0582-9pp1-i8sl-037h7w843j8r", 0, "c5bbd64b-02d6-4284-9d74-bfb1e96bcdb2", "charlie@kelly.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEBX3FwUCO19YKUfyKg4JJp7LlhAv8CnE0qdKGbXLfwrLLb+k15sy6ct/JceKCCAe9A==", null, false, "247d2f6e-588a-43ba-80a1-e84d35ab6d52", false, "Charlie" }
                 });
 
             migrationBuilder.InsertData(
@@ -314,22 +338,6 @@ namespace OmgShoes.Migrations
                     { 3, "Used" },
                     { 4, "Very Used" },
                     { 5, "Thrashed" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Likes",
-                columns: new[] { "Id", "UserId", "UserShoeId" },
-                values: new object[,]
-                {
-                    { 1, 6, 11 },
-                    { 2, 6, 12 },
-                    { 3, 4, 6 },
-                    { 4, 6, 6 },
-                    { 5, 5, 49 },
-                    { 6, 5, 50 },
-                    { 7, 5, 52 },
-                    { 8, 5, 36 },
-                    { 9, 5, 37 }
                 });
 
             migrationBuilder.InsertData(
@@ -463,81 +471,6 @@ namespace OmgShoes.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "UserShoes",
-                columns: new[] { "Id", "ConditionId", "Description", "ShoeId", "ShoeSize", "Style", "UserId" },
-                values: new object[,]
-                {
-                    { 1, 4, "Completely unwearable!!!", 3, "11.5", "Low", 5 },
-                    { 2, 2, "Great condition for age", 9, "11.5", "Low", 5 },
-                    { 3, 3, "Great condition, a bit faded", 10, "11.5", "Low", 5 },
-                    { 4, 4, "FOR SALE!!!", 19, "11.5", "Low", 5 },
-                    { 5, 3, "Soles have recently been replaced/swapped with brand new soles", 24, "11.5", "Low", 5 },
-                    { 6, 1, "Brand New", 30, "11.5", "Low", 5 },
-                    { 7, 3, "Good lookin shoe", 36, "11.5", "Low", 5 },
-                    { 8, 3, "Hard to find", 38, "11", "Low", 5 },
-                    { 9, 3, "Great Condition, fits like an 11.5", 39, "11", "Low", 5 },
-                    { 10, 4, "Kick around shoe", 48, "11.5", "Low", 5 },
-                    { 11, 3, "Good for everyday wear", 52, "11.5", "Low", 5 },
-                    { 12, 3, "Sock Liner Tears", 54, "11.5", "Low", 5 },
-                    { 13, 2, "Has 1 replacement insole from a pair of Blue Lobster", 66, "12", "Low", 5 },
-                    { 14, 3, "Great condition!", 68, "11.5", "Low", 5 },
-                    { 15, 3, "Very very faded", 73, "11", "Low", 5 },
-                    { 16, 3, "Runs a little big", 75, "11.5", "Low", 5 },
-                    { 17, 2, "Black laces only", 81, "11.5", "Low", 5 },
-                    { 18, 4, "These don't look very used at all", 97, "11", "Low", 5 },
-                    { 19, 2, "Almost brand new", 99, "11.5", "Low", 5 },
-                    { 20, 3, "Great condition, one tongue strap falling apart", 100, "11.5", "Low", 5 },
-                    { 21, 2, "$$$$$", 101, "11.5", "Low", 5 },
-                    { 22, 4, "Everyday work shoes, sock liner tears", 103, "11.5", "Low", 5 },
-                    { 23, 2, "Clean. No inner tag", 104, "12", "Low", 5 },
-                    { 24, 5, "Old and beat!", 109, "11.5", "Low", 5 },
-                    { 25, 5, "thrashed...", 108, "14", "Low", 3 },
-                    { 26, 3, "Great condition!", 113, "7.5", "Low", 3 },
-                    { 27, 4, "Need new soles", 87, "9", "Low", 3 },
-                    { 28, 3, "uesd!!@", 73, "8.5", "Low", 4 },
-                    { 29, 1, "testestest", 123, "9", "Low", 5 },
-                    { 30, 1, "Needs a re-glue", 30, "11.5", "Low", 5 },
-                    { 31, 4, "Too small!", 123, "10.5", "Low", 5 },
-                    { 32, 3, "Kick arounds!", 11, "6.5", null, 6 },
-                    { 33, 1, "1 of 202 ever made.", 23, "7.5", null, 6 },
-                    { 34, 3, "Has the original box", 38, "5.5", null, 1 },
-                    { 35, 1, "Willing to trade", 35, "7", null, 6 },
-                    { 36, 5, "Heavily Skated", 120, "7.5", null, 6 },
-                    { 37, 1, "Another 1 of 202 ever made.", 23, "7", null, 6 },
-                    { 38, 1, "Brand New", 25, "10.5", null, 2 },
-                    { 39, 1, "Brand New", 26, "10.5", null, 2 },
-                    { 40, 1, "Brand New", 27, "10.5", null, 2 },
-                    { 41, 1, "Brand New", 7, "10.5", null, 2 },
-                    { 42, 1, "Brand New", 8, "10.5", null, 2 },
-                    { 43, 1, "Brand New", 59, "10.5", null, 2 },
-                    { 44, 1, "Brand New", 60, "10.5", null, 2 },
-                    { 45, 1, "Brand New", 44, "10.5", null, 2 },
-                    { 46, 1, "Brand New", 43, "10.5", null, 2 },
-                    { 47, 3, "Needs a scrubbing", 34, "6.5", null, 6 },
-                    { 48, 1, "sffsa", 75, "5.5", null, 6 },
-                    { 49, 1, "Missing the box", 10, "6.5", null, 6 },
-                    { 50, 4, "Pretty torn apart", 9, "7", null, 6 },
-                    { 51, 2, "Has all the extras included! Looking to move!", 102, "6.5", null, 6 },
-                    { 52, 2, "Has all the extras included! Looking to move!", 107, "7", null, 6 },
-                    { 53, 4, "I bleached these and I like the way they turned out!", 106, "7.5", null, 6 },
-                    { 54, 2, "🔪🔪🔪", 96, "7.5", null, 6 },
-                    { 55, 1, "💰💰💰💃🏻🕺🏻💰💰💰", 77, "6", null, 6 },
-                    { 56, 1, "Brand New", 18, "11.5", null, 2 },
-                    { 57, 1, "Brand New", 17, "11.5", null, 2 },
-                    { 58, 1, "Brand New", 31, "11", null, 2 },
-                    { 59, 1, "Brand New", 30, "11", null, 2 },
-                    { 60, 1, "Brand New", 102, "10", null, 2 },
-                    { 61, 1, "Brand New", 107, "10", null, 2 },
-                    { 62, 1, "Brand New", 94, "10.5", null, 2 },
-                    { 63, 1, "Brand New", 94, "11", null, 2 },
-                    { 64, 1, "Brand New", 64, "12", null, 2 },
-                    { 65, 1, "Brand New", 65, "12", null, 2 },
-                    { 66, 5, "100% used", 54, "6.5", null, 1 },
-                    { 67, 1, "Great Condition!", 19, "7.5", null, 1 },
-                    { 68, 3, "🤑🤑🤑🤑🤑", 89, "7", null, 6 }
-                });
-
-            migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
                 columns: new[] { "RoleId", "UserId" },
                 values: new object[] { "c3aaeb97-d2ba-4a53-a521-4eea61e59b35", "rfv98hu4-3206-4gga-t8ws-457k5v543l6r" });
@@ -557,17 +490,132 @@ namespace OmgShoes.Migrations
 
             migrationBuilder.InsertData(
                 table: "Comments",
-                columns: new[] { "Id", "IsEdited", "Text", "TimeStamp", "UserId", "UserShoeId" },
+                columns: new[] { "Id", "IsEdited", "Text", "TimeStamp", "UserProfileId", "UserShoeId" },
                 values: new object[,]
                 {
-                    { 1, false, "I love you!!", new DateTime(2024, 5, 5, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2810), 5, 43 },
-                    { 2, false, "WAITRESS!!!", new DateTime(2024, 5, 18, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2870), 5, 43 },
-                    { 3, false, "I AM THE RAT KING", new DateTime(2024, 3, 16, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2870), 5, 6 },
-                    { 4, false, "bustin rats is my gig", new DateTime(2024, 3, 17, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2880), 5, 6 },
-                    { 5, false, "did you seriously put nair in my shampoo?!", new DateTime(2024, 4, 20, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2890), 6, 6 },
-                    { 6, false, "I'm playing both sides!!!!", new DateTime(2024, 5, 21, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2890), 4, 6 },
-                    { 7, false, "LEAVE ME ALONE CHARLIE!!!", new DateTime(2024, 4, 21, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2890), 6, 43 },
-                    { 8, false, "I am a 5 ⭐️ man!!!", new DateTime(2024, 5, 25, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2900), 2, 49 }
+                    { 1, false, "I love you!!", new DateTime(2024, 5, 7, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(730), 5, 43 },
+                    { 2, false, "WAITRESS!!!", new DateTime(2024, 5, 20, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(790), 5, 43 },
+                    { 3, false, "I AM THE RAT KING", new DateTime(2024, 3, 18, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(800), 5, 6 },
+                    { 4, false, "bustin rats is my gig", new DateTime(2024, 3, 19, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(810), 5, 6 },
+                    { 5, false, "did you seriously put nair in my shampoo?!", new DateTime(2024, 4, 22, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(820), 6, 6 },
+                    { 6, false, "I'm playing both sides!!!!", new DateTime(2024, 5, 23, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(820), 4, 6 },
+                    { 7, false, "LEAVE ME ALONE CHARLIE!!!", new DateTime(2024, 4, 23, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(830), 6, 43 },
+                    { 8, false, "I am a 5 ⭐️ man!!!", new DateTime(2024, 5, 27, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(830), 2, 49 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "UserShoes",
+                columns: new[] { "Id", "ConditionId", "Description", "ShoeId", "ShoeSize", "Style", "UserProfileId" },
+                values: new object[,]
+                {
+                    { 6, 4, "Completely unwearable!!!", 3, "11.5", "Low", 5 },
+                    { 7, 2, "Great condition for age", 9, "11.5", "Low", 5 },
+                    { 8, 3, "Great condition, a bit faded", 10, "11.5", "Low", 5 },
+                    { 9, 4, "FOR SALE!!!", 19, "11.5", "Low", 5 },
+                    { 10, 3, "Soles have recently been replaced/swapped with brand new soles", 24, "11.5", "Low", 5 },
+                    { 11, 1, "Brand New", 30, "11.5", "Low", 5 },
+                    { 12, 3, "Good lookin shoe", 36, "11.5", "Low", 5 },
+                    { 13, 3, "Hard to find", 38, "11", "Low", 5 },
+                    { 14, 3, "Great Condition, fits like an 11.5", 39, "11", "Low", 5 },
+                    { 15, 4, "Kick around shoe", 48, "11.5", "Low", 5 },
+                    { 16, 3, "Good for everyday wear", 52, "11.5", "Low", 5 },
+                    { 17, 3, "Sock Liner Tears", 54, "11.5", "Low", 5 },
+                    { 18, 2, "Has 1 replacement insole from a pair of Blue Lobster", 66, "12", "Low", 5 },
+                    { 19, 3, "Great condition!", 68, "11.5", "Low", 5 },
+                    { 20, 3, "Very very faded", 73, "11", "Low", 5 },
+                    { 21, 3, "Runs a little big", 75, "11.5", "Low", 5 },
+                    { 22, 2, "Black laces only", 81, "11.5", "Low", 5 },
+                    { 23, 4, "These don't look very used at all", 97, "11", "Low", 5 },
+                    { 24, 2, "Almost brand new", 99, "11.5", "Low", 5 },
+                    { 25, 3, "Great condition, one tongue strap falling apart", 100, "11.5", "Low", 5 },
+                    { 26, 2, "$$$$$", 101, "11.5", "Low", 5 },
+                    { 27, 4, "Everyday work shoes, sock liner tears", 103, "11.5", "Low", 5 },
+                    { 28, 2, "Clean. No inner tag", 104, "12", "Low", 5 },
+                    { 29, 5, "Old and beat!", 109, "11.5", "Low", 5 },
+                    { 36, 5, "thrashed...", 108, "14", "Low", 3 },
+                    { 37, 3, "Great condition!", 113, "7.5", "Low", 3 },
+                    { 38, 4, "Need new soles", 87, "9", "Low", 3 },
+                    { 39, 3, "uesd!!@", 73, "8.5", "Low", 4 },
+                    { 40, 1, "testestest", 123, "9", "Low", 5 },
+                    { 41, 1, "Needs a re-glue", 30, "11.5", "Low", 5 },
+                    { 42, 4, "Too small!", 123, "10.5", "Low", 5 },
+                    { 43, 3, "Kick arounds!", 11, "6.5", null, 6 },
+                    { 44, 1, "1 of 202 ever made.", 23, "7.5", null, 6 },
+                    { 45, 3, "Has the original box", 38, "5.5", null, 1 },
+                    { 46, 1, "Willing to trade", 35, "7", null, 6 },
+                    { 47, 5, "Heavily Skated", 120, "7.5", null, 6 },
+                    { 48, 1, "Another 1 of 202 ever made.", 23, "7", null, 6 },
+                    { 49, 1, "Brand New", 25, "10.5", null, 2 },
+                    { 50, 1, "Brand New", 26, "10.5", null, 2 },
+                    { 51, 1, "Brand New", 27, "10.5", null, 2 },
+                    { 52, 1, "Brand New", 7, "10.5", null, 2 },
+                    { 53, 1, "Brand New", 8, "10.5", null, 2 },
+                    { 54, 1, "Brand New", 59, "10.5", null, 2 },
+                    { 55, 1, "Brand New", 60, "10.5", null, 2 },
+                    { 56, 1, "Brand New", 44, "10.5", null, 2 },
+                    { 57, 1, "Brand New", 43, "10.5", null, 2 },
+                    { 58, 3, "Needs a scrubbing", 34, "6.5", null, 6 },
+                    { 59, 1, "sffsa", 75, "5.5", null, 6 },
+                    { 60, 1, "Missing the box", 10, "6.5", null, 6 },
+                    { 61, 4, "Pretty torn apart", 9, "7", null, 6 },
+                    { 62, 2, "Has all the extras included! Looking to move!", 102, "6.5", null, 6 },
+                    { 63, 2, "Has all the extras included! Looking to move!", 107, "7", null, 6 },
+                    { 64, 4, "I bleached these and I like the way they turned out!", 106, "7.5", null, 6 },
+                    { 65, 2, "🔪🔪🔪", 96, "7.5", null, 6 },
+                    { 66, 1, "💰💰💰💃🏻🕺🏻💰💰💰", 77, "6", null, 6 },
+                    { 67, 1, "Brand New", 18, "11.5", null, 2 },
+                    { 68, 1, "Brand New", 17, "11.5", null, 2 },
+                    { 69, 1, "Brand New", 31, "11", null, 2 },
+                    { 70, 1, "Brand New", 30, "11", null, 2 },
+                    { 71, 1, "Brand New", 102, "10", null, 2 },
+                    { 72, 1, "Brand New", 107, "10", null, 2 },
+                    { 73, 1, "Brand New", 94, "10.5", null, 2 },
+                    { 74, 1, "Brand New", 94, "11", null, 2 },
+                    { 75, 1, "Brand New", 64, "12", null, 2 },
+                    { 76, 1, "Brand New", 65, "12", null, 2 },
+                    { 77, 5, "100% used", 54, "6.5", null, 1 },
+                    { 78, 1, "Great Condition!", 19, "7.5", null, 1 },
+                    { 79, 3, "🤑🤑🤑🤑🤑", 89, "7", null, 6 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Likes",
+                columns: new[] { "Id", "UserProfileId", "UserShoeId" },
+                values: new object[,]
+                {
+                    { 1, 6, 11 },
+                    { 2, 6, 12 },
+                    { 3, 4, 6 },
+                    { 4, 6, 6 },
+                    { 5, 5, 49 },
+                    { 6, 5, 50 },
+                    { 7, 5, 52 },
+                    { 8, 5, 36 },
+                    { 9, 5, 37 },
+                    { 10, 5, 37 },
+                    { 11, 6, 36 },
+                    { 12, 6, 38 },
+                    { 13, 1, 43 },
+                    { 14, 1, 44 },
+                    { 15, 1, 46 },
+                    { 16, 1, 47 },
+                    { 17, 1, 48 },
+                    { 18, 1, 58 },
+                    { 19, 1, 59 },
+                    { 20, 2, 43 },
+                    { 21, 2, 44 },
+                    { 22, 2, 46 },
+                    { 23, 2, 47 },
+                    { 24, 2, 48 },
+                    { 25, 2, 58 },
+                    { 26, 2, 59 },
+                    { 27, 5, 43 },
+                    { 28, 3, 44 },
+                    { 29, 3, 46 },
+                    { 30, 3, 47 },
+                    { 31, 3, 48 },
+                    { 32, 3, 58 },
+                    { 33, 3, 59 }
                 });
 
             migrationBuilder.CreateIndex(
@@ -608,14 +656,34 @@ namespace OmgShoes.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Comments_UserId",
+                name: "IX_Comments_UserProfileId",
                 table: "Comments",
-                column: "UserId");
+                column: "UserProfileId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Likes_UserShoeId",
+                table: "Likes",
+                column: "UserShoeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserProfiles_IdentityUserId",
                 table: "UserProfiles",
                 column: "IdentityUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserShoes_ConditionId",
+                table: "UserShoes",
+                column: "ConditionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserShoes_ShoeId",
+                table: "UserShoes",
+                column: "ShoeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserShoes_UserProfileId",
+                table: "UserShoes",
+                column: "UserProfileId");
         }
 
         /// <inheritdoc />
@@ -640,22 +708,22 @@ namespace OmgShoes.Migrations
                 name: "Comments");
 
             migrationBuilder.DropTable(
-                name: "Conditions");
-
-            migrationBuilder.DropTable(
                 name: "Friendships");
 
             migrationBuilder.DropTable(
                 name: "Likes");
 
             migrationBuilder.DropTable(
-                name: "Shoes");
+                name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "UserShoes");
 
             migrationBuilder.DropTable(
-                name: "AspNetRoles");
+                name: "Conditions");
+
+            migrationBuilder.DropTable(
+                name: "Shoes");
 
             migrationBuilder.DropTable(
                 name: "UserProfiles");

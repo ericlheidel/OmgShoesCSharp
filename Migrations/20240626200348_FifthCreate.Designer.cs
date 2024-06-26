@@ -12,8 +12,8 @@ using OmgShoes.Data;
 namespace OmgShoes.Migrations
 {
     [DbContext(typeof(OmgShoesDbContext))]
-    [Migration("20240624200021_FirstCreate")]
-    partial class FirstCreate
+    [Migration("20240626200348_FifthCreate")]
+    partial class FifthCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -152,13 +152,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f4781008-9c82-4392-8052-e33fee7a2ee3",
+                            ConcurrencyStamp = "db827866-2385-4966-aac2-c04b729df58d",
                             Email = "dee@reynolds.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEJQcAIfVWsNN3F8JcSbDk3xEf0CoZn8VQkSBCm7FzlwDZF811Rp5E5qHWyWMVrweaA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAECvbuan+HnJWlLfLFm4suhcrPcuDsObUH7vXpnTEtEIFJgDERZxtrlia8JW9JdTZ2Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1697db45-9df4-482d-96e0-06eb5a695f22",
+                            SecurityStamp = "4b897534-2d69-4982-98dc-e99d805451ff",
                             TwoFactorEnabled = false,
                             UserName = "Dee"
                         },
@@ -166,13 +166,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "frt98wr5-0223-3ww7-t6rq-028g4r521d4e",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f44b24eb-0a2b-4ddc-8f4a-9a747e8e57f5",
+                            ConcurrencyStamp = "bc0dd8ec-f50a-4f66-81d1-d14d2a6a428b",
                             Email = "dennis@reynolds.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEIp9yfQCaRGhOKH8dG0pPLZAYLvzX8Xwir4ckGrnbTgIBcfKsVvOCrKMe8+GWWl82g==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOR4nDn0l4HIE+AOuyP3cav4UiWfoOsuQ0R+f6qE5RHDPYIl9Z/g7OPXiolNy7lSgA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "854d7289-dffc-411c-b634-c45338b1f9ee",
+                            SecurityStamp = "efe76bf9-3f01-4dcf-80ba-b17e15adad9d",
                             TwoFactorEnabled = false,
                             UserName = "Dennis"
                         },
@@ -180,13 +180,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "hdp65oa9-3053-5ap0-z0hh-235t2a098h8q",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f7cedff1-106e-4eb7-89da-8bf9b83d3e13",
+                            ConcurrencyStamp = "af8891a1-cad2-4414-bbf2-e93f4e1d457b",
                             Email = "frank@reynolds.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEGa07Y1EtXdqgSF1mID9FrvE3/7NvQUNf2oR4ltlfL/CQSAj1dsmqyOHptEcp2WIHA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEIlOTV9Rb3pvgXXyVl9tprSQKgta3dInrqYTDWopSKsMie/eypEIUfZSGfQ5HRX2Sw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1c32fa6e-b2e2-415a-aa3d-03b6e8b83dcb",
+                            SecurityStamp = "fa347dda-66f3-4b65-b15f-76abf6cb6ce4",
                             TwoFactorEnabled = false,
                             UserName = "Frank"
                         },
@@ -194,13 +194,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "rse05dd6-2058-3bg0-a3oo-204t2l308f3p",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f6bd1b8e-9133-4d72-8ab4-d3e15c3476da",
+                            ConcurrencyStamp = "bfd3cb63-1793-478e-a1e3-30ccfe7ef11c",
                             Email = "ronald@macdonald.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEBFGPkLBJznykA0ocv009Q2ofun7Af38LzVjIhxlLXNoYYMvIhpnzxnfOYsdABcxhA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOM4gukVs1xHiHC6XwADRvray70bZbMiemrBBUc6+dQ1rUuDY1etUU5FOy74WYTmiw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "32224a59-eff7-44a7-921b-7fc16a137ad9",
+                            SecurityStamp = "235589e2-b786-4387-980a-b4bfb70aee2b",
                             TwoFactorEnabled = false,
                             UserName = "Ronald"
                         },
@@ -208,13 +208,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "wmo20ow7-0582-9pp1-i8sl-037h7w843j8r",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "b3315e3d-7621-413c-9176-484bd646fb8b",
+                            ConcurrencyStamp = "c5bbd64b-02d6-4284-9d74-bfb1e96bcdb2",
                             Email = "charlie@kelly.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEBzrM0Uh89FiVgnC0t138hNxMvlxBeqC2t3W+DC0fdAvYzmpJVdIDw8BbQdkp9vCmw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEBX3FwUCO19YKUfyKg4JJp7LlhAv8CnE0qdKGbXLfwrLLb+k15sy6ct/JceKCCAe9A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "88b064da-5442-4d13-98db-42bb7cae428a",
+                            SecurityStamp = "247d2f6e-588a-43ba-80a1-e84d35ab6d52",
                             TwoFactorEnabled = false,
                             UserName = "Charlie"
                         },
@@ -222,13 +222,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "rfv98hu4-3206-4gga-t8ws-457k5v543l6r",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "893c85fc-4695-4489-ba0c-e68c42560edc",
+                            ConcurrencyStamp = "4643bfbf-7d85-4e69-913b-bdff19953fa2",
                             Email = "the@waitress.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEE1YfnmAUIxcQV2EMGla+h0kGzDxs2zkUOBPWprdM1JlXdaaBCUe6IfNygvTVc8BJg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOjHiDqOsQKLGelW5HVCSzxfajwVv4FkPgNZH7/pq7Jfb9oy/hGuxSM6UQcyJuKjpg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "aa2500e0-fabb-4f30-93e6-6b90713c7a35",
+                            SecurityStamp = "9906dab1-3aec-4daf-8693-3f5d174cc570",
                             TwoFactorEnabled = false,
                             UserName = "Waitress"
                         });
@@ -339,7 +339,7 @@ namespace OmgShoes.Migrations
                     b.Property<DateTime>("TimeStamp")
                         .HasColumnType("timestamp without time zone");
 
-                    b.Property<int>("UserId")
+                    b.Property<int>("UserProfileId")
                         .HasColumnType("integer");
 
                     b.Property<int>("UserShoeId")
@@ -347,7 +347,7 @@ namespace OmgShoes.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserProfileId");
 
                     b.ToTable("Comments");
 
@@ -357,8 +357,8 @@ namespace OmgShoes.Migrations
                             Id = 1,
                             IsEdited = false,
                             Text = "I love you!!",
-                            TimeStamp = new DateTime(2024, 5, 5, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2810),
-                            UserId = 5,
+                            TimeStamp = new DateTime(2024, 5, 7, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(730),
+                            UserProfileId = 5,
                             UserShoeId = 43
                         },
                         new
@@ -366,8 +366,8 @@ namespace OmgShoes.Migrations
                             Id = 2,
                             IsEdited = false,
                             Text = "WAITRESS!!!",
-                            TimeStamp = new DateTime(2024, 5, 18, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2870),
-                            UserId = 5,
+                            TimeStamp = new DateTime(2024, 5, 20, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(790),
+                            UserProfileId = 5,
                             UserShoeId = 43
                         },
                         new
@@ -375,8 +375,8 @@ namespace OmgShoes.Migrations
                             Id = 3,
                             IsEdited = false,
                             Text = "I AM THE RAT KING",
-                            TimeStamp = new DateTime(2024, 3, 16, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2870),
-                            UserId = 5,
+                            TimeStamp = new DateTime(2024, 3, 18, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(800),
+                            UserProfileId = 5,
                             UserShoeId = 6
                         },
                         new
@@ -384,8 +384,8 @@ namespace OmgShoes.Migrations
                             Id = 4,
                             IsEdited = false,
                             Text = "bustin rats is my gig",
-                            TimeStamp = new DateTime(2024, 3, 17, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2880),
-                            UserId = 5,
+                            TimeStamp = new DateTime(2024, 3, 19, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(810),
+                            UserProfileId = 5,
                             UserShoeId = 6
                         },
                         new
@@ -393,8 +393,8 @@ namespace OmgShoes.Migrations
                             Id = 5,
                             IsEdited = false,
                             Text = "did you seriously put nair in my shampoo?!",
-                            TimeStamp = new DateTime(2024, 4, 20, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2890),
-                            UserId = 6,
+                            TimeStamp = new DateTime(2024, 4, 22, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(820),
+                            UserProfileId = 6,
                             UserShoeId = 6
                         },
                         new
@@ -402,8 +402,8 @@ namespace OmgShoes.Migrations
                             Id = 6,
                             IsEdited = false,
                             Text = "I'm playing both sides!!!!",
-                            TimeStamp = new DateTime(2024, 5, 21, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2890),
-                            UserId = 4,
+                            TimeStamp = new DateTime(2024, 5, 23, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(820),
+                            UserProfileId = 4,
                             UserShoeId = 6
                         },
                         new
@@ -411,8 +411,8 @@ namespace OmgShoes.Migrations
                             Id = 7,
                             IsEdited = false,
                             Text = "LEAVE ME ALONE CHARLIE!!!",
-                            TimeStamp = new DateTime(2024, 4, 21, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2890),
-                            UserId = 6,
+                            TimeStamp = new DateTime(2024, 4, 23, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(830),
+                            UserProfileId = 6,
                             UserShoeId = 43
                         },
                         new
@@ -420,8 +420,8 @@ namespace OmgShoes.Migrations
                             Id = 8,
                             IsEdited = false,
                             Text = "I am a 5 ⭐️ man!!!",
-                            TimeStamp = new DateTime(2024, 5, 25, 15, 0, 21, 275, DateTimeKind.Local).AddTicks(2900),
-                            UserId = 2,
+                            TimeStamp = new DateTime(2024, 5, 27, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(830),
+                            UserProfileId = 2,
                             UserShoeId = 49
                         });
                 });
@@ -486,7 +486,7 @@ namespace OmgShoes.Migrations
                     b.Property<string>("FriendName")
                         .HasColumnType("text");
 
-                    b.Property<int>("UserId")
+                    b.Property<int>("UserProfileId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -502,7 +502,7 @@ namespace OmgShoes.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("UserId")
+                    b.Property<int>("UserProfileId")
                         .HasColumnType("integer");
 
                     b.Property<int>("UserShoeId")
@@ -510,62 +510,208 @@ namespace OmgShoes.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("UserShoeId");
+
                     b.ToTable("Likes");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            UserId = 6,
+                            UserProfileId = 6,
                             UserShoeId = 11
                         },
                         new
                         {
                             Id = 2,
-                            UserId = 6,
+                            UserProfileId = 6,
                             UserShoeId = 12
                         },
                         new
                         {
                             Id = 3,
-                            UserId = 4,
+                            UserProfileId = 4,
                             UserShoeId = 6
                         },
                         new
                         {
                             Id = 4,
-                            UserId = 6,
+                            UserProfileId = 6,
                             UserShoeId = 6
                         },
                         new
                         {
                             Id = 5,
-                            UserId = 5,
+                            UserProfileId = 5,
                             UserShoeId = 49
                         },
                         new
                         {
                             Id = 6,
-                            UserId = 5,
+                            UserProfileId = 5,
                             UserShoeId = 50
                         },
                         new
                         {
                             Id = 7,
-                            UserId = 5,
+                            UserProfileId = 5,
                             UserShoeId = 52
                         },
                         new
                         {
                             Id = 8,
-                            UserId = 5,
+                            UserProfileId = 5,
                             UserShoeId = 36
                         },
                         new
                         {
                             Id = 9,
-                            UserId = 5,
+                            UserProfileId = 5,
                             UserShoeId = 37
+                        },
+                        new
+                        {
+                            Id = 10,
+                            UserProfileId = 5,
+                            UserShoeId = 37
+                        },
+                        new
+                        {
+                            Id = 11,
+                            UserProfileId = 6,
+                            UserShoeId = 36
+                        },
+                        new
+                        {
+                            Id = 12,
+                            UserProfileId = 6,
+                            UserShoeId = 38
+                        },
+                        new
+                        {
+                            Id = 13,
+                            UserProfileId = 1,
+                            UserShoeId = 43
+                        },
+                        new
+                        {
+                            Id = 14,
+                            UserProfileId = 1,
+                            UserShoeId = 44
+                        },
+                        new
+                        {
+                            Id = 15,
+                            UserProfileId = 1,
+                            UserShoeId = 46
+                        },
+                        new
+                        {
+                            Id = 16,
+                            UserProfileId = 1,
+                            UserShoeId = 47
+                        },
+                        new
+                        {
+                            Id = 17,
+                            UserProfileId = 1,
+                            UserShoeId = 48
+                        },
+                        new
+                        {
+                            Id = 18,
+                            UserProfileId = 1,
+                            UserShoeId = 58
+                        },
+                        new
+                        {
+                            Id = 19,
+                            UserProfileId = 1,
+                            UserShoeId = 59
+                        },
+                        new
+                        {
+                            Id = 20,
+                            UserProfileId = 2,
+                            UserShoeId = 43
+                        },
+                        new
+                        {
+                            Id = 21,
+                            UserProfileId = 2,
+                            UserShoeId = 44
+                        },
+                        new
+                        {
+                            Id = 22,
+                            UserProfileId = 2,
+                            UserShoeId = 46
+                        },
+                        new
+                        {
+                            Id = 23,
+                            UserProfileId = 2,
+                            UserShoeId = 47
+                        },
+                        new
+                        {
+                            Id = 24,
+                            UserProfileId = 2,
+                            UserShoeId = 48
+                        },
+                        new
+                        {
+                            Id = 25,
+                            UserProfileId = 2,
+                            UserShoeId = 58
+                        },
+                        new
+                        {
+                            Id = 26,
+                            UserProfileId = 2,
+                            UserShoeId = 59
+                        },
+                        new
+                        {
+                            Id = 27,
+                            UserProfileId = 5,
+                            UserShoeId = 43
+                        },
+                        new
+                        {
+                            Id = 28,
+                            UserProfileId = 3,
+                            UserShoeId = 44
+                        },
+                        new
+                        {
+                            Id = 29,
+                            UserProfileId = 3,
+                            UserShoeId = 46
+                        },
+                        new
+                        {
+                            Id = 30,
+                            UserProfileId = 3,
+                            UserShoeId = 47
+                        },
+                        new
+                        {
+                            Id = 31,
+                            UserProfileId = 3,
+                            UserShoeId = 48
+                        },
+                        new
+                        {
+                            Id = 32,
+                            UserProfileId = 3,
+                            UserShoeId = 58
+                        },
+                        new
+                        {
+                            Id = 33,
+                            UserProfileId = 3,
+                            UserShoeId = 59
                         });
                 });
 
@@ -1962,656 +2108,662 @@ namespace OmgShoes.Migrations
                     b.Property<string>("Style")
                         .HasColumnType("text");
 
-                    b.Property<int>("UserId")
+                    b.Property<int>("UserProfileId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ConditionId");
+
+                    b.HasIndex("ShoeId");
+
+                    b.HasIndex("UserProfileId");
 
                     b.ToTable("UserShoes");
 
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            Id = 6,
                             ConditionId = 4,
                             Description = "Completely unwearable!!!",
                             ShoeId = 3,
                             ShoeSize = "11.5",
                             Style = "Low",
-                            UserId = 5
+                            UserProfileId = 5
                         },
                         new
                         {
-                            Id = 2,
+                            Id = 7,
                             ConditionId = 2,
                             Description = "Great condition for age",
                             ShoeId = 9,
                             ShoeSize = "11.5",
                             Style = "Low",
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ConditionId = 3,
-                            Description = "Great condition, a bit faded",
-                            ShoeId = 10,
-                            ShoeSize = "11.5",
-                            Style = "Low",
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 4,
-                            ConditionId = 4,
-                            Description = "FOR SALE!!!",
-                            ShoeId = 19,
-                            ShoeSize = "11.5",
-                            Style = "Low",
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 5,
-                            ConditionId = 3,
-                            Description = "Soles have recently been replaced/swapped with brand new soles",
-                            ShoeId = 24,
-                            ShoeSize = "11.5",
-                            Style = "Low",
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 6,
-                            ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 30,
-                            ShoeSize = "11.5",
-                            Style = "Low",
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 7,
-                            ConditionId = 3,
-                            Description = "Good lookin shoe",
-                            ShoeId = 36,
-                            ShoeSize = "11.5",
-                            Style = "Low",
-                            UserId = 5
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 8,
                             ConditionId = 3,
-                            Description = "Hard to find",
-                            ShoeId = 38,
-                            ShoeSize = "11",
+                            Description = "Great condition, a bit faded",
+                            ShoeId = 10,
+                            ShoeSize = "11.5",
                             Style = "Low",
-                            UserId = 5
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 9,
-                            ConditionId = 3,
-                            Description = "Great Condition, fits like an 11.5",
-                            ShoeId = 39,
-                            ShoeSize = "11",
+                            ConditionId = 4,
+                            Description = "FOR SALE!!!",
+                            ShoeId = 19,
+                            ShoeSize = "11.5",
                             Style = "Low",
-                            UserId = 5
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 10,
-                            ConditionId = 4,
-                            Description = "Kick around shoe",
-                            ShoeId = 48,
+                            ConditionId = 3,
+                            Description = "Soles have recently been replaced/swapped with brand new soles",
+                            ShoeId = 24,
                             ShoeSize = "11.5",
                             Style = "Low",
-                            UserId = 5
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 11,
-                            ConditionId = 3,
-                            Description = "Good for everyday wear",
-                            ShoeId = 52,
+                            ConditionId = 1,
+                            Description = "Brand New",
+                            ShoeId = 30,
                             ShoeSize = "11.5",
                             Style = "Low",
-                            UserId = 5
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 12,
                             ConditionId = 3,
-                            Description = "Sock Liner Tears",
-                            ShoeId = 54,
+                            Description = "Good lookin shoe",
+                            ShoeId = 36,
                             ShoeSize = "11.5",
                             Style = "Low",
-                            UserId = 5
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 13,
-                            ConditionId = 2,
-                            Description = "Has 1 replacement insole from a pair of Blue Lobster",
-                            ShoeId = 66,
-                            ShoeSize = "12",
+                            ConditionId = 3,
+                            Description = "Hard to find",
+                            ShoeId = 38,
+                            ShoeSize = "11",
                             Style = "Low",
-                            UserId = 5
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 14,
                             ConditionId = 3,
-                            Description = "Great condition!",
-                            ShoeId = 68,
-                            ShoeSize = "11.5",
+                            Description = "Great Condition, fits like an 11.5",
+                            ShoeId = 39,
+                            ShoeSize = "11",
                             Style = "Low",
-                            UserId = 5
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 15,
-                            ConditionId = 3,
-                            Description = "Very very faded",
-                            ShoeId = 73,
-                            ShoeSize = "11",
+                            ConditionId = 4,
+                            Description = "Kick around shoe",
+                            ShoeId = 48,
+                            ShoeSize = "11.5",
                             Style = "Low",
-                            UserId = 5
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 16,
                             ConditionId = 3,
-                            Description = "Runs a little big",
-                            ShoeId = 75,
+                            Description = "Good for everyday wear",
+                            ShoeId = 52,
                             ShoeSize = "11.5",
                             Style = "Low",
-                            UserId = 5
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 17,
-                            ConditionId = 2,
-                            Description = "Black laces only",
-                            ShoeId = 81,
+                            ConditionId = 3,
+                            Description = "Sock Liner Tears",
+                            ShoeId = 54,
                             ShoeSize = "11.5",
                             Style = "Low",
-                            UserId = 5
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 18,
-                            ConditionId = 4,
-                            Description = "These don't look very used at all",
-                            ShoeId = 97,
-                            ShoeSize = "11",
+                            ConditionId = 2,
+                            Description = "Has 1 replacement insole from a pair of Blue Lobster",
+                            ShoeId = 66,
+                            ShoeSize = "12",
                             Style = "Low",
-                            UserId = 5
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 19,
-                            ConditionId = 2,
-                            Description = "Almost brand new",
-                            ShoeId = 99,
+                            ConditionId = 3,
+                            Description = "Great condition!",
+                            ShoeId = 68,
                             ShoeSize = "11.5",
                             Style = "Low",
-                            UserId = 5
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 20,
                             ConditionId = 3,
-                            Description = "Great condition, one tongue strap falling apart",
-                            ShoeId = 100,
-                            ShoeSize = "11.5",
+                            Description = "Very very faded",
+                            ShoeId = 73,
+                            ShoeSize = "11",
                             Style = "Low",
-                            UserId = 5
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 21,
+                            ConditionId = 3,
+                            Description = "Runs a little big",
+                            ShoeId = 75,
+                            ShoeSize = "11.5",
+                            Style = "Low",
+                            UserProfileId = 5
+                        },
+                        new
+                        {
+                            Id = 22,
+                            ConditionId = 2,
+                            Description = "Black laces only",
+                            ShoeId = 81,
+                            ShoeSize = "11.5",
+                            Style = "Low",
+                            UserProfileId = 5
+                        },
+                        new
+                        {
+                            Id = 23,
+                            ConditionId = 4,
+                            Description = "These don't look very used at all",
+                            ShoeId = 97,
+                            ShoeSize = "11",
+                            Style = "Low",
+                            UserProfileId = 5
+                        },
+                        new
+                        {
+                            Id = 24,
+                            ConditionId = 2,
+                            Description = "Almost brand new",
+                            ShoeId = 99,
+                            ShoeSize = "11.5",
+                            Style = "Low",
+                            UserProfileId = 5
+                        },
+                        new
+                        {
+                            Id = 25,
+                            ConditionId = 3,
+                            Description = "Great condition, one tongue strap falling apart",
+                            ShoeId = 100,
+                            ShoeSize = "11.5",
+                            Style = "Low",
+                            UserProfileId = 5
+                        },
+                        new
+                        {
+                            Id = 26,
                             ConditionId = 2,
                             Description = "$$$$$",
                             ShoeId = 101,
                             ShoeSize = "11.5",
                             Style = "Low",
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 22,
-                            ConditionId = 4,
-                            Description = "Everyday work shoes, sock liner tears",
-                            ShoeId = 103,
-                            ShoeSize = "11.5",
-                            Style = "Low",
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 23,
-                            ConditionId = 2,
-                            Description = "Clean. No inner tag",
-                            ShoeId = 104,
-                            ShoeSize = "12",
-                            Style = "Low",
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 24,
-                            ConditionId = 5,
-                            Description = "Old and beat!",
-                            ShoeId = 109,
-                            ShoeSize = "11.5",
-                            Style = "Low",
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 25,
-                            ConditionId = 5,
-                            Description = "thrashed...",
-                            ShoeId = 108,
-                            ShoeSize = "14",
-                            Style = "Low",
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 26,
-                            ConditionId = 3,
-                            Description = "Great condition!",
-                            ShoeId = 113,
-                            ShoeSize = "7.5",
-                            Style = "Low",
-                            UserId = 3
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 27,
                             ConditionId = 4,
-                            Description = "Need new soles",
-                            ShoeId = 87,
-                            ShoeSize = "9",
+                            Description = "Everyday work shoes, sock liner tears",
+                            ShoeId = 103,
+                            ShoeSize = "11.5",
                             Style = "Low",
-                            UserId = 3
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 28,
-                            ConditionId = 3,
-                            Description = "uesd!!@",
-                            ShoeId = 73,
-                            ShoeSize = "8.5",
+                            ConditionId = 2,
+                            Description = "Clean. No inner tag",
+                            ShoeId = 104,
+                            ShoeSize = "12",
                             Style = "Low",
-                            UserId = 4
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 29,
-                            ConditionId = 1,
-                            Description = "testestest",
-                            ShoeId = 123,
-                            ShoeSize = "9",
-                            Style = "Low",
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 30,
-                            ConditionId = 1,
-                            Description = "Needs a re-glue",
-                            ShoeId = 30,
+                            ConditionId = 5,
+                            Description = "Old and beat!",
+                            ShoeId = 109,
                             ShoeSize = "11.5",
                             Style = "Low",
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 31,
-                            ConditionId = 4,
-                            Description = "Too small!",
-                            ShoeId = 123,
-                            ShoeSize = "10.5",
-                            Style = "Low",
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 32,
-                            ConditionId = 3,
-                            Description = "Kick arounds!",
-                            ShoeId = 11,
-                            ShoeSize = "6.5",
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 33,
-                            ConditionId = 1,
-                            Description = "1 of 202 ever made.",
-                            ShoeId = 23,
-                            ShoeSize = "7.5",
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 34,
-                            ConditionId = 3,
-                            Description = "Has the original box",
-                            ShoeId = 38,
-                            ShoeSize = "5.5",
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 35,
-                            ConditionId = 1,
-                            Description = "Willing to trade",
-                            ShoeId = 35,
-                            ShoeSize = "7",
-                            UserId = 6
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 36,
                             ConditionId = 5,
-                            Description = "Heavily Skated",
-                            ShoeId = 120,
-                            ShoeSize = "7.5",
-                            UserId = 6
+                            Description = "thrashed...",
+                            ShoeId = 108,
+                            ShoeSize = "14",
+                            Style = "Low",
+                            UserProfileId = 3
                         },
                         new
                         {
                             Id = 37,
-                            ConditionId = 1,
-                            Description = "Another 1 of 202 ever made.",
-                            ShoeId = 23,
-                            ShoeSize = "7",
-                            UserId = 6
+                            ConditionId = 3,
+                            Description = "Great condition!",
+                            ShoeId = 113,
+                            ShoeSize = "7.5",
+                            Style = "Low",
+                            UserProfileId = 3
                         },
                         new
                         {
                             Id = 38,
-                            ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 25,
-                            ShoeSize = "10.5",
-                            UserId = 2
+                            ConditionId = 4,
+                            Description = "Need new soles",
+                            ShoeId = 87,
+                            ShoeSize = "9",
+                            Style = "Low",
+                            UserProfileId = 3
                         },
                         new
                         {
                             Id = 39,
-                            ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 26,
-                            ShoeSize = "10.5",
-                            UserId = 2
+                            ConditionId = 3,
+                            Description = "uesd!!@",
+                            ShoeId = 73,
+                            ShoeSize = "8.5",
+                            Style = "Low",
+                            UserProfileId = 4
                         },
                         new
                         {
                             Id = 40,
                             ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 27,
-                            ShoeSize = "10.5",
-                            UserId = 2
+                            Description = "testestest",
+                            ShoeId = 123,
+                            ShoeSize = "9",
+                            Style = "Low",
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 41,
                             ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 7,
-                            ShoeSize = "10.5",
-                            UserId = 2
+                            Description = "Needs a re-glue",
+                            ShoeId = 30,
+                            ShoeSize = "11.5",
+                            Style = "Low",
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 42,
-                            ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 8,
+                            ConditionId = 4,
+                            Description = "Too small!",
+                            ShoeId = 123,
                             ShoeSize = "10.5",
-                            UserId = 2
+                            Style = "Low",
+                            UserProfileId = 5
                         },
                         new
                         {
                             Id = 43,
-                            ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 59,
-                            ShoeSize = "10.5",
-                            UserId = 2
+                            ConditionId = 3,
+                            Description = "Kick arounds!",
+                            ShoeId = 11,
+                            ShoeSize = "6.5",
+                            UserProfileId = 6
                         },
                         new
                         {
                             Id = 44,
                             ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 60,
-                            ShoeSize = "10.5",
-                            UserId = 2
+                            Description = "1 of 202 ever made.",
+                            ShoeId = 23,
+                            ShoeSize = "7.5",
+                            UserProfileId = 6
                         },
                         new
                         {
                             Id = 45,
-                            ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 44,
-                            ShoeSize = "10.5",
-                            UserId = 2
+                            ConditionId = 3,
+                            Description = "Has the original box",
+                            ShoeId = 38,
+                            ShoeSize = "5.5",
+                            UserProfileId = 1
                         },
                         new
                         {
                             Id = 46,
                             ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 43,
-                            ShoeSize = "10.5",
-                            UserId = 2
+                            Description = "Willing to trade",
+                            ShoeId = 35,
+                            ShoeSize = "7",
+                            UserProfileId = 6
                         },
                         new
                         {
                             Id = 47,
-                            ConditionId = 3,
-                            Description = "Needs a scrubbing",
-                            ShoeId = 34,
-                            ShoeSize = "6.5",
-                            UserId = 6
+                            ConditionId = 5,
+                            Description = "Heavily Skated",
+                            ShoeId = 120,
+                            ShoeSize = "7.5",
+                            UserProfileId = 6
                         },
                         new
                         {
                             Id = 48,
                             ConditionId = 1,
-                            Description = "sffsa",
-                            ShoeId = 75,
-                            ShoeSize = "5.5",
-                            UserId = 6
+                            Description = "Another 1 of 202 ever made.",
+                            ShoeId = 23,
+                            ShoeSize = "7",
+                            UserProfileId = 6
                         },
                         new
                         {
                             Id = 49,
                             ConditionId = 1,
-                            Description = "Missing the box",
-                            ShoeId = 10,
-                            ShoeSize = "6.5",
-                            UserId = 6
+                            Description = "Brand New",
+                            ShoeId = 25,
+                            ShoeSize = "10.5",
+                            UserProfileId = 2
                         },
                         new
                         {
                             Id = 50,
-                            ConditionId = 4,
-                            Description = "Pretty torn apart",
-                            ShoeId = 9,
-                            ShoeSize = "7",
-                            UserId = 6
+                            ConditionId = 1,
+                            Description = "Brand New",
+                            ShoeId = 26,
+                            ShoeSize = "10.5",
+                            UserProfileId = 2
                         },
                         new
                         {
                             Id = 51,
-                            ConditionId = 2,
-                            Description = "Has all the extras included! Looking to move!",
-                            ShoeId = 102,
-                            ShoeSize = "6.5",
-                            UserId = 6
+                            ConditionId = 1,
+                            Description = "Brand New",
+                            ShoeId = 27,
+                            ShoeSize = "10.5",
+                            UserProfileId = 2
                         },
                         new
                         {
                             Id = 52,
-                            ConditionId = 2,
-                            Description = "Has all the extras included! Looking to move!",
-                            ShoeId = 107,
-                            ShoeSize = "7",
-                            UserId = 6
+                            ConditionId = 1,
+                            Description = "Brand New",
+                            ShoeId = 7,
+                            ShoeSize = "10.5",
+                            UserProfileId = 2
                         },
                         new
                         {
                             Id = 53,
-                            ConditionId = 4,
-                            Description = "I bleached these and I like the way they turned out!",
-                            ShoeId = 106,
-                            ShoeSize = "7.5",
-                            UserId = 6
+                            ConditionId = 1,
+                            Description = "Brand New",
+                            ShoeId = 8,
+                            ShoeSize = "10.5",
+                            UserProfileId = 2
                         },
                         new
                         {
                             Id = 54,
-                            ConditionId = 2,
-                            Description = "🔪🔪🔪",
-                            ShoeId = 96,
-                            ShoeSize = "7.5",
-                            UserId = 6
+                            ConditionId = 1,
+                            Description = "Brand New",
+                            ShoeId = 59,
+                            ShoeSize = "10.5",
+                            UserProfileId = 2
                         },
                         new
                         {
                             Id = 55,
                             ConditionId = 1,
-                            Description = "💰💰💰💃🏻🕺🏻💰💰💰",
-                            ShoeId = 77,
-                            ShoeSize = "6",
-                            UserId = 6
+                            Description = "Brand New",
+                            ShoeId = 60,
+                            ShoeSize = "10.5",
+                            UserProfileId = 2
                         },
                         new
                         {
                             Id = 56,
                             ConditionId = 1,
                             Description = "Brand New",
-                            ShoeId = 18,
-                            ShoeSize = "11.5",
-                            UserId = 2
+                            ShoeId = 44,
+                            ShoeSize = "10.5",
+                            UserProfileId = 2
                         },
                         new
                         {
                             Id = 57,
                             ConditionId = 1,
                             Description = "Brand New",
-                            ShoeId = 17,
-                            ShoeSize = "11.5",
-                            UserId = 2
+                            ShoeId = 43,
+                            ShoeSize = "10.5",
+                            UserProfileId = 2
                         },
                         new
                         {
                             Id = 58,
-                            ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 31,
-                            ShoeSize = "11",
-                            UserId = 2
+                            ConditionId = 3,
+                            Description = "Needs a scrubbing",
+                            ShoeId = 34,
+                            ShoeSize = "6.5",
+                            UserProfileId = 6
                         },
                         new
                         {
                             Id = 59,
                             ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 30,
-                            ShoeSize = "11",
-                            UserId = 2
+                            Description = "sffsa",
+                            ShoeId = 75,
+                            ShoeSize = "5.5",
+                            UserProfileId = 6
                         },
                         new
                         {
                             Id = 60,
                             ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 102,
-                            ShoeSize = "10",
-                            UserId = 2
+                            Description = "Missing the box",
+                            ShoeId = 10,
+                            ShoeSize = "6.5",
+                            UserProfileId = 6
                         },
                         new
                         {
                             Id = 61,
-                            ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 107,
-                            ShoeSize = "10",
-                            UserId = 2
+                            ConditionId = 4,
+                            Description = "Pretty torn apart",
+                            ShoeId = 9,
+                            ShoeSize = "7",
+                            UserProfileId = 6
                         },
                         new
                         {
                             Id = 62,
-                            ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 94,
-                            ShoeSize = "10.5",
-                            UserId = 2
+                            ConditionId = 2,
+                            Description = "Has all the extras included! Looking to move!",
+                            ShoeId = 102,
+                            ShoeSize = "6.5",
+                            UserProfileId = 6
                         },
                         new
                         {
                             Id = 63,
-                            ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 94,
-                            ShoeSize = "11",
-                            UserId = 2
+                            ConditionId = 2,
+                            Description = "Has all the extras included! Looking to move!",
+                            ShoeId = 107,
+                            ShoeSize = "7",
+                            UserProfileId = 6
                         },
                         new
                         {
                             Id = 64,
-                            ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 64,
-                            ShoeSize = "12",
-                            UserId = 2
+                            ConditionId = 4,
+                            Description = "I bleached these and I like the way they turned out!",
+                            ShoeId = 106,
+                            ShoeSize = "7.5",
+                            UserProfileId = 6
                         },
                         new
                         {
                             Id = 65,
-                            ConditionId = 1,
-                            Description = "Brand New",
-                            ShoeId = 65,
-                            ShoeSize = "12",
-                            UserId = 2
+                            ConditionId = 2,
+                            Description = "🔪🔪🔪",
+                            ShoeId = 96,
+                            ShoeSize = "7.5",
+                            UserProfileId = 6
                         },
                         new
                         {
                             Id = 66,
-                            ConditionId = 5,
-                            Description = "100% used",
-                            ShoeId = 54,
-                            ShoeSize = "6.5",
-                            UserId = 1
+                            ConditionId = 1,
+                            Description = "💰💰💰💃🏻🕺🏻💰💰💰",
+                            ShoeId = 77,
+                            ShoeSize = "6",
+                            UserProfileId = 6
                         },
                         new
                         {
                             Id = 67,
                             ConditionId = 1,
-                            Description = "Great Condition!",
-                            ShoeId = 19,
-                            ShoeSize = "7.5",
-                            UserId = 1
+                            Description = "Brand New",
+                            ShoeId = 18,
+                            ShoeSize = "11.5",
+                            UserProfileId = 2
                         },
                         new
                         {
                             Id = 68,
+                            ConditionId = 1,
+                            Description = "Brand New",
+                            ShoeId = 17,
+                            ShoeSize = "11.5",
+                            UserProfileId = 2
+                        },
+                        new
+                        {
+                            Id = 69,
+                            ConditionId = 1,
+                            Description = "Brand New",
+                            ShoeId = 31,
+                            ShoeSize = "11",
+                            UserProfileId = 2
+                        },
+                        new
+                        {
+                            Id = 70,
+                            ConditionId = 1,
+                            Description = "Brand New",
+                            ShoeId = 30,
+                            ShoeSize = "11",
+                            UserProfileId = 2
+                        },
+                        new
+                        {
+                            Id = 71,
+                            ConditionId = 1,
+                            Description = "Brand New",
+                            ShoeId = 102,
+                            ShoeSize = "10",
+                            UserProfileId = 2
+                        },
+                        new
+                        {
+                            Id = 72,
+                            ConditionId = 1,
+                            Description = "Brand New",
+                            ShoeId = 107,
+                            ShoeSize = "10",
+                            UserProfileId = 2
+                        },
+                        new
+                        {
+                            Id = 73,
+                            ConditionId = 1,
+                            Description = "Brand New",
+                            ShoeId = 94,
+                            ShoeSize = "10.5",
+                            UserProfileId = 2
+                        },
+                        new
+                        {
+                            Id = 74,
+                            ConditionId = 1,
+                            Description = "Brand New",
+                            ShoeId = 94,
+                            ShoeSize = "11",
+                            UserProfileId = 2
+                        },
+                        new
+                        {
+                            Id = 75,
+                            ConditionId = 1,
+                            Description = "Brand New",
+                            ShoeId = 64,
+                            ShoeSize = "12",
+                            UserProfileId = 2
+                        },
+                        new
+                        {
+                            Id = 76,
+                            ConditionId = 1,
+                            Description = "Brand New",
+                            ShoeId = 65,
+                            ShoeSize = "12",
+                            UserProfileId = 2
+                        },
+                        new
+                        {
+                            Id = 77,
+                            ConditionId = 5,
+                            Description = "100% used",
+                            ShoeId = 54,
+                            ShoeSize = "6.5",
+                            UserProfileId = 1
+                        },
+                        new
+                        {
+                            Id = 78,
+                            ConditionId = 1,
+                            Description = "Great Condition!",
+                            ShoeId = 19,
+                            ShoeSize = "7.5",
+                            UserProfileId = 1
+                        },
+                        new
+                        {
+                            Id = 79,
                             ConditionId = 3,
                             Description = "🤑🤑🤑🤑🤑",
                             ShoeId = 89,
                             ShoeSize = "7",
-                            UserId = 6
+                            UserProfileId = 6
                         });
                 });
 
@@ -2670,11 +2822,20 @@ namespace OmgShoes.Migrations
                 {
                     b.HasOne("OmgShoes.Models.UserProfile", "User")
                         .WithMany()
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("UserProfileId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("OmgShoes.Models.Like", b =>
+                {
+                    b.HasOne("OmgShoes.Models.UserShoe", null)
+                        .WithMany("Likes")
+                        .HasForeignKey("UserShoeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("OmgShoes.Models.UserProfile", b =>
@@ -2684,6 +2845,41 @@ namespace OmgShoes.Migrations
                         .HasForeignKey("IdentityUserId");
 
                     b.Navigation("IdentityUser");
+                });
+
+            modelBuilder.Entity("OmgShoes.Models.UserShoe", b =>
+                {
+                    b.HasOne("OmgShoes.Models.Condition", "Condition")
+                        .WithMany()
+                        .HasForeignKey("ConditionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OmgShoes.Models.Shoe", "Shoe")
+                        .WithMany()
+                        .HasForeignKey("ShoeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OmgShoes.Models.UserProfile", null)
+                        .WithMany("UserShoes")
+                        .HasForeignKey("UserProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Condition");
+
+                    b.Navigation("Shoe");
+                });
+
+            modelBuilder.Entity("OmgShoes.Models.UserProfile", b =>
+                {
+                    b.Navigation("UserShoes");
+                });
+
+            modelBuilder.Entity("OmgShoes.Models.UserShoe", b =>
+                {
+                    b.Navigation("Likes");
                 });
 #pragma warning restore 612, 618
         }
