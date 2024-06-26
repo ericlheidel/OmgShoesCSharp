@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace OmgShoes.Migrations
 {
     /// <inheritdoc />
-    public partial class FifthCreate : Migration
+    public partial class SeventhCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -232,29 +232,6 @@ namespace OmgShoes.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Comments",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    UserProfileId = table.Column<int>(type: "integer", nullable: false),
-                    UserShoeId = table.Column<int>(type: "integer", nullable: false),
-                    Text = table.Column<string>(type: "text", nullable: true),
-                    TimeStamp = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    IsEdited = table.Column<bool>(type: "boolean", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Comments", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Comments_UserProfiles_UserProfileId",
-                        column: x => x.UserProfileId,
-                        principalTable: "UserProfiles",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "UserShoes",
                 columns: table => new
                 {
@@ -291,6 +268,35 @@ namespace OmgShoes.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Comments",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    UserProfileId = table.Column<int>(type: "integer", nullable: false),
+                    UserShoeId = table.Column<int>(type: "integer", nullable: false),
+                    Text = table.Column<string>(type: "text", nullable: true),
+                    TimeStamp = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    IsEdited = table.Column<bool>(type: "boolean", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comments", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Comments_UserProfiles_UserProfileId",
+                        column: x => x.UserProfileId,
+                        principalTable: "UserProfiles",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Comments_UserShoes_UserShoeId",
+                        column: x => x.UserShoeId,
+                        principalTable: "UserShoes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Likes",
                 columns: table => new
                 {
@@ -320,12 +326,12 @@ namespace OmgShoes.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f", 0, "db827866-2385-4966-aac2-c04b729df58d", "dee@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAECvbuan+HnJWlLfLFm4suhcrPcuDsObUH7vXpnTEtEIFJgDERZxtrlia8JW9JdTZ2Q==", null, false, "4b897534-2d69-4982-98dc-e99d805451ff", false, "Dee" },
-                    { "frt98wr5-0223-3ww7-t6rq-028g4r521d4e", 0, "bc0dd8ec-f50a-4f66-81d1-d14d2a6a428b", "dennis@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEOR4nDn0l4HIE+AOuyP3cav4UiWfoOsuQ0R+f6qE5RHDPYIl9Z/g7OPXiolNy7lSgA==", null, false, "efe76bf9-3f01-4dcf-80ba-b17e15adad9d", false, "Dennis" },
-                    { "hdp65oa9-3053-5ap0-z0hh-235t2a098h8q", 0, "af8891a1-cad2-4414-bbf2-e93f4e1d457b", "frank@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEIlOTV9Rb3pvgXXyVl9tprSQKgta3dInrqYTDWopSKsMie/eypEIUfZSGfQ5HRX2Sw==", null, false, "fa347dda-66f3-4b65-b15f-76abf6cb6ce4", false, "Frank" },
-                    { "rfv98hu4-3206-4gga-t8ws-457k5v543l6r", 0, "4643bfbf-7d85-4e69-913b-bdff19953fa2", "the@waitress.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEOjHiDqOsQKLGelW5HVCSzxfajwVv4FkPgNZH7/pq7Jfb9oy/hGuxSM6UQcyJuKjpg==", null, false, "9906dab1-3aec-4daf-8693-3f5d174cc570", false, "Waitress" },
-                    { "rse05dd6-2058-3bg0-a3oo-204t2l308f3p", 0, "bfd3cb63-1793-478e-a1e3-30ccfe7ef11c", "ronald@macdonald.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEOM4gukVs1xHiHC6XwADRvray70bZbMiemrBBUc6+dQ1rUuDY1etUU5FOy74WYTmiw==", null, false, "235589e2-b786-4387-980a-b4bfb70aee2b", false, "Ronald" },
-                    { "wmo20ow7-0582-9pp1-i8sl-037h7w843j8r", 0, "c5bbd64b-02d6-4284-9d74-bfb1e96bcdb2", "charlie@kelly.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEBX3FwUCO19YKUfyKg4JJp7LlhAv8CnE0qdKGbXLfwrLLb+k15sy6ct/JceKCCAe9A==", null, false, "247d2f6e-588a-43ba-80a1-e84d35ab6d52", false, "Charlie" }
+                    { "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f", 0, "43af6893-7491-4d6a-b506-a6af071e07a8", "dee@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEBWko+LNSWw8reD7xGCC0BVvnh/4mOuWmGNAcluPmEz8e1eUWBeJbM+tMx7hu14MHA==", null, false, "906afab9-2a7e-438b-bc49-10631d15f2ea", false, "Dee" },
+                    { "frt98wr5-0223-3ww7-t6rq-028g4r521d4e", 0, "88628aeb-77fe-477c-95be-f00cd572044b", "dennis@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEMW3iHq0EsK7kBI2GW910eJciYWzXvA8aQ4eDrXX2ZC7PJKCn1gQYq/ETKxf6sXbQQ==", null, false, "8ad0c0fb-818e-40c0-a715-5967a8453922", false, "Dennis" },
+                    { "hdp65oa9-3053-5ap0-z0hh-235t2a098h8q", 0, "d80ba2c7-0fed-4bca-9ccd-c593de4d5d1b", "frank@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEDoX00ixPUKQw34utmPuNfyobmXY884owuhX4CrlkjG8rG8usrcjvrl8J885JROQVg==", null, false, "6aa03b18-f1d3-4859-9450-0482a08d8209", false, "Frank" },
+                    { "rfv98hu4-3206-4gga-t8ws-457k5v543l6r", 0, "85087f5f-ac0c-4614-bb3f-f7723b279842", "the@waitress.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEJRdzQ4TUdxJ0HAMmHn+L7or7zWal/Oqq4oIATbe4/cWMLRCbcujKHRyuy/RXKa7yg==", null, false, "c253c4ee-7222-4560-865f-f660f90656cc", false, "Waitress" },
+                    { "rse05dd6-2058-3bg0-a3oo-204t2l308f3p", 0, "00e0cb8e-b554-4f9d-844c-c3151fec2c5c", "ronald@macdonald.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEAMKQ9nLjiokxuwsR2p5sT258EfWYP7OhXos1nzPNpwr1J0bsx8X9AGkJ08J9ah/1w==", null, false, "a4bbf86c-1a12-499d-b093-590685c5a210", false, "Ronald" },
+                    { "wmo20ow7-0582-9pp1-i8sl-037h7w843j8r", 0, "ae437d48-ad04-4775-ad6f-547732a9f41d", "charlie@kelly.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEOuMq/I/e7Q5e8g2Lb6KD2llybg4Bktb3toPjx/bLhKoGap28RR0kLYVAuisNhOCAw==", null, false, "29f1afe8-6290-4a81-b2c6-05555949f9c8", false, "Charlie" }
                 });
 
             migrationBuilder.InsertData(
@@ -489,21 +495,6 @@ namespace OmgShoes.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Comments",
-                columns: new[] { "Id", "IsEdited", "Text", "TimeStamp", "UserProfileId", "UserShoeId" },
-                values: new object[,]
-                {
-                    { 1, false, "I love you!!", new DateTime(2024, 5, 7, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(730), 5, 43 },
-                    { 2, false, "WAITRESS!!!", new DateTime(2024, 5, 20, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(790), 5, 43 },
-                    { 3, false, "I AM THE RAT KING", new DateTime(2024, 3, 18, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(800), 5, 6 },
-                    { 4, false, "bustin rats is my gig", new DateTime(2024, 3, 19, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(810), 5, 6 },
-                    { 5, false, "did you seriously put nair in my shampoo?!", new DateTime(2024, 4, 22, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(820), 6, 6 },
-                    { 6, false, "I'm playing both sides!!!!", new DateTime(2024, 5, 23, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(820), 4, 6 },
-                    { 7, false, "LEAVE ME ALONE CHARLIE!!!", new DateTime(2024, 4, 23, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(830), 6, 43 },
-                    { 8, false, "I am a 5 ⭐️ man!!!", new DateTime(2024, 5, 27, 15, 3, 47, 763, DateTimeKind.Local).AddTicks(830), 2, 49 }
-                });
-
-            migrationBuilder.InsertData(
                 table: "UserShoes",
                 columns: new[] { "Id", "ConditionId", "Description", "ShoeId", "ShoeSize", "Style", "UserProfileId" },
                 values: new object[,]
@@ -579,6 +570,21 @@ namespace OmgShoes.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Comments",
+                columns: new[] { "Id", "IsEdited", "Text", "TimeStamp", "UserProfileId", "UserShoeId" },
+                values: new object[,]
+                {
+                    { 1, false, "I love you!!", new DateTime(2024, 5, 7, 16, 57, 6, 256, DateTimeKind.Local).AddTicks(4210), 5, 43 },
+                    { 2, false, "WAITRESS!!!", new DateTime(2024, 5, 20, 16, 57, 6, 256, DateTimeKind.Local).AddTicks(4290), 5, 43 },
+                    { 3, false, "I AM THE RAT KING", new DateTime(2024, 3, 18, 16, 57, 6, 256, DateTimeKind.Local).AddTicks(4300), 5, 6 },
+                    { 4, false, "bustin rats is my gig", new DateTime(2024, 3, 19, 16, 57, 6, 256, DateTimeKind.Local).AddTicks(4310), 5, 6 },
+                    { 5, false, "did you seriously put nair in my shampoo?!", new DateTime(2024, 4, 22, 16, 57, 6, 256, DateTimeKind.Local).AddTicks(4330), 6, 6 },
+                    { 6, false, "I'm playing both sides!!!!", new DateTime(2024, 5, 23, 16, 57, 6, 256, DateTimeKind.Local).AddTicks(4330), 4, 6 },
+                    { 7, false, "LEAVE ME ALONE CHARLIE!!!", new DateTime(2024, 4, 23, 16, 57, 6, 256, DateTimeKind.Local).AddTicks(4340), 6, 43 },
+                    { 8, false, "I am a 5 ⭐️ man!!!", new DateTime(2024, 5, 27, 16, 57, 6, 256, DateTimeKind.Local).AddTicks(4340), 2, 49 }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Likes",
                 columns: new[] { "Id", "UserProfileId", "UserShoeId" },
                 values: new object[,]
@@ -591,7 +597,7 @@ namespace OmgShoes.Migrations
                     { 6, 5, 50 },
                     { 7, 5, 52 },
                     { 8, 5, 36 },
-                    { 9, 5, 37 },
+                    { 9, 5, 38 },
                     { 10, 5, 37 },
                     { 11, 6, 36 },
                     { 12, 6, 38 },
@@ -659,6 +665,11 @@ namespace OmgShoes.Migrations
                 name: "IX_Comments_UserProfileId",
                 table: "Comments",
                 column: "UserProfileId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_UserShoeId",
+                table: "Comments",
+                column: "UserShoeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Likes_UserShoeId",

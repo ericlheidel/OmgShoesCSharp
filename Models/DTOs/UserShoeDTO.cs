@@ -13,4 +13,5 @@ public class UserShoeDTO
     public ConditionDTO? Condition { get; set; }
     public string? Description { get; set; }
     public List<LikeDTO>? Likes { get; set; }
+    public List<CommentDTO>? Comments { get; set; }
 }
