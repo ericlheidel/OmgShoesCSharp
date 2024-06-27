@@ -61,10 +61,27 @@ public class UserShoeController : ControllerBase
         // return NoContent();
         return Created($"api/usershoe/{userShoe.Id}", userShoe);
     }
+
+    [HttpDelete("{id}")]
+    // [Authorize]
+    public IActionResult DeleteFromCollection(int id)
+    {
+        UserShoe userShoeToDelete = _dbContext.UserShoes.SingleOrDefault(us => us.Id == id);
+
+        if (userShoeToDelete == null)
+        {
+            return NotFound();
+        }
+
+        _dbContext.Remove(userShoeToDelete);
+        _dbContext.SaveChanges();
+
+        return NoContent();
+    }
 }
 
 //√  get user shoe by id
 //!  edit user shoe
 //√  add shoe to user collection
-//!  delete user shoe from collection
+//√  delete user shoe from collection
 //√  get user shoe collection
