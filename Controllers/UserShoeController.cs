@@ -50,11 +50,21 @@ public class UserShoeController : ControllerBase
 
         return Ok(userShoe);
     }
+
+    [HttpPost]
+    // [Authorize]
+    public IActionResult AddToCollection(UserShoe userShoe)
+    {
+        _dbContext.Add(userShoe);
+        _dbContext.SaveChanges();
+
+        // return NoContent();
+        return Created($"api/usershoe/{userShoe.Id}", userShoe);
+    }
 }
 
-//+  get all user shoes
 //√  get user shoe by id
 //!  edit user shoe
-//!  add shoe to user collection
+//√  add shoe to user collection
 //!  delete user shoe from collection
 //√  get user shoe collection

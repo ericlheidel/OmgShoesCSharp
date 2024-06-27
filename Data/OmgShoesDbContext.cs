@@ -1434,7 +1434,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 6,
                 UserProfileId = 5,
                 ShoeId = 3,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 4,
                 Description = "Completely unwearable!!!"
@@ -1444,7 +1443,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 7,
                 UserProfileId = 5,
                 ShoeId = 9,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 2,
                 Description = "Great condition for age"
@@ -1454,7 +1452,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 8,
                 UserProfileId = 5,
                 ShoeId = 10,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 3,
                 Description = "Great condition, a bit faded"
@@ -1464,7 +1461,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 9,
                 UserProfileId = 5,
                 ShoeId = 19,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 4,
                 Description = "FOR SALE!!!"
@@ -1474,7 +1470,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 10,
                 UserProfileId = 5,
                 ShoeId = 24,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 3,
                 Description = "Soles have recently been replaced/swapped with brand new soles"
@@ -1484,7 +1479,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 11,
                 UserProfileId = 5,
                 ShoeId = 30,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 1,
                 Description = "Brand New"
@@ -1494,7 +1488,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 12,
                 UserProfileId = 5,
                 ShoeId = 36,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 3,
                 Description = "Good lookin shoe"
@@ -1504,7 +1497,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 13,
                 UserProfileId = 5,
                 ShoeId = 38,
-                Style = "Low",
                 ShoeSize = "11",
                 ConditionId = 3,
                 Description = "Hard to find"
@@ -1514,7 +1506,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 14,
                 UserProfileId = 5,
                 ShoeId = 39,
-                Style = "Low",
                 ShoeSize = "11",
                 ConditionId = 3,
                 Description = "Great Condition, fits like an 11.5"
@@ -1524,7 +1515,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 15,
                 UserProfileId = 5,
                 ShoeId = 48,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 4,
                 Description = "Kick around shoe"
@@ -1534,7 +1524,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 16,
                 UserProfileId = 5,
                 ShoeId = 52,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 3,
                 Description = "Good for everyday wear"
@@ -1544,7 +1533,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 17,
                 UserProfileId = 5,
                 ShoeId = 54,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 3,
                 Description = "Sock Liner Tears"
@@ -1554,7 +1542,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 18,
                 UserProfileId = 5,
                 ShoeId = 66,
-                Style = "Low",
                 ShoeSize = "12",
                 ConditionId = 2,
                 Description = "Has 1 replacement insole from a pair of Blue Lobster"
@@ -1564,7 +1551,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 19,
                 UserProfileId = 5,
                 ShoeId = 68,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 3,
                 Description = "Great condition!"
@@ -1574,7 +1560,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 20,
                 UserProfileId = 5,
                 ShoeId = 73,
-                Style = "Low",
                 ShoeSize = "11",
                 ConditionId = 3,
                 Description = "Very very faded"
@@ -1584,7 +1569,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 21,
                 UserProfileId = 5,
                 ShoeId = 75,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 3,
                 Description = "Runs a little big"
@@ -1594,7 +1578,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 22,
                 UserProfileId = 5,
                 ShoeId = 81,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 2,
                 Description = "Black laces only"
@@ -1604,7 +1587,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 23,
                 UserProfileId = 5,
                 ShoeId = 97,
-                Style = "Low",
                 ShoeSize = "11",
                 ConditionId = 4,
                 Description = "These don't look very used at all"
@@ -1614,7 +1596,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 24,
                 UserProfileId = 5,
                 ShoeId = 99,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 2,
                 Description = "Almost brand new"
@@ -1624,7 +1605,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 25,
                 UserProfileId = 5,
                 ShoeId = 100,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 3,
                 Description = "Great condition, one tongue strap falling apart"
@@ -1634,7 +1614,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 26,
                 UserProfileId = 5,
                 ShoeId = 101,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 2,
                 Description = "$$$$$"
@@ -1644,7 +1623,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 27,
                 UserProfileId = 5,
                 ShoeId = 103,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 4,
                 Description = "Everyday work shoes, sock liner tears"
@@ -1654,7 +1632,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 28,
                 UserProfileId = 5,
                 ShoeId = 104,
-                Style = "Low",
                 ShoeSize = "12",
                 ConditionId = 2,
                 Description = "Clean. No inner tag"
@@ -1664,7 +1641,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 29,
                 UserProfileId = 5,
                 ShoeId = 109,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 5,
                 Description = "Old and beat!"
@@ -1674,7 +1650,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 36,
                 UserProfileId = 3,
                 ShoeId = 108,
-                Style = "Low",
                 ShoeSize = "14",
                 ConditionId = 5,
                 Description = "thrashed..."
@@ -1684,7 +1659,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 37,
                 UserProfileId = 3,
                 ShoeId = 113,
-                Style = "Low",
                 ShoeSize = "7.5",
                 ConditionId = 3,
                 Description = "Great condition!"
@@ -1694,7 +1668,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 38,
                 UserProfileId = 3,
                 ShoeId = 87,
-                Style = "Low",
                 ShoeSize = "9",
                 ConditionId = 4,
                 Description = "Need new soles"
@@ -1704,7 +1677,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 39,
                 UserProfileId = 4,
                 ShoeId = 73,
-                Style = "Low",
                 ShoeSize = "8.5",
                 ConditionId = 3,
                 Description = "uesd!!@"
@@ -1714,7 +1686,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 40,
                 UserProfileId = 5,
                 ShoeId = 123,
-                Style = "Low",
                 ShoeSize = "9",
                 ConditionId = 1,
                 Description = "testestest"
@@ -1724,7 +1695,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 41,
                 UserProfileId = 5,
                 ShoeId = 30,
-                Style = "Low",
                 ShoeSize = "11.5",
                 ConditionId = 1,
                 Description = "Needs a re-glue"
@@ -1734,7 +1704,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 42,
                 UserProfileId = 5,
                 ShoeId = 123,
-                Style = "Low",
                 ShoeSize = "10.5",
                 ConditionId = 4,
                 Description = "Too small!"
