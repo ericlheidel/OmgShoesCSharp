@@ -22,12 +22,33 @@ public class CommentController : ControllerBase
         return Ok(_dbContext
             .Comments
             .Where(c => c.UserShoeId == id)
+            .Include(c => c.User)
             .ToList()
         );
+    }
+
+    [HttpPost]
+    // [Authorize]
+    public IActionResult Post(Comment comment)
+    {
+        Comment newComment = new Comment
+        {
+            UserProfileId = comment.UserProfileId,
+            UserShoeId = comment.UserShoeId,
+            Text = comment.Text,
+            TimeStamp = DateTime.Now,
+            IsEdited = false
+        };
+
+
+        _dbContext.Add(newComment);
+        _dbContext.SaveChanges();
+
+        return NoContent();
     }
 }
 
 //√  get comments by userShoeId
-//!  add comments
+//√  add comments
 //!  remove comment by id
 //!  update comment

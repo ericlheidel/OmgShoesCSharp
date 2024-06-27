@@ -58,7 +58,6 @@ public class UserShoeController : ControllerBase
         _dbContext.Add(userShoe);
         _dbContext.SaveChanges();
 
-        // return NoContent();
         return Created($"api/usershoe/{userShoe.Id}", userShoe);
     }
 
