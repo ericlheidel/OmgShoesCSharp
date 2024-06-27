@@ -78,10 +78,26 @@ public class UserShoeController : ControllerBase
 
         return NoContent();
     }
-}
 
-//√  get user shoe by id
-//!  edit user shoe
-//√  add shoe to user collection
-//√  delete user shoe from collection
-//√  get user shoe collection
+    [HttpPut("{id}")]
+    // [Authorize]
+    public IActionResult Edit(UserShoe userShoe, int id)
+    {
+        UserShoe userShoeToEdit = _dbContext.UserShoes.SingleOrDefault(us => us.Id == id);
+
+        if (userShoeToEdit == null)
+        {
+            return NotFound();
+        }
+
+        userShoeToEdit.UserProfileId = userShoe.UserProfileId;
+        userShoeToEdit.ShoeId = userShoe.ShoeId;
+        userShoeToEdit.ShoeSize = userShoe.ShoeSize;
+        userShoeToEdit.ConditionId = userShoe.ConditionId;
+        userShoeToEdit.Description = userShoe.Description;
+
+        _dbContext.SaveChanges();
+
+        return NoContent();
+    }
+}
