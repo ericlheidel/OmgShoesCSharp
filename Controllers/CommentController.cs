@@ -46,6 +46,23 @@ public class CommentController : ControllerBase
 
         return NoContent();
     }
+
+    [HttpDelete("{id}")]
+    // [Authorize]
+    public IActionResult Delete(int id)
+    {
+        Comment commentToDelete = _dbContext.Comments.SingleOrDefault(c => c.Id == id);
+
+        if (commentToDelete == null)
+        {
+            return NotFound();
+        }
+
+        _dbContext.Remove(commentToDelete);
+        _dbContext.SaveChanges();
+
+        return NoContent();
+    }
 }
 
 //√  get comments by userShoeId
