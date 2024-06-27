@@ -86,8 +86,3 @@ public class CommentController : ControllerBase
         return NoContent();
     }
 }
-
-//√  get comments by userShoeId
-//√  add comments
-//√  remove comment by id
-//!  update comment
