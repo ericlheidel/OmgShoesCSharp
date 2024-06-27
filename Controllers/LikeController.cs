@@ -30,7 +30,21 @@ public class LikeController : ControllerBase
 
         return NoContent();
     }
-}
 
-//√  post like
-//!  remove by id
+    [HttpDelete("{id}")]
+    // [Authorize]
+    public IActionResult Delete(int id)
+    {
+        Like likeToDelete = _dbContext.Likes.SingleOrDefault(l => l.Id == id);
+
+        if (likeToDelete == null)
+        {
+            return NotFound();
+        }
+
+        _dbContext.Likes.Remove(likeToDelete);
+        _dbContext.SaveChanges();
+
+        return NoContent();
+    }
+}
