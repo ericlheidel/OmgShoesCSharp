@@ -63,9 +63,26 @@ public class CommentController : ControllerBase
 
         return NoContent();
     }
-}
 
-//√  get comments by userShoeId
-//√  add comments
-//!  remove comment by id
-//!  update comment
+    [HttpPut("{id}")]
+    // [Authorize]
+    public IActionResult Edit(Comment comment, int id)
+    {
+        Comment commentToEdit = _dbContext.Comments.SingleOrDefault(c => c.Id == id);
+
+        if (commentToEdit == null)
+        {
+            return NotFound();
+        }
+
+        commentToEdit.UserProfileId = comment.UserProfileId;
+        commentToEdit.UserShoeId = comment.UserShoeId;
+        commentToEdit.Text = comment.Text;
+        commentToEdit.TimeStamp = DateTime.Now;
+        commentToEdit.IsEdited = true;
+
+        _dbContext.SaveChanges();
+
+        return NoContent();
+    }
+}
