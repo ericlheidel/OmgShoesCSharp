@@ -41,7 +41,7 @@ public class CommentController : ControllerBase
         };
 
 
-        _dbContext.Add(newComment);
+        _dbContext.Comments.Add(newComment);
         _dbContext.SaveChanges();
 
         return NoContent();
