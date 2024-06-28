@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OmgShoes.Data;
 using OmgShoes.Models;
-using OmgShoes.Models.DTOs;
 
 namespace OmgShoes.Controllers;
 
