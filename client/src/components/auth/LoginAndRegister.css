@@ -1,0 +1,50 @@
+.register-form,
+.login-form {
+  width: 450px;
+  margin: 2.5rem auto 1.5rem auto;
+  background-color: var(--color-two);
+  border-radius: 12.5px;
+  padding: 3rem;
+  /* box-shadow: 5px 5px 15px var(--color-two); */
+}
+
+.register-form > h1,
+.login-form > h1 {
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.register-form > h2,
+.login-form > h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.text-div {
+  border-radius: 8px;
+  width: fit-content;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  cursor: default;
+}
+
+.text-div > h1 {
+  font-size: 2.5rem;
+}
+
+.text-div > h2 {
+  font-size: 1.75rem;
+}
+
+.state-dropdown {
+  width: 26rem;
+  font-size: 20px;
+}
+
+.register-link {
+  color: var(--color-two);
+  font-size: 1.75rem;
+  cursor: pointer;
+  text-align: center;
+}
