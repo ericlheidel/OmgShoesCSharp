@@ -167,6 +167,3 @@ public class UserProfileController : ControllerBase
         return NoContent();
     }
 }
-
-
-// update user profile
