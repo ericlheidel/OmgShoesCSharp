@@ -4,6 +4,10 @@ export const getUserShoeCollectionByUserId = (userId) => {
   return fetch(`${_apiUrl}/collection/${userId}`).then((res) => res.json())
 }
 
+export const getUserShoeCollectionWithLikeByUserId = (userId) => {
+  return fetch(`${_apiUrl}/${userId}/everything`).then((res) => res.json())
+}
+
 export const getUserShoeNyId = (userShoeId) => {
   return fetch(`${_apiUrl}/${userShoeId}`).then((res) => res.json())
 }

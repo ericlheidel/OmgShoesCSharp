@@ -79,7 +79,39 @@ public class UserProfileController : ControllerBase
         return Ok(userProfile);
     }
 
-    [HttpGet("{id}/likes")]
+    [HttpGet("withroles/{id}")]
+    // [Authorize]
+    public IActionResult GetByIdWithRoles(int id)
+    {
+        UserProfileDTO userProfile = _dbContext
+            .UserProfiles
+            .Where(up => up.Id == id)
+            .Include(up => up.IdentityUser)
+            .Select(up => new UserProfileDTO
+            {
+                Id = up.Id,
+                Email = up.Email,
+                Name = up.Name,
+                City = up.City,
+                State = up.State,
+                Avatar = up.Avatar,
+                Bio = up.Bio,
+                IsAdmin = up.IsAdmin,
+                IdentityUserId = up.IdentityUserId,
+                Roles = _dbContext.UserRoles
+                    .Where(ur => ur.UserId == up.IdentityUserId)
+                    .Select(ur => _dbContext.Roles.SingleOrDefault(r => r.Id == ur.RoleId).Name).ToList()
+            }).SingleOrDefault();
+
+        if (userProfile == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(userProfile);
+    }
+
+    [HttpGet("{id}/everything")]
     // [Authorize]
     public IActionResult GetByIdWithShoeCollection(int id)
     {
