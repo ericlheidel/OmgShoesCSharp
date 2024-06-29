@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react"
-import "./App.css"
 import { tryGetLoggedInUser } from "./managers/authManager.js"
-import { Spinner } from "reactstrap"
 import { NavBar } from "./components/NavBar.jsx"
 import { ApplicationViews } from "./components/ApplicationViews.jsx"
 
@@ -17,7 +15,7 @@ function App() {
 
   // wait to get a definite logged-in state before rendering
   if (loggedInUser === undefined) {
-    return <Spinner />
+    return <div>Loading...</div>
   }
 
   return (

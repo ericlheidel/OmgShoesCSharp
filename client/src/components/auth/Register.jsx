@@ -93,6 +93,8 @@ export const Register = ({ setLoggedInUser }) => {
     setAvatar("/avatars/sheriff.jpg")
     setEmail("sheriff@sheriff.com")
     setBio("I'm the sheriff!")
+    setPassword("password")
+    setConfirmPassword("password")
   }
 
   return (
@@ -137,6 +139,7 @@ export const Register = ({ setLoggedInUser }) => {
                     autoFocus
                     spellCheck={false}
                     className="form-control city"
+                    style={{ width: "90%" }}
                     onChange={(e) => {
                       setCity(e.target.value)
                     }}
@@ -154,6 +157,7 @@ export const Register = ({ setLoggedInUser }) => {
                     required
                     spellCheck={false}
                     className="state-dropdown form-select state-two"
+                    style={{ width: "85%", height: "70%" }}
                     onChange={(e) => {
                       setState(e.target.value)
                     }}
@@ -212,7 +216,7 @@ export const Register = ({ setLoggedInUser }) => {
               <label>
                 Password:
                 <input
-                  onInvalid={passwordMismatch}
+                  // invalid={passwordMismatch}
                   type="password"
                   id="password"
                   value={password}
@@ -233,7 +237,7 @@ export const Register = ({ setLoggedInUser }) => {
               <label>
                 Confirm Password:
                 <input
-                  onInvalid={passwordMismatch}
+                  // invalid={passwordMismatch}
                   type="password"
                   id="password"
                   value={password}

@@ -98,7 +98,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Name = "Dee Reynolds",
                 City = "Philadelphia",
                 State = "PA",
-                Avatar = null,
+                Avatar = "client/public/avatars/dee-reynolds.jpg",
                 Bio = "I'm a bird!",
                 IsAdmin = false
             },
@@ -110,7 +110,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Name = "Dennis Reynolds",
                 City = "Philadelphia",
                 State = "PA",
-                Avatar = null,
+                Avatar = "client/public/avatars/dennis-reynolds.jpg",
                 Bio = "I'm a five star man!!!!",
                 IsAdmin = false
             },
@@ -122,7 +122,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Name = "Frank Reynolds",
                 City = "Philadelphia",
                 State = "PA",
-                Avatar = null,
+                Avatar = "client/public/avatars/frank-reynolds.jpg",
                 Bio = "I'm gonna get real weird with it!!",
                 IsAdmin = false
             },
@@ -134,7 +134,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Name = "Ronald McDonald",
                 City = "Philadelphia",
                 State = "PA",
-                Avatar = null,
+                Avatar = "client/public/avatars/ronald-mcdonald.jpg",
                 Bio = "I'm playing both sides`!",
                 IsAdmin = false
             },
@@ -146,7 +146,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Name = "Charlie Kelly",
                 City = "Philadelphia",
                 State = "PA",
-                Avatar = null,
+                Avatar = "client/public/avatars/charlie-kelly.jpg",
                 Bio = "I hate Charlie work!!!!!!",
                 IsAdmin = false
             },
@@ -158,7 +158,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Name = "The Waitress",
                 City = "Philadelphia",
                 State = "PA",
-                Avatar = null,
+                Avatar = "client/public/avatars/the-waitress.jpg",
                 Bio = "Nobody knows my name!",
                 IsAdmin = true
             },

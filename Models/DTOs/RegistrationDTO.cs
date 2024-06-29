@@ -1,4 +1,4 @@
-namespace HouseRules.Models.DTOs;
+namespace OmgShoes.Models.DTOs;
 
 public class RegistrationDTO
 {

@@ -9,7 +9,7 @@ import { login } from "../../managers/authManager.js"
 export const Login = ({ setLoggedInUser }) => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  const [failedLogin, setFailedLogin] = useState(false)
+  // const [failedLogin, setFailedLogin] = useState(false)
 
   const navigate = useNavigate()
 
@@ -17,7 +17,8 @@ export const Login = ({ setLoggedInUser }) => {
     e.preventDefault()
     login(email, password).then((user) => {
       if (!user) {
-        setFailedLogin(true)
+        // setFailedLogin(true)
+        window.alert("User does not exist")
       } else {
         setLoggedInUser(user)
         navigate("/")
@@ -53,7 +54,7 @@ export const Login = ({ setLoggedInUser }) => {
             <h1>
               <span onClick={() => setEmail("charlie@kelly.com")}>OMG,</span>
               <span onClick={() => setEmail("the@waitress.com")}> Shoes</span>
-              ...
+              <span onClick={() => setPassword("password")}>...</span>
             </h1>
             <h2>
               <span onClick={() => setEmail("dee@reynolds.com")}>Please</span>{" "}
@@ -66,14 +67,14 @@ export const Login = ({ setLoggedInUser }) => {
               <label>
                 <span onClick={() => setEmail(handleClick)}>Email:</span>
                 <input
-                  onInvalid={failedLogin}
+                  // invalid={failedLogin}
                   type="email"
                   value={email}
                   required
                   autoFocus
                   className="form-control"
                   onChange={(e) => {
-                    setFailedLogin(false)
+                    // setFailedLogin(false)
                     setEmail(e.target.value)
                   }}
                 />
@@ -85,14 +86,14 @@ export const Login = ({ setLoggedInUser }) => {
               <label>
                 <span onClick={() => setEmail(handleClick)}>Password:</span>
                 <input
-                  onInvalid={failedLogin}
+                  // invalid={failedLogin}
                   type="password"
                   value={password}
                   required
                   autoFocus
                   className="form-control"
                   onChange={(e) => {
-                    setFailedLogin(false)
+                    // setFailedLogin(false)
                     setPassword(e.target.value)
                   }}
                 />

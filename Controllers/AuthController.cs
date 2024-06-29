@@ -8,7 +8,6 @@ using System.Text;
 using OmgShoes.Models;
 using OmgShoes.Models.DTOs;
 using OmgShoes.Data;
-using HouseRules.Models.DTOs;
 
 namespace OmgShoes.Controllers;
 
@@ -68,7 +67,6 @@ public class AuthController : ControllerBase
             }
 
             return new UnauthorizedResult();
-
         }
         catch (Exception ex)
         {
@@ -115,7 +113,7 @@ public class AuthController : ControllerBase
                 Roles = roles
             };
 
-            return Ok();
+            return Ok(userDTO);
         }
         return NotFound();
     }
@@ -144,13 +142,14 @@ public class AuthController : ControllerBase
                 Avatar = registration.Avatar,
                 Bio = registration.Bio,
                 IsAdmin = false,
-                IdentityUserId = user.Id,
+                // IdentityUserId = user.Id,
             });
             _dbContext.SaveChanges();
 
             var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                    new Claim(ClaimTypes.Name, user.UserName.ToString()),
                     new Claim(ClaimTypes.Email, user.Email)
                 };
 
