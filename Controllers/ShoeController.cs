@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OmgShoes.Data;
 using OmgShoes.Models;
@@ -16,7 +17,7 @@ public class ShoeController : ControllerBase
     }
 
     [HttpGet]
-    // [Authorize]
+    [Authorize]
     public IActionResult Get()
     {
         return Ok(_dbContext
@@ -26,7 +27,7 @@ public class ShoeController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    // [Authorize]
+    [Authorize]
     public IActionResult GetById(int id)
     {
         Shoe shoe = _dbContext
@@ -42,12 +43,38 @@ public class ShoeController : ControllerBase
     }
 
     [HttpPost]
-    // [Authorize]
+    [Authorize]
     public IActionResult Create(Shoe shoe)
     {
         _dbContext.Shoes.Add(shoe);
         _dbContext.SaveChanges();
 
         return Created($"api/shoe/{shoe.Id}", shoe);
+    }
+
+    [HttpGet("search")]
+    // [Authorize]
+    public IActionResult GetBySearch([FromQuery] string? searchTerm = null, [FromQuery] int? filterTerm = null)
+    {
+        var queriedShoes = _dbContext.Shoes.AsQueryable();
+
+
+        if (searchTerm != null)
+        {
+            searchTerm = searchTerm.ToLower();
+            queriedShoes = queriedShoes
+                            .Where(s => s.Name.ToLower().Contains(searchTerm) ||
+                                        s.ModelNumber.Contains(searchTerm) ||
+                                        s.Colorway.ToLower().Contains(searchTerm));
+        }
+
+        if (filterTerm != null)
+        {
+            queriedShoes = queriedShoes.Where(s => s.Year.Equals(filterTerm));
+        }
+
+        var filteredShoes = queriedShoes.ToList();
+
+        return Ok(filteredShoes);
     }
 }

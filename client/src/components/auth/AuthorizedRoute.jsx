@@ -17,5 +17,5 @@ export const AuthorizedRoute = ({ children, loggedInUser, roles, all }) => {
     }
   }
 
-  return authed ? children : <Navigate to="/" />
+  return authed ? children : <Navigate to="/login" />
 }

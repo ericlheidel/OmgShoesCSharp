@@ -4,6 +4,7 @@ import { AuthorizedRoute } from "./auth/AuthorizedRoute.jsx"
 import { Welcome } from "./home/Welcome.jsx"
 import { Login } from "./auth/Login.jsx"
 import { Register } from "./auth/Register.jsx"
+import { AllShoesList } from "./shoes/AllShoesList.jsx"
 
 export const ApplicationViews = ({ loggedInUser, setLoggedInUser }) => {
   return (
@@ -24,6 +25,14 @@ export const ApplicationViews = ({ loggedInUser, setLoggedInUser }) => {
         <Route
           path="register"
           element={<Register setLoggedInUser={setLoggedInUser} />}
+        />
+        <Route
+          path="shoes"
+          element={
+            <AuthorizedRoute loggedInUser={loggedInUser}>
+              <AllShoesList />
+            </AuthorizedRoute>
+          }
         />
       </Route>
     </Routes>
