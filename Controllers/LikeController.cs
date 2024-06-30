@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OmgShoes.Data;
 using OmgShoes.Models;
@@ -15,7 +16,7 @@ public class LikeController : ControllerBase
     }
 
     [HttpPost]
-    // [Authorize]
+    [Authorize]
     public IActionResult Post(Like like)
     {
         Like newLike = new Like
@@ -31,7 +32,7 @@ public class LikeController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    // [Authorize]
+    [Authorize]
     public IActionResult Delete(int id)
     {
         Like likeToDelete = _dbContext.Likes.SingleOrDefault(l => l.Id == id);

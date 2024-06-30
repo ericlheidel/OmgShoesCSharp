@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OmgShoes.Data;
@@ -16,7 +17,7 @@ public class UserShoeController : ControllerBase
     }
 
     [HttpGet("collection/{id}")]
-    // [Authorize]
+    [Authorize]
     public IActionResult GetUserShoeCollection(int id)
     {
         return Ok(_dbContext
@@ -30,7 +31,7 @@ public class UserShoeController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    // [Authorize]
+    [Authorize]
     public IActionResult GetById(int id)
     {
         UserShoe userShoe = _dbContext
@@ -51,7 +52,7 @@ public class UserShoeController : ControllerBase
     }
 
     [HttpPost]
-    // [Authorize]
+    [Authorize]
     public IActionResult AddToCollection(UserShoe userShoe)
     {
         _dbContext.Add(userShoe);
@@ -61,7 +62,7 @@ public class UserShoeController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    // [Authorize]
+    [Authorize]
     public IActionResult DeleteFromCollection(int id)
     {
         UserShoe userShoeToDelete = _dbContext.UserShoes.SingleOrDefault(us => us.Id == id);
@@ -78,7 +79,7 @@ public class UserShoeController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    // [Authorize]
+    [Authorize]
     public IActionResult Edit(UserShoe userShoe, int id)
     {
         UserShoe userShoeToEdit = _dbContext.UserShoes.SingleOrDefault(us => us.Id == id);

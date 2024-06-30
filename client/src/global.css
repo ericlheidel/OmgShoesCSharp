@@ -1,0 +1,76 @@
+/**********  FLEX  **********/
+.flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.middle {
+  justify-content: center;
+}
+
+.center {
+  text-align: center;
+}
+
+/**********  COLORS  **********/
+.color-one {
+  color: #40798c;
+}
+
+.color-two {
+  color: #021e31;
+}
+
+.color-three {
+  color: #5c0029;
+}
+
+.color-four {
+  color: #dd7230;
+}
+
+.color-five {
+  color: #f4c95d;
+}
+
+/**********  MARGIN  **********/
+
+.m-t-15 {
+  margin-top: 15px;
+}
+
+/**********  ALIGNMENT  **********/
+
+.w100 {
+  width: 100%;
+}
+
+/**********  TEST  **********/
+
+.test {
+  border: 2.5px solid red;
+}
+
+.hidden-div {
+  margin-left: 30px;
+  width: 80px;
+}

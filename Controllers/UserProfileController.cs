@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OmgShoes.Data;
@@ -18,7 +19,7 @@ public class UserProfileController : ControllerBase
     }
 
     [HttpGet]
-    // [Authorize]
+    [Authorize(Roles = "Admin")]
     public IActionResult Get()
     {
         return Ok(_dbContext
@@ -39,7 +40,7 @@ public class UserProfileController : ControllerBase
     }
 
     [HttpGet("withroles")]
-    // [Authorize]
+    [Authorize(Roles = "Admin")]
     public IActionResult GetWithRoles()
     {
         return Ok(_dbContext
@@ -63,7 +64,7 @@ public class UserProfileController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    // [Authorize]
+    [Authorize]
     public IActionResult GetById(int id)
     {
         UserProfile userProfile = _dbContext
@@ -80,7 +81,7 @@ public class UserProfileController : ControllerBase
     }
 
     [HttpGet("withroles/{id}")]
-    // [Authorize]
+    [Authorize]
     public IActionResult GetByIdWithRoles(int id)
     {
         UserProfileDTO userProfile = _dbContext
@@ -112,7 +113,7 @@ public class UserProfileController : ControllerBase
     }
 
     [HttpGet("{id}/everything")]
-    // [Authorize]
+    [Authorize]
     public IActionResult GetByIdWithShoeCollection(int id)
     {
         UserProfileDTO userProfileDTO = _dbContext
@@ -174,7 +175,7 @@ public class UserProfileController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    // [Authorize]
+    [Authorize]
     public IActionResult Update(UserProfile userProfile, int id)
     {
         UserProfile userProfileToUpdate =

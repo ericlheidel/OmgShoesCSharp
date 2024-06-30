@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OmgShoes.Data;
@@ -16,7 +17,7 @@ public class CommentController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    // [Authorize]
+    [Authorize]
     public IActionResult GetByUserShoeId(int id)
     {
         return Ok(_dbContext
@@ -28,7 +29,7 @@ public class CommentController : ControllerBase
     }
 
     [HttpPost]
-    // [Authorize]
+    [Authorize]
     public IActionResult Post(Comment comment)
     {
         Comment newComment = new Comment
@@ -48,7 +49,7 @@ public class CommentController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    // [Authorize]
+    [Authorize]
     public IActionResult Delete(int id)
     {
         Comment commentToDelete = _dbContext.Comments.SingleOrDefault(c => c.Id == id);
@@ -65,7 +66,7 @@ public class CommentController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    // [Authorize]
+    [Authorize]
     public IActionResult Edit(Comment comment, int id)
     {
         Comment commentToEdit = _dbContext.Comments.SingleOrDefault(c => c.Id == id);

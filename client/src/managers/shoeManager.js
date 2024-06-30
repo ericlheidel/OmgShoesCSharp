@@ -17,3 +17,9 @@ export const createShoe = (shoe) => {
     body: JSON.stringify(shoe),
   })
 }
+
+export const getShoesBySearch = (searchTerm, filterTerm) => {
+  return fetch(
+    `${_apiUrl}/search?searchTerm=${searchTerm}&filterTerm=${filterTerm}`
+  ).then((res) => res.json())
+}
