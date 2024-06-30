@@ -17,8 +17,6 @@ export const Register = ({ setLoggedInUser }) => {
   const [password, setPassword] = useState("")
 
   const [confirmPassword, setConfirmPassword] = useState("")
-  const [passwordMismatch, setPasswordMismatch] = useState()
-  // const [registrationFailure, setRegistrationFailure] = useState(false)
 
   const navigate = useNavigate()
 
@@ -26,7 +24,7 @@ export const Register = ({ setLoggedInUser }) => {
     e.preventDefault()
 
     if (password !== confirmPassword) {
-      setPasswordMismatch(true)
+      window.alert("Passwords don't match")
     } else {
       const newUser = {
         email,
@@ -43,48 +41,11 @@ export const Register = ({ setLoggedInUser }) => {
           setLoggedInUser(user)
           navigate("/")
         } else {
-          // setRegistrationFailure(true)
+          window.alert("Registration failed")
         }
       })
     }
   }
-
-  // const registerNewUser = () => {
-  //   const user = {
-  //     email,
-  //     name,
-  //     city,
-  //     state,
-  //     avatar,
-  //     bio,
-  //     isAdmin: false,
-  //   }
-  //   createUser(user).then((createdUser) => {
-  //     if (createdUser.hasOwnProperty("id")) {
-  //       localStorage.setItem(
-  //         "shoes_user",
-  //         JSON.stringify({
-  //           id: createdUser.id,
-  //           isAdmin: createdUser.isAdmin,
-  //         })
-  //       )
-  //       navigate("/")
-  //     }
-  //   })
-  // }
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   getUserByEmail(email).then((res) => {
-  //     if (res.length > 0) {
-  //       window.alert(
-  //         "This email is already associated with an OMG...Shoes account"
-  //       )
-  //     } else {
-  //       registerNewUser()
-  //     }
-  //   })
-  // }
 
   const fillOutForm = () => {
     setName("Sheriff")
@@ -216,7 +177,6 @@ export const Register = ({ setLoggedInUser }) => {
               <label>
                 Password:
                 <input
-                  // invalid={passwordMismatch}
                   type="password"
                   id="password"
                   value={password}
@@ -225,7 +185,6 @@ export const Register = ({ setLoggedInUser }) => {
                   spellCheck={false}
                   className="form-control"
                   onChange={(e) => {
-                    setPasswordMismatch(false)
                     setPassword(e.target.value)
                   }}
                 />
@@ -237,7 +196,6 @@ export const Register = ({ setLoggedInUser }) => {
               <label>
                 Confirm Password:
                 <input
-                  // invalid={passwordMismatch}
                   type="password"
                   id="password"
                   value={password}
@@ -246,7 +204,6 @@ export const Register = ({ setLoggedInUser }) => {
                   spellCheck={false}
                   className="form-control"
                   onChange={(e) => {
-                    setPasswordMismatch(false)
                     setConfirmPassword(e.target.value)
                   }}
                 />
@@ -274,7 +231,6 @@ export const Register = ({ setLoggedInUser }) => {
               <button
                 type="submit"
                 className="btn-submit form-btn"
-                disabled={passwordMismatch}
                 onClick={handleSubmit}
               >
                 Register
