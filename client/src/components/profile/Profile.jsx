@@ -52,7 +52,6 @@ export const Profile = ({ loggedInUser }) => {
         </div>
         <div className="user-info-div">
           <div className="user-collection-amount">
-            {/* Shoes in Collection: {reducedCollectionArray.length} */}
             Shoes in Collection: {collection.length}
           </div>
         </div>
@@ -63,32 +62,13 @@ export const Profile = ({ loggedInUser }) => {
             </Link>
           )}
         </div>
-        <div className="dropdown-div">
-          {/* <select
-            className="form-select profile-dropdown"
-            onChange={(e) => {
-              setChosenShoeValue(parseInt(e.target.value))
-            }}
-          >
-            <option value={0} key={0}>
-              All Shoes
-            </option>
-            {reducedCollectionArray.map((userShoe) => {
-              return (
-                <option value={userShoe.shoe.id} key={userShoe.shoe.id}>
-                  {userShoe.shoe.name}
-                </option>
-              )
-            })}
-          </select> */}
-        </div>
+        <div className="dropdown-div"></div>
       </div>
       <div className="collection-div">
         <ShoeCollection
           userId={userId}
           loggedInUser={loggedInUser}
-          // filteredShoes={filteredShoes}
-          // getAndSetCollectionByUserId={getAndSetCollectionByUserId}
+          collection={collection}
         />
       </div>
     </div>
