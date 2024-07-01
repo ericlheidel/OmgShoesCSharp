@@ -12,7 +12,7 @@ export const Profile = ({ loggedInUser }) => {
 
   useEffect(() => {
     getUserShoeCollectionByUserId(userId).then(setCollection)
-  }, [])
+  }, [userId])
 
   return (
     <div className="profile">
