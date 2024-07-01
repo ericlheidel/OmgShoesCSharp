@@ -18,8 +18,8 @@ export const createShoe = (shoe) => {
   })
 }
 
-export const getShoesBySearch = (searchTerm, filterTerm) => {
+export const getShoesBySearch = (searchTerm, filterYear) => {
   return fetch(
-    `${_apiUrl}/search?searchTerm=${searchTerm}&filterTerm=${filterTerm}`
+    `${_apiUrl}/search?searchTerm=${searchTerm}&filterYear=${filterYear}`
   ).then((res) => res.json())
 }

@@ -53,8 +53,8 @@ public class ShoeController : ControllerBase
     }
 
     [HttpGet("search")]
-    // [Authorize]
-    public IActionResult GetBySearch([FromQuery] string? searchTerm = null, [FromQuery] int? filterTerm = null)
+    [Authorize]
+    public IActionResult GetBySearch([FromQuery] string? searchTerm = null, [FromQuery] int? filterYear = null)
     {
         var queriedShoes = _dbContext.Shoes.AsQueryable();
 
@@ -65,12 +65,13 @@ public class ShoeController : ControllerBase
             queriedShoes = queriedShoes
                             .Where(s => s.Name.ToLower().Contains(searchTerm) ||
                                         s.ModelNumber.Contains(searchTerm) ||
-                                        s.Colorway.ToLower().Contains(searchTerm));
+                                        s.Colorway.ToLower().Contains(searchTerm))
+                            .OrderBy(s => s.Id);
         }
 
-        if (filterTerm != null)
+        if (filterYear != null)
         {
-            queriedShoes = queriedShoes.Where(s => s.Year.Equals(filterTerm));
+            queriedShoes = queriedShoes.Where(s => s.Year.Equals(filterYear));
         }
 
         var filteredShoes = queriedShoes.ToList();
