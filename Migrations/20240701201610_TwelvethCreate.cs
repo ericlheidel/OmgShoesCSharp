@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace OmgShoes.Migrations
 {
     /// <inheritdoc />
-    public partial class NinethCreate : Migration
+    public partial class TwelvethCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -325,12 +325,12 @@ namespace OmgShoes.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f", 0, "fba28ab9-eced-4ffe-aaf6-477c7c42b4e3", "dee@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEJeqzca7oCGGYk/fIAhKBtOlPVul3xPaMvHLVWKspcO+qokVj+mC0VpLwBcJY35nyQ==", null, false, "7558deca-a7a9-4266-8b9d-1b5c91aadc25", false, "Dee" },
-                    { "frt98wr5-0223-3ww7-t6rq-028g4r521d4e", 0, "1f39bea8-a928-4793-84b2-e319dcf3a8dd", "dennis@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEJKpRnRHS/9Y6wmKWW8ngTbQnf380k/Nq+HvjNhsXsPo7vxTNQOO3DVC4yKUyhncuA==", null, false, "f5ada56f-fb1d-4385-8ba5-aed3a96db10d", false, "Dennis" },
-                    { "hdp65oa9-3053-5ap0-z0hh-235t2a098h8q", 0, "11b28137-8218-4982-bed3-e940c9603da2", "frank@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEBSs70iQgVi6jkcqaiMOHYTYKXmdbG/6eqOd1bDKK/jdxkCeYXXkLtdaxbSZfrcnDA==", null, false, "8aa05f26-f27a-47e4-9ac9-6b7593ee72a5", false, "Frank" },
-                    { "rfv98hu4-3206-4gga-t8ws-457k5v543l6r", 0, "dc8d909a-61b8-4c3c-b36e-fb8e831c322a", "the@waitress.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEC9nSVLkagMmW1Vu2iKnCXCBi2t3r8rO9i7rKaKcM0xLbjHHHIkSaLFi1OOiIJEwng==", null, false, "df9394c3-4cb2-4c39-9350-49b9a8caafa3", false, "Waitress" },
-                    { "rse05dd6-2058-3bg0-a3oo-204t2l308f3p", 0, "6ce11839-ffa9-445d-af5a-347873cfbe8b", "ronald@macdonald.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEGLmBPhvDBOZDi13fL7SoKnpdLtvtu0RBjkzowe3RMMCu8jNT+NBn/rUiLAhpBPVlg==", null, false, "8edc17b8-ebc9-425f-a3e6-111175d9cf08", false, "Ronald" },
-                    { "wmo20ow7-0582-9pp1-i8sl-037h7w843j8r", 0, "f0e34e65-b48e-4e3b-8c3b-e11eb20bb945", "charlie@kelly.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEIiZ+8Ddroi5YvqRna5hFoyiqne+IGMyTkujzQemYIdVo6J41heMB6apRvfHsNRc+g==", null, false, "58d3613c-07b1-4eef-a330-80711e32202f", false, "Charlie" }
+                    { "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f", 0, "5514a1dc-efc4-4adb-ae7d-b92daaf68646", "dee@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEK5mfCAGZwxaQSwVCvOGtEgO5h5htGV3u6N/wH9PK7U7tElZZeEZZmynFPzeWkiqcQ==", null, false, "63cc37a1-52cf-4077-aa60-6b00f95a9586", false, "Dee" },
+                    { "frt98wr5-0223-3ww7-t6rq-028g4r521d4e", 0, "e8a50601-4c68-4638-a332-bdaefef739f8", "dennis@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEO+X/nJ6hu1UNEnf7XEq9PE1bYW8F5h5AfulBE4s5vuc4VvMuXpFKoNrrMcCUhu21g==", null, false, "3746fb7c-ab40-4568-bfcd-d6d637ecd2ab", false, "Dennis" },
+                    { "hdp65oa9-3053-5ap0-z0hh-235t2a098h8q", 0, "05fa2302-7fef-47dd-8635-4e3076f92c9c", "frank@reynolds.com", false, false, null, null, null, "AQAAAAIAAYagAAAAECu0SqjdYogqr9LkW+bQWp4OdC2l9NbJ1tGjKR18fRgA/6FHRW9hmzTr/Fneaqbzrg==", null, false, "f829892d-4113-45ae-b5db-5f72b3c8b8d4", false, "Frank" },
+                    { "rfv98hu4-3206-4gga-t8ws-457k5v543l6r", 0, "87cd845f-2269-4119-96c0-db117ce8af92", "the@waitress.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEPknTtg9LmgeQmOZgiY9XJzu5fTco0+nmhuWxZy/y9j6zwm8SFvqcEr0yg35HJDowg==", null, false, "719de95f-2bea-4e22-9b64-959142588682", false, "Waitress" },
+                    { "rse05dd6-2058-3bg0-a3oo-204t2l308f3p", 0, "68bad4be-03c3-4773-be1f-8bfc3dddaeee", "ronald@macdonald.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEOrBXXwNM/8cug1OZGGocEesCkBBfDKqjnPxhzgP9XbkjmT877y1K7NjOM1Zy8hUDw==", null, false, "d8523672-44cf-406e-becf-4530b49d598f", false, "Ronald" },
+                    { "wmo20ow7-0582-9pp1-i8sl-037h7w843j8r", 0, "c043d17d-b1bc-4e8f-8b4b-0a822cb7240c", "charlie@kelly.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEGBxqtPRYG+CB8tqfxgksjnPQGcQmIK7VcSvFRg+WnUcgjeNar69pcYfUcTmBMOu/Q==", null, false, "a9732742-4dda-44c6-8777-2ffd748d653b", false, "Charlie" }
                 });
 
             migrationBuilder.InsertData(
@@ -485,12 +485,12 @@ namespace OmgShoes.Migrations
                 columns: new[] { "Id", "Avatar", "Bio", "City", "Email", "IdentityUserId", "IsAdmin", "Name", "State" },
                 values: new object[,]
                 {
-                    { 1, "client/public/avatars/dee-reynolds.jpg", "I'm a bird!", "Philadelphia", "dee@reynolds.com", "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f", false, "Dee Reynolds", "PA" },
-                    { 2, "client/public/avatars/dennis-reynolds.jpg", "I'm a five star man!!!!", "Philadelphia", "dennis@reynolds.com", "frt98wr5-0223-3ww7-t6rq-028g4r521d4e", false, "Dennis Reynolds", "PA" },
-                    { 3, "client/public/avatars/frank-reynolds.jpg", "I'm gonna get real weird with it!!", "Philadelphia", "frank@reynolds.com", "hdp65oa9-3053-5ap0-z0hh-235t2a098h8q", false, "Frank Reynolds", "PA" },
-                    { 4, "client/public/avatars/ronald-mcdonald.jpg", "I'm playing both sides`!", "Philadelphia", "ronald@macdonald.com", "rse05dd6-2058-3bg0-a3oo-204t2l308f3p", false, "Ronald McDonald", "PA" },
-                    { 5, "client/public/avatars/charlie-kelly.jpg", "I hate Charlie work!!!!!!", "Philadelphia", "charlie@kelly.com", "wmo20ow7-0582-9pp1-i8sl-037h7w843j8r", false, "Charlie Kelly", "PA" },
-                    { 6, "client/public/avatars/the-waitress.jpg", "Nobody knows my name!", "Philadelphia", "the@waitress.com", "rfv98hu4-3206-4gga-t8ws-457k5v543l6r", true, "The Waitress", "PA" }
+                    { 1, "/avatars/dee-reynolds.jpg", "I'm a bird!", "Philadelphia", "dee@reynolds.com", "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f", false, "Dee Reynolds", "PA" },
+                    { 2, "/avatars/dennis-reynolds.jpg", "I'm a five star man!!!!", "Philadelphia", "dennis@reynolds.com", "frt98wr5-0223-3ww7-t6rq-028g4r521d4e", false, "Dennis Reynolds", "PA" },
+                    { 3, "/avatars/frank-reynolds.jpg", "I'm gonna get real weird with it!!", "Philadelphia", "frank@reynolds.com", "hdp65oa9-3053-5ap0-z0hh-235t2a098h8q", false, "Frank Reynolds", "PA" },
+                    { 4, "/avatars/ronald-mcdonald.jpg", "I'm playing both sides`!", "Philadelphia", "ronald@macdonald.com", "rse05dd6-2058-3bg0-a3oo-204t2l308f3p", false, "Ronald McDonald", "PA" },
+                    { 5, "/avatars/charlie-kelly.jpg", "I hate Charlie work!!!!!!", "Philadelphia", "charlie@kelly.com", "wmo20ow7-0582-9pp1-i8sl-037h7w843j8r", false, "Charlie Kelly", "PA" },
+                    { 6, "/avatars/the-waitress.jpg", "Nobody knows my name!", "Philadelphia", "the@waitress.com", "rfv98hu4-3206-4gga-t8ws-457k5v543l6r", true, "The Waitress", "PA" }
                 });
 
             migrationBuilder.InsertData(
@@ -573,14 +573,14 @@ namespace OmgShoes.Migrations
                 columns: new[] { "Id", "IsEdited", "Text", "TimeStamp", "UserProfileId", "UserShoeId" },
                 values: new object[,]
                 {
-                    { 1, false, "I love you!!", new DateTime(2024, 5, 10, 14, 22, 30, 384, DateTimeKind.Local).AddTicks(1160), 5, 43 },
-                    { 2, false, "WAITRESS!!!", new DateTime(2024, 5, 23, 14, 22, 30, 384, DateTimeKind.Local).AddTicks(1240), 5, 43 },
-                    { 3, false, "I AM THE RAT KING", new DateTime(2024, 3, 21, 14, 22, 30, 384, DateTimeKind.Local).AddTicks(1240), 5, 6 },
-                    { 4, false, "bustin rats is my gig", new DateTime(2024, 3, 22, 14, 22, 30, 384, DateTimeKind.Local).AddTicks(1250), 5, 6 },
-                    { 5, false, "did you seriously put nair in my shampoo?!", new DateTime(2024, 4, 25, 14, 22, 30, 384, DateTimeKind.Local).AddTicks(1260), 6, 6 },
-                    { 6, false, "I'm playing both sides!!!!", new DateTime(2024, 5, 26, 14, 22, 30, 384, DateTimeKind.Local).AddTicks(1260), 4, 6 },
-                    { 7, false, "LEAVE ME ALONE CHARLIE!!!", new DateTime(2024, 4, 26, 14, 22, 30, 384, DateTimeKind.Local).AddTicks(1270), 6, 43 },
-                    { 8, false, "I am a 5 ⭐️ man!!!", new DateTime(2024, 5, 30, 14, 22, 30, 384, DateTimeKind.Local).AddTicks(1270), 2, 49 }
+                    { 1, false, "I love you!!", new DateTime(2024, 5, 12, 15, 16, 10, 264, DateTimeKind.Local).AddTicks(9030), 5, 43 },
+                    { 2, false, "WAITRESS!!!", new DateTime(2024, 5, 25, 15, 16, 10, 264, DateTimeKind.Local).AddTicks(9100), 5, 43 },
+                    { 3, false, "I AM THE RAT KING", new DateTime(2024, 3, 23, 15, 16, 10, 264, DateTimeKind.Local).AddTicks(9100), 5, 6 },
+                    { 4, false, "bustin rats is my gig", new DateTime(2024, 3, 24, 15, 16, 10, 264, DateTimeKind.Local).AddTicks(9110), 5, 6 },
+                    { 5, false, "did you seriously put nair in my shampoo?!", new DateTime(2024, 4, 27, 15, 16, 10, 264, DateTimeKind.Local).AddTicks(9120), 6, 6 },
+                    { 6, false, "I'm playing both sides!!!!", new DateTime(2024, 5, 28, 15, 16, 10, 264, DateTimeKind.Local).AddTicks(9120), 4, 6 },
+                    { 7, false, "LEAVE ME ALONE CHARLIE!!!", new DateTime(2024, 4, 28, 15, 16, 10, 264, DateTimeKind.Local).AddTicks(9120), 6, 43 },
+                    { 8, false, "I am a 5 ⭐️ man!!!", new DateTime(2024, 6, 1, 15, 16, 10, 264, DateTimeKind.Local).AddTicks(9130), 2, 49 }
                 });
 
             migrationBuilder.InsertData(

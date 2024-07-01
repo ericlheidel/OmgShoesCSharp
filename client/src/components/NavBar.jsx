@@ -15,7 +15,7 @@ export const NavBar = ({ loggedInUser, setLoggedInUser }) => {
               <Link to={`/users/${loggedInUser.id}`}>
                 <img
                   className="navbar-user-img"
-                  src={loggedInUser.avatar}
+                  src={`https://localhost:5212/${loggedInUser.avatar}`}
                   alt="User avatar"
                 />
               </Link>
