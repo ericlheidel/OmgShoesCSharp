@@ -8,7 +8,7 @@ export const getUserShoeCollectionWithLikeByUserId = (userId) => {
   return fetch(`${_apiUrl}/${userId}/everything`).then((res) => res.json())
 }
 
-export const getUserShoeNyId = (userShoeId) => {
+export const getUserShoeById = (userShoeId) => {
   return fetch(`${_apiUrl}/${userShoeId}`).then((res) => res.json())
 }
 
@@ -28,8 +28,8 @@ export const deleteUserShoeFromCollection = (id) => {
   })
 }
 
-export const editUserShoe = (userShoe) => {
-  return fetch(`${_apiUrl}/${userShoe.id}`, {
+export const editUserShoe = (userShoe, userShoeId) => {
+  return fetch(`${_apiUrl}/${userShoeId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
