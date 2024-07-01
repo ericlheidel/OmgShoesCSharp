@@ -65,8 +65,7 @@ public class ShoeController : ControllerBase
             queriedShoes = queriedShoes
                             .Where(s => s.Name.ToLower().Contains(searchTerm) ||
                                         s.ModelNumber.Contains(searchTerm) ||
-                                        s.Colorway.ToLower().Contains(searchTerm))
-                            .OrderBy(s => s.Id);
+                                        s.Colorway.ToLower().Contains(searchTerm));
         }
 
         if (filterYear != null)
@@ -74,7 +73,10 @@ public class ShoeController : ControllerBase
             queriedShoes = queriedShoes.Where(s => s.Year.Equals(filterYear));
         }
 
-        var filteredShoes = queriedShoes.ToList();
+        var filteredShoes = queriedShoes
+                            .OrderBy(s => s.Year)
+                            .ThenBy(s => s.Name)
+                            .ToList();
 
         return Ok(filteredShoes);
     }
