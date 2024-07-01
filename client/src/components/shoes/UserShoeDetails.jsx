@@ -8,6 +8,7 @@ import {
   editUserShoe,
   getUserShoeById,
 } from "../../managers/userShoeManager.js"
+import { ProfileColumn } from "../profile/ProfileColumn.jsx"
 
 export const UserShoeDetails = ({ loggedInUser }) => {
   const [userShoe, setUserShoe] = useState([])
@@ -28,6 +29,7 @@ export const UserShoeDetails = ({ loggedInUser }) => {
 
   useEffect(() => {
     getAndSetShoe()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
@@ -69,7 +71,7 @@ export const UserShoeDetails = ({ loggedInUser }) => {
   return (
     <>
       <div className="details">
-        {/* <ProfileColumn userShoe={userShoe} /> */}
+        <ProfileColumn userShoe={userShoe} loggedInUser={loggedInUser} />
         <div className="inner-details-div">
           {loggedInUser.id === userShoe.userProfileId ? (
             <div className="shoe-details-container">
