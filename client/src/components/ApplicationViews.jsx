@@ -8,6 +8,7 @@ import { AllShoesList } from "./shoes/AllShoesList.jsx"
 import { ShoeDetailsForm } from "./shoes/ShoeDetailsForm.jsx"
 import { Profile } from "./profile/Profile.jsx"
 import { UsersList } from "./users/UsersList.jsx"
+import { UserShoeDetails } from "./shoes/UserShoeDetails.jsx"
 
 export const ApplicationViews = ({ loggedInUser, setLoggedInUser }) => {
   return (
@@ -29,27 +30,50 @@ export const ApplicationViews = ({ loggedInUser, setLoggedInUser }) => {
           path="register"
           element={<Register setLoggedInUser={setLoggedInUser} />}
         />
-        <Route
-          path="shoes"
-          element={
-            <AuthorizedRoute loggedInUser={loggedInUser}>
-              <AllShoesList />
-            </AuthorizedRoute>
-          }
-        />
-        <Route
-          path="shoes/:shoeId"
-          element={
-            <AuthorizedRoute loggedInUser={loggedInUser}>
-              <ShoeDetailsForm loggedInUser={loggedInUser} />
-            </AuthorizedRoute>
-          }
-        />
+        <Route path="shoes">
+          <Route
+            index
+            element={
+              <AuthorizedRoute loggedInUser={loggedInUser}>
+                <AllShoesList loggedInUser={loggedInUser} />
+              </AuthorizedRoute>
+            }
+          />
+          <Route
+            path=":shoeId"
+            element={
+              <AuthorizedRoute loggedInUser={loggedInUser}>
+                <ShoeDetailsForm loggedInUser={loggedInUser} />
+              </AuthorizedRoute>
+            }
+          />
+        </Route>
         <Route path="users">
-          <Route index element={<UsersList loggedInUser={loggedInUser} />} />
+          <Route
+            index
+            element={
+              <AuthorizedRoute loggedInUser={loggedInUser}>
+                <UsersList loggedInUser={loggedInUser} />
+              </AuthorizedRoute>
+            }
+          />
           <Route
             path=":userId"
-            element={<Profile loggedInUser={loggedInUser} />}
+            element={
+              <AuthorizedRoute loggedInUser={loggedInUser}>
+                <Profile loggedInUser={loggedInUser} />
+              </AuthorizedRoute>
+            }
+          />
+        </Route>
+        <Route path="usershoe">
+          <Route
+            path=":userShoeId"
+            element={
+              <AuthorizedRoute loggedInUser={loggedInUser}>
+                <UserShoeDetails loggedInUser={loggedInUser} />
+              </AuthorizedRoute>
+            }
           />
         </Route>
       </Route>
