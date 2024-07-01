@@ -26,6 +26,7 @@ public class UserShoeController : ControllerBase
             .Include(us => us.Condition)
             .OrderBy(us => us.Id)
             .Where(us => us.UserProfileId == id)
+            .OrderBy(us => us.Id)
             .ToList()
         );
     }

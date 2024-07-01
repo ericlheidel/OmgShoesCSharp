@@ -5,6 +5,7 @@ import { Welcome } from "./home/Welcome.jsx"
 import { Login } from "./auth/Login.jsx"
 import { Register } from "./auth/Register.jsx"
 import { AllShoesList } from "./shoes/AllShoesList.jsx"
+import { ShoeDetailsForm } from "./shoes/ShoeDetailsForm.jsx"
 
 export const ApplicationViews = ({ loggedInUser, setLoggedInUser }) => {
   return (
@@ -31,6 +32,14 @@ export const ApplicationViews = ({ loggedInUser, setLoggedInUser }) => {
           element={
             <AuthorizedRoute loggedInUser={loggedInUser}>
               <AllShoesList />
+            </AuthorizedRoute>
+          }
+        />
+        <Route
+          path="shoes/:shoeId"
+          element={
+            <AuthorizedRoute loggedInUser={loggedInUser}>
+              <ShoeDetailsForm loggedInUser={loggedInUser} />
             </AuthorizedRoute>
           }
         />
