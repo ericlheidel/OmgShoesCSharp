@@ -11,7 +11,6 @@ public class UserProfile
     public string? State { get; set; }
     public string? Avatar { get; set; }
     public string? Bio { get; set; }
-    public bool IsAdmin { get; set; }
     public string? IdentityUserId { get; set; }
     public IdentityUser? IdentityUser { get; set; }
     public List<UserShoe>? UserShoes { get; set; }

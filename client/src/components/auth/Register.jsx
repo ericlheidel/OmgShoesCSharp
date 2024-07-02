@@ -34,7 +34,6 @@ export const Register = ({ setLoggedInUser }) => {
         avatar,
         bio,
         password,
-        isAdmin: false,
       }
       register(newUser).then((user) => {
         if (user) {

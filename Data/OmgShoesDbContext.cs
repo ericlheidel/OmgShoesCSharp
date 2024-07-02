@@ -82,11 +82,24 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
 
         });
 
-        modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
-        {
-            RoleId = "c3aaeb97-d2ba-4a53-a521-4eea61e59b35",
-            UserId = "rfv98hu4-3206-4gga-t8ws-457k5v543l6r"
-        });
+        // modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
+        // {
+        //     RoleId = "c3aaeb97-d2ba-4a53-a521-4eea61e59b35",
+        //     UserId = "rfv98hu4-3206-4gga-t8ws-457k5v543l6r"
+        // });
+
+        modelBuilder.Entity<IdentityUserRole<string>>().HasData(
+            new IdentityUserRole<string>
+            {
+                RoleId = "c3aaeb97-d2ba-4a53-a521-4eea61e59b35",
+                UserId = "rfv98hu4-3206-4gga-t8ws-457k5v543l6r"
+            },
+            new IdentityUserRole<string>
+            {
+                RoleId = "c3aaeb97-d2ba-4a53-a521-4eea61e59b35",
+                UserId = "wmo20ow7-0582-9pp1-i8sl-037h7w843j8r"
+            }
+        );
 
         modelBuilder.Entity<UserProfile>().HasData(new UserProfile[]
         {
@@ -99,8 +112,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 City = "Philadelphia",
                 State = "PA",
                 Avatar = "/avatars/dee-reynolds.jpg",
-                Bio = "I'm a bird!",
-                IsAdmin = false
+                Bio = "I'm a bird!"
             },
             new UserProfile
             {
@@ -111,8 +123,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 City = "Philadelphia",
                 State = "PA",
                 Avatar = "/avatars/dennis-reynolds.jpg",
-                Bio = "I'm a five star man!!!!",
-                IsAdmin = false
+                Bio = "I'm a five star man!!!!"
             },
             new UserProfile
             {
@@ -123,8 +134,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 City = "Philadelphia",
                 State = "PA",
                 Avatar = "/avatars/frank-reynolds.jpg",
-                Bio = "I'm gonna get real weird with it!!",
-                IsAdmin = false
+                Bio = "I'm gonna get real weird with it!!"
             },
             new UserProfile
             {
@@ -135,8 +145,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 City = "Philadelphia",
                 State = "PA",
                 Avatar = "/avatars/ronald-mcdonald.jpg",
-                Bio = "I'm playing both sides`!",
-                IsAdmin = false
+                Bio = "I'm playing both sides`!"
             },
             new UserProfile
             {
@@ -147,8 +156,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 City = "Philadelphia",
                 State = "PA",
                 Avatar = "/avatars/charlie-kelly.jpg",
-                Bio = "I hate Charlie work!!!!!!",
-                IsAdmin = false
+                Bio = "I hate Charlie work!!!!!!"
             },
             new UserProfile
             {
@@ -159,8 +167,7 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 City = "Philadelphia",
                 State = "PA",
                 Avatar = "/avatars/the-waitress.jpg",
-                Bio = "Nobody knows my name!",
-                IsAdmin = true
+                Bio = "Nobody knows my name!"
             },
         });
 

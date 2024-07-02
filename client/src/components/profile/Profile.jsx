@@ -4,8 +4,10 @@ import "./Profile.css"
 import { Link, useParams } from "react-router-dom"
 import { ShoeCollection } from "../shoes/ShoeCollection.jsx"
 import { getUserShoeCollectionByUserId } from "../../managers/userShoeManager.js"
+import { getUserById } from "../../managers/userProfileManager.js"
 
 export const Profile = ({ loggedInUser }) => {
+  const [user, setUser] = useState([])
   const [collection, setCollection] = useState([])
 
   const { userId } = useParams()
@@ -14,17 +16,21 @@ export const Profile = ({ loggedInUser }) => {
     getUserShoeCollectionByUserId(userId).then(setCollection)
   }, [userId])
 
+  useEffect(() => {
+    getUserById(userId).then(setUser)
+  }, [userId])
+
   return (
     <div className="profile">
       <div className="profile-div">
         <div className="profile-img-div">
           <img
-            src={`https://localhost:5212/${loggedInUser.avatar}`}
+            src={`https://localhost:5212/${user.avatar}`}
             alt="User Avatar"
             className="profile-img"
           />
         </div>
-        <div className="user-name">{loggedInUser.name}</div>
+        <div className="user-name">{user.name}</div>
         {/* <FriendButtons
           userId={userId}
           currentUser={currentUser}
@@ -43,11 +49,11 @@ export const Profile = ({ loggedInUser }) => {
           </>
         )} */}
         <div className="user-info-div">
-          <div className="user-bio">{loggedInUser.bio}</div>
+          <div className="user-bio">{user.bio}</div>
         </div>
         <div className="user-info-div">
           <div className="user-location">
-            {loggedInUser.city}, {loggedInUser.state}
+            {user.city}, {user.state}
           </div>
         </div>
         <div className="user-info-div">
@@ -62,7 +68,6 @@ export const Profile = ({ loggedInUser }) => {
             </Link>
           )}
         </div>
-        <div className="dropdown-div"></div>
       </div>
       <div className="collection-div">
         <ShoeCollection

@@ -108,8 +108,7 @@ public class AuthController : ControllerBase
                 State = profile.State,
                 Avatar = profile.Avatar,
                 Bio = profile.Bio,
-                IsAdmin = profile.IsAdmin,
-                IdentityUserId = identityUserId,
+                // IdentityUserId = identityUserId,
                 Roles = roles
             };
 
@@ -141,7 +140,6 @@ public class AuthController : ControllerBase
                 State = registration.State,
                 Avatar = registration.Avatar,
                 Bio = registration.Bio,
-                IsAdmin = false,
                 // IdentityUserId = user.Id,
             });
             _dbContext.SaveChanges();

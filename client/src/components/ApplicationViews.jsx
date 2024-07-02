@@ -76,6 +76,16 @@ export const ApplicationViews = ({ loggedInUser, setLoggedInUser }) => {
             }
           />
         </Route>
+        <Route path="users">
+          <Route
+            index
+            element={
+              <AuthorizedRoute loggedInUser={loggedInUser}>
+                <UsersList loggedInUser={loggedInUser} />
+              </AuthorizedRoute>
+            }
+          />
+        </Route>
       </Route>
     </Routes>
   )
