@@ -9,6 +9,7 @@ import {
   getUserShoeById,
 } from "../../managers/userShoeManager.js"
 import { ProfileColumn } from "../profile/ProfileColumn.jsx"
+import { LikesDiv } from "../likes/LikesDiv.jsx"
 
 export const UserShoeDetails = ({ loggedInUser }) => {
   const [userShoe, setUserShoe] = useState([])
@@ -213,9 +214,9 @@ export const UserShoeDetails = ({ loggedInUser }) => {
                   <div className="shoe-detail-two">
                     Description: {userShoe?.description}
                   </div>
-                  {/* {currentUser.id !== userShoe.userId && (
-                    <LikesDiv currentUser={currentUser} userShoe={userShoe} />
-                  )} */}
+                  {loggedInUser.id !== userShoe.userProfileId && (
+                    <LikesDiv loggedInUser={loggedInUser} userShoe={userShoe} />
+                  )}
                 </div>
               </div>
             </div>

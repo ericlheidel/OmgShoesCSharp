@@ -4,6 +4,10 @@ export const getAllUsers = () => {
   return fetch(_apiUrl).then((res) => res.json())
 }
 
+export const getAllUsersWithBasicInfo = () => {
+  return fetch(`${_apiUrl}/basic`).then((res) => res.json())
+}
+
 export const getAllUsersWithRoles = () => {
   return fetch(`${_apiUrl}/withroles`).then((res) => res.json())
 }
@@ -14,4 +18,16 @@ export const getUserById = (id) => {
 
 export const getUserByIdWithRoles = (userId) => {
   return fetch(`${_apiUrl}/withroles/${userId}`).then((res) => res.json())
+}
+
+export const promoteUser = (userId) => {
+  return fetch(`${_apiUrl}/promote/${userId}`, {
+    method: "POST",
+  })
+}
+
+export const demoteUser = (userId) => {
+  return fetch(`${_apiUrl}/demote/${userId}`, {
+    method: "POST",
+  })
 }

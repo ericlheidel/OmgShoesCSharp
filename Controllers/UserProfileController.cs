@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OmgShoes.Data;
@@ -24,7 +25,7 @@ public class UserProfileController : ControllerBase
     {
         return Ok(_dbContext
             .UserProfiles
-            .Include(up => up.IdentityUser)
+            // .Include(up => up.IdentityUser)
             .Select(up => new UserProfileDTO
             {
                 Id = up.Id,
@@ -34,8 +35,23 @@ public class UserProfileController : ControllerBase
                 State = up.State,
                 Avatar = up.Avatar,
                 Bio = up.Bio,
-                IsAdmin = up.IsAdmin,
-                IdentityUserId = up.IdentityUserId
+                // IdentityUserId = up.IdentityUserId
+            }).ToList());
+    }
+
+    [HttpGet("basic")]
+    [Authorize]
+    public IActionResult GetBasicInfo()
+    {
+        return Ok(_dbContext
+            .UserProfiles
+            .Select(up => new UserProfileBasicDTO
+            {
+                Id = up.Id,
+                Name = up.Name,
+                City = up.City,
+                State = up.State,
+                Avatar = up.Avatar
             }).ToList());
     }
 
@@ -55,8 +71,7 @@ public class UserProfileController : ControllerBase
                 State = up.State,
                 Avatar = up.Avatar,
                 Bio = up.Bio,
-                IsAdmin = up.IsAdmin,
-                IdentityUserId = up.IdentityUserId,
+                // IdentityUserId = up.IdentityUserId,
                 Roles = _dbContext.UserRoles
                     .Where(ur => ur.UserId == up.IdentityUserId)
                     .Select(ur => _dbContext.Roles.SingleOrDefault(r => r.Id == ur.RoleId).Name).ToList()
@@ -97,8 +112,7 @@ public class UserProfileController : ControllerBase
                 State = up.State,
                 Avatar = up.Avatar,
                 Bio = up.Bio,
-                IsAdmin = up.IsAdmin,
-                IdentityUserId = up.IdentityUserId,
+                // IdentityUserId = up.IdentityUserId,
                 Roles = _dbContext.UserRoles
                     .Where(ur => ur.UserId == up.IdentityUserId)
                     .Select(ur => _dbContext.Roles.SingleOrDefault(r => r.Id == ur.RoleId).Name).ToList()
@@ -129,8 +143,7 @@ public class UserProfileController : ControllerBase
                 State = up.State,
                 Avatar = up.Avatar,
                 Bio = up.Bio,
-                IsAdmin = up.IsAdmin,
-                IdentityUserId = up.IdentityUser.Id,
+                // IdentityUserId = up.IdentityUser.Id,
                 UserShoes = _dbContext.UserShoes
                     .Where(us => us.UserProfileId == id)
                     .Select(us => new UserShoeDTO
@@ -198,5 +211,47 @@ public class UserProfileController : ControllerBase
         _dbContext.SaveChanges();
 
         return NoContent();
+    }
+
+    [HttpPost("promote/{id}")]
+    [Authorize]
+    public IActionResult Promote(int id)
+    {
+        IdentityRole role = _dbContext.Roles.SingleOrDefault(r => r.Name == "Admin");
+
+        string identityUserId = _dbContext.UserProfiles.SingleOrDefault(up => up.Id == id).IdentityUserId;
+
+        _dbContext.UserRoles.Add(new IdentityUserRole<string>
+        {
+            RoleId = role.Id,
+            UserId = identityUserId
+        });
+
+        _dbContext.SaveChanges();
+
+        return NoContent();
+    }
+
+    [HttpPost("demote/{id}")]
+    [Authorize]
+    public IActionResult Demote(int id)
+    {
+        string identityUserId = _dbContext.UserProfiles.SingleOrDefault(up => up.Id == id).IdentityUserId;
+
+        IdentityUserRole<string> userRoleToDemote =
+                _dbContext
+                .UserRoles
+                .SingleOrDefault(ur => ur.UserId == identityUserId);
+
+        if (userRoleToDemote == null)
+        {
+            return NotFound();
+        }
+
+        _dbContext.Remove(userRoleToDemote);
+        _dbContext.SaveChanges();
+
+        return NoContent();
+
     }
 }
