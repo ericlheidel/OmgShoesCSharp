@@ -31,11 +31,11 @@ public class LikeController : ControllerBase
         return NoContent();
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete]
     [Authorize]
-    public IActionResult Delete(int id)
+    public IActionResult Delete([FromQuery] int userShoeId, [FromQuery] int userId)
     {
-        Like likeToDelete = _dbContext.Likes.SingleOrDefault(l => l.Id == id);
+        Like likeToDelete = _dbContext.Likes.SingleOrDefault(l => l.UserShoeId == userShoeId && l.UserProfileId == userId);
 
         if (likeToDelete == null)
         {

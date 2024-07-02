@@ -25,7 +25,7 @@ export const UserShoeDetails = ({ loggedInUser }) => {
   const navigate = useNavigate()
 
   const getAndSetShoe = () => {
-    getUserShoeById(userShoeId).then(setUserShoe)
+    getUserShoeById(userShoeId, loggedInUser.id).then(setUserShoe)
   }
 
   useEffect(() => {
@@ -93,6 +93,9 @@ export const UserShoeDetails = ({ loggedInUser }) => {
                   </div>
                   <div className="shoe-detail-two">
                     {userShoe.shoe?.colorway}
+                  </div>
+                  <div className="shoe-detail-two">
+                    {`Likes: ${userShoe.likes.length}`}
                   </div>
                   <div className="shoe-detail-two" hidden={isHidden}>
                     <div className="color-one">
@@ -215,7 +218,11 @@ export const UserShoeDetails = ({ loggedInUser }) => {
                     Description: {userShoe?.description}
                   </div>
                   {loggedInUser.id !== userShoe.userProfileId && (
-                    <LikesDiv loggedInUser={loggedInUser} userShoe={userShoe} />
+                    <LikesDiv
+                      loggedInUser={loggedInUser}
+                      userShoe={userShoe}
+                      getAndSetShoe={getAndSetShoe}
+                    />
                   )}
                 </div>
               </div>
