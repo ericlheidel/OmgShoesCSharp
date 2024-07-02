@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace OmgShoes.Models;
 
 public class UserShoe
@@ -12,4 +14,6 @@ public class UserShoe
     public string? Description { get; set; }
     public List<Like>? Likes { get; set; }
     public List<Comment>? Comments { get; set; }
+    [NotMapped]
+    public bool IsLikedByCurrentUser { get; set; }
 }

@@ -82,12 +82,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
 
         });
 
-        // modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
-        // {
-        //     RoleId = "c3aaeb97-d2ba-4a53-a521-4eea61e59b35",
-        //     UserId = "rfv98hu4-3206-4gga-t8ws-457k5v543l6r"
-        // });
-
         modelBuilder.Entity<IdentityUserRole<string>>().HasData(
             new IdentityUserRole<string>
             {

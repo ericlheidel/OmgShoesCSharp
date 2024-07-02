@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -33,7 +34,7 @@ public class UserShoeController : ControllerBase
 
     [HttpGet("{id}")]
     [Authorize]
-    public IActionResult GetById(int id)
+    public IActionResult GetById(int id, [FromQuery] int userId)
     {
         UserShoe userShoe = _dbContext
             .UserShoes
@@ -48,6 +49,8 @@ public class UserShoeController : ControllerBase
         {
             return NotFound();
         }
+
+        userShoe.IsLikedByCurrentUser = userShoe.Likes != null && userShoe.Likes.Any(l => l.UserProfileId == userId && l.UserShoeId == id);
 
         return Ok(userShoe);
     }

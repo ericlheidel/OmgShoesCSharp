@@ -10,8 +10,8 @@ export const postLike = (like) => {
   })
 }
 
-export const removeLikeById = (id) => {
-  return fetch(`${_apiUrl}/${id}`, {
+export const removeLike = (userShoeId, userId) => {
+  return fetch(`${_apiUrl}?userShoeId=${userShoeId}&userId=${userId}`, {
     method: "DELETE",
   })
 }
