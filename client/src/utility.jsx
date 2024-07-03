@@ -1,3 +1,9 @@
+export const getCurrentYear = () => {
+  const getYear = new Date()
+  const thisYear = getYear.getFullYear()
+  return thisYear
+}
+
 export const formatDate = (timestamp) => {
   const date = new Date(timestamp)
   const year = date.getFullYear()

@@ -19,7 +19,6 @@ export const UserShoeDetails = ({ loggedInUser }) => {
   const [editedDescription, setEditedDescription] = useState("")
   const [isChecked, setIsChecked] = useState(false)
   const [isHidden, setIsHidden] = useState(false)
-  // const [userShoeComments, setUserShoeComments] = useState([])
 
   const { userShoeId } = useParams()
 

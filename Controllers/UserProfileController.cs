@@ -92,7 +92,17 @@ public class UserProfileController : ControllerBase
             return NotFound();
         }
 
-        return Ok(userProfile);
+        // return Ok(userProfile);
+        return Ok(new UserProfileDTO
+        {
+            Id = userProfile.Id,
+            Email = userProfile.Email,
+            Name = userProfile.Name,
+            City = userProfile.City,
+            State = userProfile.State,
+            Avatar = userProfile.Avatar,
+            Bio = userProfile.Bio
+        });
     }
 
     [HttpGet("withroles/{id}")]

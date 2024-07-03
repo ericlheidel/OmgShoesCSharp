@@ -80,4 +80,16 @@ public class ShoeController : ControllerBase
 
         return Ok(filteredShoes);
     }
+
+    [HttpDelete("{id}")]
+    [Authorize]
+    public IActionResult Delete(int id)
+    {
+        Shoe shoeToDelete = _dbContext.Shoes.SingleOrDefault(s => s.Id == id);
+
+        _dbContext.Remove(shoeToDelete);
+        _dbContext.SaveChanges();
+
+        return NoContent();
+    }
 }

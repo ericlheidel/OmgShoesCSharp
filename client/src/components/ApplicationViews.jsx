@@ -9,6 +9,7 @@ import { ShoeDetailsForm } from "./shoes/ShoeDetailsForm.jsx"
 import { Profile } from "./profile/Profile.jsx"
 import { UsersList } from "./users/UsersList.jsx"
 import { UserShoeDetails } from "./shoes/UserShoeDetails.jsx"
+import { AddShoe } from "./shoes/AddShoe.jsx"
 
 export const ApplicationViews = ({ loggedInUser, setLoggedInUser }) => {
   return (
@@ -76,16 +77,14 @@ export const ApplicationViews = ({ loggedInUser, setLoggedInUser }) => {
             }
           />
         </Route>
-        <Route path="users">
-          <Route
-            index
-            element={
-              <AuthorizedRoute loggedInUser={loggedInUser}>
-                <UsersList loggedInUser={loggedInUser} />
-              </AuthorizedRoute>
-            }
-          />
-        </Route>
+        <Route
+          path="/addshoe"
+          element={
+            <AuthorizedRoute loggedInUser={loggedInUser}>
+              <AddShoe loggedInUser={loggedInUser} />
+            </AuthorizedRoute>
+          }
+        />
       </Route>
     </Routes>
   )

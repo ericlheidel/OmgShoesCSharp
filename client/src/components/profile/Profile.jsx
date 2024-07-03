@@ -17,8 +17,10 @@ export const Profile = ({ loggedInUser }) => {
   }, [userId])
 
   useEffect(() => {
-    getUserById(userId).then(setUser)
-  }, [userId])
+    if (loggedInUser) {
+      getUserById(userId).then(setUser)
+    }
+  }, [loggedInUser, userId])
 
   return (
     <div className="profile">
