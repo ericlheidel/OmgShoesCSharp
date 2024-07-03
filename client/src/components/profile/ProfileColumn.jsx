@@ -3,12 +3,12 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { getUserById } from "../../managers/userProfileManager"
 
-export const ProfileColumn = ({ userShoe }) => {
+export const ProfileColumn = ({ userShoe, loggedInUser }) => {
   const [user, setUser] = useState([])
 
   useEffect(() => {
-    getUserById(userShoe.userProfileId).then(setUser)
-  }, [userShoe])
+    getUserById(loggedInUser.id).then(setUser)
+  }, [loggedInUser])
 
   return (
     <div className="profile">

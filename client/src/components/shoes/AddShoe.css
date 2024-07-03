@@ -1,0 +1,22 @@
+.add-shoe-form {
+  width: 450px;
+  margin: 2.5rem auto 1.5rem auto;
+  background-color: var(--color-two);
+  border-radius: 12.5px;
+  padding: 3rem;
+  text-align: left;
+  /* box-shadow: 5px 5px 15px var(--color-two); */
+}
+
+.add-shoe-title {
+  margin-left: 3.5%;
+}
+
+.style-dropdown {
+  width: 120%;
+  border: 2px solid red;
+}
+
+.colorway {
+  text-transform: uppercase;
+}

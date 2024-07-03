@@ -2,7 +2,7 @@
 import { useNavigate, useParams } from "react-router-dom"
 import "./ShoeDetails.css"
 import { useEffect, useState } from "react"
-import { getShoeById } from "../../managers/shoeManager.js"
+import { deleteShoe, getShoeById } from "../../managers/shoeManager.js"
 import { getAllConditions } from "../../managers/conditionManager"
 import { sizes } from "../../utility.jsx"
 import { addShoeToUserCollection } from "../../managers/userShoeManager.js"
@@ -56,6 +56,10 @@ export const ShoeDetailsForm = ({ loggedInUser }) => {
       setIsDisabled(true)
     }
   }, [chosenCondition, chosenSize, userShoeDescription])
+
+  const handleDelete = () => {
+    deleteShoe(shoe.id).then(navigate("/shoes"))
+  }
 
   return (
     <div className="shoe-details-container">
@@ -143,6 +147,15 @@ export const ShoeDetailsForm = ({ loggedInUser }) => {
             </fieldset>
           </div>
         </form>
+        {shoe.id >= 123 && (
+          <button
+            className="form-btn"
+            style={{ marginBottom: "15px", marginRight: "77.5%" }}
+            onClick={handleDelete}
+          >
+            Delete
+          </button>
+        )}
       </div>
     </div>
   )
