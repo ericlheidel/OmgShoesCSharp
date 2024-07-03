@@ -10,6 +10,7 @@ import {
 } from "../../managers/userShoeManager.js"
 import { ProfileColumn } from "../profile/ProfileColumn.jsx"
 import { LikesDiv } from "../likes/LikesDiv.jsx"
+import { Comments } from "../comments/Comments.jsx"
 
 export const UserShoeDetails = ({ loggedInUser }) => {
   const [userShoe, setUserShoe] = useState([])
@@ -94,7 +95,7 @@ export const UserShoeDetails = ({ loggedInUser }) => {
                   <div className="shoe-detail-two">
                     {userShoe.shoe?.colorway}
                   </div>
-                  <div className="shoe-detail-two">
+                  <div className="shoe-detail-two" style={{ fontSize: "2rem" }}>
                     {`Likes: ${userShoe.likes.length}`}
                   </div>
                   <div className="shoe-detail-two" hidden={isHidden}>
@@ -228,7 +229,11 @@ export const UserShoeDetails = ({ loggedInUser }) => {
               </div>
             </div>
           )}
-          {/* <Comments currentUser={currentUser} userShoeId={userShoeId} /> */}
+          <Comments
+            loggedInUser={loggedInUser}
+            userShoe={userShoe}
+            getAndSetShoe={getAndSetShoe}
+          />
         </div>
       </div>
     </>

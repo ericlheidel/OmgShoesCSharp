@@ -39,10 +39,12 @@ public class UserShoeController : ControllerBase
         UserShoe userShoe = _dbContext
             .UserShoes
             .Where(us => us.Id == id)
+            .Include(us => us.User)
             .Include(us => us.Shoe)
             .Include(us => us.Condition)
             .Include(us => us.Likes)
             .Include(us => us.Comments)
+                .ThenInclude(c => c.User)
             .SingleOrDefault();
 
         if (userShoe == null)

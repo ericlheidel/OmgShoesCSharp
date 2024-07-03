@@ -24,6 +24,7 @@ public class CommentController : ControllerBase
             .Comments
             .Where(c => c.UserShoeId == id)
             .Include(c => c.User)
+            .OrderByDescending(c => c.TimeStamp)
             .ToList()
         );
     }
@@ -37,7 +38,7 @@ public class CommentController : ControllerBase
             UserProfileId = comment.UserProfileId,
             UserShoeId = comment.UserShoeId,
             Text = comment.Text,
-            TimeStamp = DateTime.Now,
+            TimeStamp = DateTime.UtcNow,
             IsEdited = false
         };
 
@@ -79,7 +80,7 @@ public class CommentController : ControllerBase
         commentToEdit.UserProfileId = comment.UserProfileId;
         commentToEdit.UserShoeId = comment.UserShoeId;
         commentToEdit.Text = comment.Text;
-        commentToEdit.TimeStamp = DateTime.Now;
+        commentToEdit.TimeStamp = DateTime.UtcNow;
         commentToEdit.IsEdited = true;
 
         _dbContext.SaveChanges();
