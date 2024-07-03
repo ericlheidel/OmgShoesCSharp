@@ -24,6 +24,7 @@ public class CommentController : ControllerBase
             .Comments
             .Where(c => c.UserShoeId == id)
             .Include(c => c.User)
+            .OrderByDescending(c => c.TimeStamp)
             .ToList()
         );
     }

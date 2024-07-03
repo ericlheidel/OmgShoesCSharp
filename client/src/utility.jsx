@@ -1,20 +1,9 @@
-export const getCurrentYear = () => {
-  const getYear = new Date()
-  const thisYear = getYear.getFullYear()
-  return thisYear
-}
-
-export const getTodaysDateAndTime = () => {
-  const options = {
-    month: "2-digit",
-    day: "2-digit",
-    year: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    hour12: true,
-  }
-  const now = new Date().toLocaleString("en-US", options)
-  return now
+export const formatDate = (timestamp) => {
+  const date = new Date(timestamp)
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, "0")
+  const day = String(date.getDate()).padStart(2, "0")
+  return `${year}-${month}-${day}`
 }
 
 let clickCount = 0
