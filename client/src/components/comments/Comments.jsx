@@ -2,12 +2,22 @@
 import { useState } from "react"
 import "./Comments.css"
 import { Comment } from "./Comment.jsx"
+import { postComment } from "../../managers/commentManager.js"
+import { getUserShoeById } from "../../managers/userShoeManager.js"
 
 export const Comments = ({ loggedInUser, userShoe, getAndSetShoe }) => {
   const [commentText, setCommentText] = useState("")
 
   const handleSubmit = () => {
-    console.log("handleSubmit()")
+    const newComment = {
+      userProfileId: loggedInUser.id,
+      userShoeId: userShoe.id,
+      text: commentText,
+    }
+
+    postComment(newComment).then(() => {
+      getUserShoeById(userShoe.id, loggedInUser.id).then(getAndSetShoe)
+    })
   }
 
   return (
@@ -20,7 +30,6 @@ export const Comments = ({ loggedInUser, userShoe, getAndSetShoe }) => {
           className="form-textarea comments-textarea"
           required
           value={commentText}
-          // placeholder="Leave a comment..."
           onChange={(e) => {
             setCommentText(e.target.value)
           }}

@@ -2,10 +2,13 @@
 import { useEffect, useState } from "react"
 import "./Comments.css"
 import { formatDate } from "../../utility.jsx"
-import { updateComment } from "../../managers/commentManager.js"
+import {
+  removeCommentById,
+  updateComment,
+} from "../../managers/commentManager.js"
 import { getUserShoeById } from "../../managers/userShoeManager"
 
-export const Comment = ({ loggedInUser, comment, getAndSetShoe }) => {
+export const Comment = ({ loggedInUser, comment, userShoe, getAndSetShoe }) => {
   const [isHidden, setIsHidden] = useState(false)
   const [originalCommentText, setOriginalCommentText] = useState("")
   const [updatedCommentText, setUpdatedCommentText] = useState(comment.text)
@@ -15,22 +18,28 @@ export const Comment = ({ loggedInUser, comment, getAndSetShoe }) => {
   }, [comment])
 
   const handleUpdate = () => {
-    const updatedComment = {
-      id: comment.id,
-      userProfileId: comment.userProfileId,
-      userShoeId: comment.userShoeId,
-      text: updatedCommentText,
-    }
+    if (updatedCommentText === "") {
+      window.alert("Please enter a comment")
+    } else {
+      const updatedComment = {
+        id: comment.id,
+        userProfileId: comment.userProfileId,
+        userShoeId: comment.userShoeId,
+        text: updatedCommentText,
+      }
 
-    updateComment(updatedComment).then(() => {
-      getUserShoeById(comment.userShoeId, comment.userProfileId).then(
-        getAndSetShoe
-      )
-    })
+      updateComment(updatedComment).then(() => {
+        getUserShoeById(comment.userShoeId, comment.userProfileId).then(
+          getAndSetShoe
+        )
+      })
+    }
   }
 
   const handleDelete = () => {
-    console.log("handleDelete()")
+    removeCommentById(comment.id).then(() => {
+      getUserShoeById(userShoe.id, loggedInUser.id).then(getAndSetShoe)
+    })
   }
 
   return (
