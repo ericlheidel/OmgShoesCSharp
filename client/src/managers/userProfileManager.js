@@ -31,3 +31,13 @@ export const demoteUser = (userId) => {
     method: "POST",
   })
 }
+
+export const updateUserProfile = (profile, userId) => {
+  return fetch(`${_apiUrl}/${userId}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(profile),
+  })
+}

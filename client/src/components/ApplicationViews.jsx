@@ -10,6 +10,7 @@ import { Profile } from "./profile/Profile.jsx"
 import { UsersList } from "./users/UsersList.jsx"
 import { UserShoeDetails } from "./shoes/UserShoeDetails.jsx"
 import { AddShoe } from "./shoes/AddShoe.jsx"
+import { ProfileForm } from "./profile/ProfileForm.jsx"
 
 export const ApplicationViews = ({ loggedInUser, setLoggedInUser }) => {
   return (
@@ -63,6 +64,14 @@ export const ApplicationViews = ({ loggedInUser, setLoggedInUser }) => {
             element={
               <AuthorizedRoute loggedInUser={loggedInUser}>
                 <Profile loggedInUser={loggedInUser} />
+              </AuthorizedRoute>
+            }
+          />
+          <Route
+            path=":userId/edit"
+            element={
+              <AuthorizedRoute loggedInUser={loggedInUser}>
+                <ProfileForm loggedInUser={loggedInUser} />
               </AuthorizedRoute>
             }
           />

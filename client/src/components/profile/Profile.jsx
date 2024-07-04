@@ -76,7 +76,7 @@ export const Profile = ({ loggedInUser }) => {
           </div>
         </div>
         <div className="edit-btn-div">
-          {loggedInUser.id === userId && (
+          {loggedInUser.id === parseInt(userId) && (
             <Link to={`/users/${userId}/edit`}>
               <button className="btn-edit btn-submit">Edit Profile</button>
             </Link>

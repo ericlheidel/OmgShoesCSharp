@@ -1,0 +1,33 @@
+.edit-profile-form {
+  width: 450px;
+  margin: 2.5rem auto 1.5rem auto;
+  background-color: var(--color-two);
+  border-radius: 12.5px;
+  padding: 3rem;
+  /* box-shadow: 5px 5px 15px var(--color-two); */
+  text-align: left;
+}
+
+.location-div {
+  margin-top: 10px;
+}
+
+.state-select {
+  width: 110%;
+}
+
+.city {
+  width: 75%;
+}
+
+.state {
+  width: 35%;
+}
+
+.state-two {
+  width: 60%;
+}
+
+.edit-profile-btn {
+  margin-top: 7.5px;
+}
