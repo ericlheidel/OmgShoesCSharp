@@ -77,14 +77,16 @@ export const ApplicationViews = ({ loggedInUser, setLoggedInUser }) => {
             }
           />
         </Route>
-        <Route
-          path="/addshoe"
-          element={
-            <AuthorizedRoute loggedInUser={loggedInUser}>
-              <AddShoe loggedInUser={loggedInUser} />
-            </AuthorizedRoute>
-          }
-        />
+        {loggedInUser?.roles.includes("Admin") && (
+          <Route
+            path="/addshoe"
+            element={
+              <AuthorizedRoute loggedInUser={loggedInUser}>
+                <AddShoe loggedInUser={loggedInUser} />
+              </AuthorizedRoute>
+            }
+          />
+        )}
       </Route>
     </Routes>
   )

@@ -5,10 +5,14 @@ import { Link, useParams } from "react-router-dom"
 import { ShoeCollection } from "../shoes/ShoeCollection.jsx"
 import { getUserShoeCollectionByUserId } from "../../managers/userShoeManager.js"
 import { getUserById } from "../../managers/userProfileManager.js"
+import { FriendButtons } from "../friends/FriendButtons.jsx"
+import { getFriendshipsByUserId } from "../../managers/friendshipManager.js"
+import { Friend } from "../friends/Friend.jsx"
 
 export const Profile = ({ loggedInUser }) => {
   const [user, setUser] = useState([])
   const [collection, setCollection] = useState([])
+  const [friendships, setFriendships] = useState([])
 
   const { userId } = useParams()
 
@@ -22,6 +26,14 @@ export const Profile = ({ loggedInUser }) => {
     }
   }, [loggedInUser, userId])
 
+  const getAndSetFriends = () => {
+    getFriendshipsByUserId(userId).then(setFriendships)
+  }
+
+  useEffect(() => {
+    getAndSetFriends()
+  }, [userId])
+
   return (
     <div className="profile">
       <div className="profile-div">
@@ -33,23 +45,23 @@ export const Profile = ({ loggedInUser }) => {
           />
         </div>
         <div className="user-name">{user.name}</div>
-        {/* <FriendButtons
+        <FriendButtons
           userId={userId}
-          currentUser={currentUser}
-          getAndSetUserFriends={getAndSetUserFriends}
+          loggedInUser={loggedInUser}
+          getAndSetFriends={getAndSetFriends}
         />
-        {userFriends.length === 0 ? (
+        {friendships.length === 0 ? (
           ""
         ) : (
           <>
             <div className="friends-title">Friends</div>
             <div className="friends-list">
-              {userFriends.map((friend) => {
-                return <Friend friend={friend} key={friend.id} />
+              {friendships.map((friendship) => {
+                return <Friend friendship={friendship} key={friendship.id} />
               })}
             </div>
           </>
-        )} */}
+        )}
         <div className="user-info-div">
           <div className="user-bio">{user.bio}</div>
         </div>
