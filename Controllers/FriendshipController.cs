@@ -17,7 +17,34 @@ public class FriendshipController : ControllerBase
         _dbContext = context;
     }
 
+    [HttpGet]
+    [Authorize]
+    public IActionResult Get()
+    {
+        return Ok(_dbContext
+            .Friendships
+            .Include(fs => fs.Initiator)
+            .Include(fs => fs.Recipient)
+            .Select(fs => new FriendshipDTO
+            {
+                Id = fs.Id,
+                InitiatorId = fs.InitiatorId,
+                Initiator = fs.Initiator != null ? new UserProfileFriendDTO
+                {
+                    Id = fs.Initiator.Id,
+                    Name = fs.Initiator.Name,
+                    Avatar = fs.Initiator.Avatar
+                } : null,
+                RecipientId = fs.RecipientId,
+                Recipient = fs.Recipient != null ? new UserProfileFriendDTO
+                {
+                    Id = fs.Recipient.Id,
+                    Name = fs.Recipient.Name,
+                    Avatar = fs.Recipient.Avatar
+                } : null
+            }).ToList());
 
+    }
 
     [HttpGet("{userId}")]
     [Authorize]

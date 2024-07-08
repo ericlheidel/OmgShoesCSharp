@@ -58,11 +58,11 @@ export const Profile = ({ loggedInUser }) => {
           />
         </div>
         <div className="user-name">{user.name}</div>
-        <FriendButtons
+        {/* <FriendButtons
           userId={userId}
           loggedInUser={loggedInUser}
-          getAndSetFriends={getAndSetFriends}
-        />
+          friends={friends}
+        /> */}
         {friends.length === 0 ? (
           ""
         ) : (
