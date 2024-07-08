@@ -1,6 +1,6 @@
 const _apiUrl = "/api/friendship"
 
-export const getFriendshipsByUserId = (userId) => {
+export const getFriendsListByUserId = (userId) => {
   return fetch(`${_apiUrl}/${userId}`).then((res) => res.json())
 }
 
@@ -18,4 +18,10 @@ export const removeFriendshipById = (id) => {
   return fetch(`${_apiUrl}/${id}`, {
     method: "DELETE",
   })
+}
+
+export const findFriendship = (loggedInUserId, nonLoggedInUserId) => {
+  return fetch(
+    `${_apiUrl}/isfriend?loggedInUserId=${loggedInUserId}&nonLoggedInUserId=${nonLoggedInUserId}`
+  ).then((res) => res.json())
 }

@@ -149,13 +149,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "110bbfa8-119c-4401-b14b-d541826e7f81",
+                            ConcurrencyStamp = "ff67919f-3a3e-4dcf-8d88-8d4d62f85ba3",
                             Email = "dee@reynolds.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEN3mWs48OZDH2T54VbvxXV0BhCfwdm3HGyTcmgVKFQeVVnp/IFbif7bHO9PPeY/AnQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEFMn/WJLF/yEFEc8jLsnzJJ5TUn6fdhpCkrYJn0Va1yrit5WKNoIOO5Keo3RVVtG0w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b5efa9a9-8ffb-4b88-a667-07fdab956068",
+                            SecurityStamp = "b7a0033c-9dd6-4029-aa64-8030b71eed2e",
                             TwoFactorEnabled = false,
                             UserName = "Dee"
                         },
@@ -163,13 +163,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "frt98wr5-0223-3ww7-t6rq-028g4r521d4e",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7c46b5bb-e3d5-4e12-893b-bd9afeccfd18",
+                            ConcurrencyStamp = "2ac9cb3a-4a63-4bde-b698-02f9d7602afa",
                             Email = "dennis@reynolds.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEBmGzS6uYZ6IBQ7PCC8MLlldHlFDA1t+4mjYwsbcyXU0rclZDyBFRh6m6NAqQK6VDg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEKtfu36gUquDZL+06hhVUOnuZfpAXyi3F/vZGBNkkyt7GAe6JBHTH5bqoA0AOR7zuw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "882b4f12-382a-4805-9dcf-376f88d1abe7",
+                            SecurityStamp = "2960006e-40b7-4bff-bf90-38aff25aa7aa",
                             TwoFactorEnabled = false,
                             UserName = "Dennis"
                         },
@@ -177,13 +177,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "hdp65oa9-3053-5ap0-z0hh-235t2a098h8q",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "2973452f-42b3-4208-890b-0bc6bec1d663",
+                            ConcurrencyStamp = "0313e607-aef7-4ea2-9211-ad220814a836",
                             Email = "frank@reynolds.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEBw2mexIUPKRKBW4/1qJM52zm5MaIXnzANc7EGw9uU1P51Vf5L481aVyZEUroewFTw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOrPPWg54QqY0ChEFuLJ8ZyK/g4JvSOOpkepZHwxe9ahzk7wx0AQOe3dsK7Glym7OA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3576fef9-d5d0-49f4-92d6-99f4688568e2",
+                            SecurityStamp = "a4a1deb2-c006-4534-92b5-6603c9be9bbf",
                             TwoFactorEnabled = false,
                             UserName = "Frank"
                         },
@@ -191,13 +191,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "rse05dd6-2058-3bg0-a3oo-204t2l308f3p",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "b158ffd2-d6e4-401d-870c-655abdc65139",
+                            ConcurrencyStamp = "5965315b-1788-4a8a-bb84-75f80387aa6a",
                             Email = "ronald@macdonald.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEF9f9houNawDaEfedKO2jDvMUJqrKKYsFtv2hszsDeWlp3+AWEpnSxtEQvE7o12EaA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOjvU18DHXcgj+ixSitG+RoN/g2TxPk1d5cMIkfLTOW1RuG2P6SpQFsqj1E2e7hXDg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "f1f13316-8cb4-4fe8-b05e-07ba888b2a46",
+                            SecurityStamp = "4212585b-5768-4a69-97a0-8bcc0dca98b4",
                             TwoFactorEnabled = false,
                             UserName = "Ronald"
                         },
@@ -205,13 +205,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "wmo20ow7-0582-9pp1-i8sl-037h7w843j8r",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "964f7246-0051-4c00-9239-0550eb15c71c",
+                            ConcurrencyStamp = "9bb6ed18-01e3-411a-80e5-fb8e4c73feb9",
                             Email = "charlie@kelly.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAELgi58I5AeUlf6IwLJKUR/da3i4ZTdAGdt7jwPjFSj5s78Kpjt67ppq63YvaXOCcQA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEIivh1YxgMmkAcLzXoTp/tAQpMiWrbda7vMuwrdYIuU38Sq6Emy9VKP9k8u4mu4DRQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e17fceab-9bcf-4b16-9490-9d175a69f5e8",
+                            SecurityStamp = "993d13ca-b6ea-466b-a52a-24b8cd9db31e",
                             TwoFactorEnabled = false,
                             UserName = "Charlie"
                         },
@@ -219,13 +219,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "rfv98hu4-3206-4gga-t8ws-457k5v543l6r",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "baf22327-e6f0-4df5-a8f2-464959e9f0ec",
+                            ConcurrencyStamp = "9b703abe-3841-4bcb-be83-5cece3de15b9",
                             Email = "the@waitress.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAELtfbhImr6zvsEQdo+EdhrqQTyLbzPebglExv8wH4WeRznuoee+hW5ROhiF8AWEw3w==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEB0X8+TB3GYGMBv+aU7OngV9tIFjUd5n+INya2+76oSjVTxWRoYjHr6PsN3PNjXwEA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c0a84f5d-3bb8-479f-b7c3-b8168e51a5fd",
+                            SecurityStamp = "efff98b3-988e-4392-b37f-7738a785d4c7",
                             TwoFactorEnabled = false,
                             UserName = "Waitress"
                         });
@@ -361,7 +361,7 @@ namespace OmgShoes.Migrations
                             Id = 1,
                             IsEdited = false,
                             Text = "I love you!!",
-                            TimeStamp = new DateTime(2024, 5, 15, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(220),
+                            TimeStamp = new DateTime(2024, 5, 19, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4360),
                             UserProfileId = 5,
                             UserShoeId = 43
                         },
@@ -370,7 +370,7 @@ namespace OmgShoes.Migrations
                             Id = 2,
                             IsEdited = false,
                             Text = "WAITRESS!!!",
-                            TimeStamp = new DateTime(2024, 5, 28, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(320),
+                            TimeStamp = new DateTime(2024, 6, 1, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4460),
                             UserProfileId = 5,
                             UserShoeId = 43
                         },
@@ -379,7 +379,7 @@ namespace OmgShoes.Migrations
                             Id = 3,
                             IsEdited = false,
                             Text = "I AM THE RAT KING",
-                            TimeStamp = new DateTime(2024, 3, 26, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(320),
+                            TimeStamp = new DateTime(2024, 3, 30, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4470),
                             UserProfileId = 5,
                             UserShoeId = 6
                         },
@@ -388,7 +388,7 @@ namespace OmgShoes.Migrations
                             Id = 4,
                             IsEdited = false,
                             Text = "bustin rats is my gig",
-                            TimeStamp = new DateTime(2024, 3, 27, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(330),
+                            TimeStamp = new DateTime(2024, 3, 31, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4480),
                             UserProfileId = 5,
                             UserShoeId = 6
                         },
@@ -397,7 +397,7 @@ namespace OmgShoes.Migrations
                             Id = 5,
                             IsEdited = false,
                             Text = "did you seriously put nair in my shampoo?!",
-                            TimeStamp = new DateTime(2024, 4, 30, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(340),
+                            TimeStamp = new DateTime(2024, 5, 4, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4490),
                             UserProfileId = 6,
                             UserShoeId = 6
                         },
@@ -406,7 +406,7 @@ namespace OmgShoes.Migrations
                             Id = 6,
                             IsEdited = false,
                             Text = "I'm playing both sides!!!!",
-                            TimeStamp = new DateTime(2024, 5, 31, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(340),
+                            TimeStamp = new DateTime(2024, 6, 4, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4490),
                             UserProfileId = 4,
                             UserShoeId = 6
                         },
@@ -415,7 +415,7 @@ namespace OmgShoes.Migrations
                             Id = 7,
                             IsEdited = false,
                             Text = "LEAVE ME ALONE CHARLIE!!!",
-                            TimeStamp = new DateTime(2024, 5, 1, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(350),
+                            TimeStamp = new DateTime(2024, 5, 5, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4500),
                             UserProfileId = 6,
                             UserShoeId = 43
                         },
@@ -424,7 +424,7 @@ namespace OmgShoes.Migrations
                             Id = 8,
                             IsEdited = false,
                             Text = "I am a 5 ⭐️ man!!!",
-                            TimeStamp = new DateTime(2024, 6, 4, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(350),
+                            TimeStamp = new DateTime(2024, 6, 8, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4500),
                             UserProfileId = 2,
                             UserShoeId = 49
                         });
@@ -525,6 +525,12 @@ namespace OmgShoes.Migrations
                             Id = 5,
                             InitiatorId = 6,
                             RecipientId = 5
+                        },
+                        new
+                        {
+                            Id = 6,
+                            InitiatorId = 5,
+                            RecipientId = 1
                         });
                 });
 
