@@ -1,10 +1,14 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace OmgShoes.Models.DTOs;
 
 public class FriendshipDTO
 {
     public int Id { get; set; }
-    public int UserProfileId { get; set; }
-    public int FriendId { get; set; }
-    public string? FriendName { get; set; }
-    public string? FriendAvatar { get; set; }
+    public int InitiatorId { get; set; }
+    [ForeignKey("InitiatorId")]
+    public UserProfileFriendDTO? Initiator { get; set; }
+    public int RecipientId { get; set; }
+    [ForeignKey("RecipientId")]
+    public UserProfileFriendDTO? Recipient { get; set; }
 }

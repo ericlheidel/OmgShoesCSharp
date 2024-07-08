@@ -12,8 +12,8 @@ using OmgShoes.Data;
 namespace OmgShoes.Migrations
 {
     [DbContext(typeof(OmgShoesDbContext))]
-    [Migration("20240702192136_14thCreate")]
-    partial class _14thCreate
+    [Migration("20240704181211_17thCreate")]
+    partial class _17thCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -152,13 +152,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f358afae-a772-4277-88ef-260298f76d4a",
+                            ConcurrencyStamp = "110bbfa8-119c-4401-b14b-d541826e7f81",
                             Email = "dee@reynolds.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEDDVPqyxOyheqteAXwW+kA5GZjJM4dAgL0ROiY5bUYOncE3nzvhcXNupconVOCoPEg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEN3mWs48OZDH2T54VbvxXV0BhCfwdm3HGyTcmgVKFQeVVnp/IFbif7bHO9PPeY/AnQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3a756983-444d-46fb-bf21-15c30ef89257",
+                            SecurityStamp = "b5efa9a9-8ffb-4b88-a667-07fdab956068",
                             TwoFactorEnabled = false,
                             UserName = "Dee"
                         },
@@ -166,13 +166,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "frt98wr5-0223-3ww7-t6rq-028g4r521d4e",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "861ddb31-515d-44e4-9b84-65b36c9362f6",
+                            ConcurrencyStamp = "7c46b5bb-e3d5-4e12-893b-bd9afeccfd18",
                             Email = "dennis@reynolds.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEB+p5ttr1LN3a+W+3NdzOIQ1af47wUyHWYj7vKAF8Z3QAmSjSP+97borPwm3em1ODw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEBmGzS6uYZ6IBQ7PCC8MLlldHlFDA1t+4mjYwsbcyXU0rclZDyBFRh6m6NAqQK6VDg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "9e3d8007-5a7b-492e-a882-3523bda556ca",
+                            SecurityStamp = "882b4f12-382a-4805-9dcf-376f88d1abe7",
                             TwoFactorEnabled = false,
                             UserName = "Dennis"
                         },
@@ -180,13 +180,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "hdp65oa9-3053-5ap0-z0hh-235t2a098h8q",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e30f6791-90c4-4cdd-ac56-6678f76bbf4f",
+                            ConcurrencyStamp = "2973452f-42b3-4208-890b-0bc6bec1d663",
                             Email = "frank@reynolds.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEAUHLzrbkVkimRqy/VTjo29uC8TEemCNc0Uf3IJyOEAgTFwDb+uf0ZUC+mGOyz0ebA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEBw2mexIUPKRKBW4/1qJM52zm5MaIXnzANc7EGw9uU1P51Vf5L481aVyZEUroewFTw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e9380bb1-bdc8-40f3-bf7f-84df65270e6e",
+                            SecurityStamp = "3576fef9-d5d0-49f4-92d6-99f4688568e2",
                             TwoFactorEnabled = false,
                             UserName = "Frank"
                         },
@@ -194,13 +194,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "rse05dd6-2058-3bg0-a3oo-204t2l308f3p",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5037367e-f2ee-40a0-866e-333871747095",
+                            ConcurrencyStamp = "b158ffd2-d6e4-401d-870c-655abdc65139",
                             Email = "ronald@macdonald.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEHx3NLfzXD+neWUNUFUniZ8VmCkeozKTydTrJ5V7W7CD5jsTjAVfXi1G+3wHDkYe3Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEF9f9houNawDaEfedKO2jDvMUJqrKKYsFtv2hszsDeWlp3+AWEpnSxtEQvE7o12EaA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "dfe0922b-0bf5-44b3-b938-2474bae58aff",
+                            SecurityStamp = "f1f13316-8cb4-4fe8-b05e-07ba888b2a46",
                             TwoFactorEnabled = false,
                             UserName = "Ronald"
                         },
@@ -208,13 +208,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "wmo20ow7-0582-9pp1-i8sl-037h7w843j8r",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "791d8fd5-ed0f-4ef7-b073-e2e86c57011e",
+                            ConcurrencyStamp = "964f7246-0051-4c00-9239-0550eb15c71c",
                             Email = "charlie@kelly.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEFs5xZ8YNbFciRpiQk3tQUUzWQAE+rdn9YifPC2Lj8F0Lpj8fyB4LeJX6IMd2wmkQQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAELgi58I5AeUlf6IwLJKUR/da3i4ZTdAGdt7jwPjFSj5s78Kpjt67ppq63YvaXOCcQA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "9c6c4c42-2541-4e1d-a0ff-7634f4cc8f92",
+                            SecurityStamp = "e17fceab-9bcf-4b16-9490-9d175a69f5e8",
                             TwoFactorEnabled = false,
                             UserName = "Charlie"
                         },
@@ -222,13 +222,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "rfv98hu4-3206-4gga-t8ws-457k5v543l6r",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "93183d3d-299b-4f81-8c67-89832ea6fb7a",
+                            ConcurrencyStamp = "baf22327-e6f0-4df5-a8f2-464959e9f0ec",
                             Email = "the@waitress.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEEYlz9HtU8SCiHWNvzJIOsw77JZRgdoWXFyHnDrIMJYoOBu5QQyM7T+8ziFpwk0tlw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAELtfbhImr6zvsEQdo+EdhrqQTyLbzPebglExv8wH4WeRznuoee+hW5ROhiF8AWEw3w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "183da152-fa8a-41fe-a8fb-286072fe6602",
+                            SecurityStamp = "c0a84f5d-3bb8-479f-b7c3-b8168e51a5fd",
                             TwoFactorEnabled = false,
                             UserName = "Waitress"
                         });
@@ -364,7 +364,7 @@ namespace OmgShoes.Migrations
                             Id = 1,
                             IsEdited = false,
                             Text = "I love you!!",
-                            TimeStamp = new DateTime(2024, 5, 13, 14, 21, 35, 800, DateTimeKind.Local).AddTicks(4980),
+                            TimeStamp = new DateTime(2024, 5, 15, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(220),
                             UserProfileId = 5,
                             UserShoeId = 43
                         },
@@ -373,7 +373,7 @@ namespace OmgShoes.Migrations
                             Id = 2,
                             IsEdited = false,
                             Text = "WAITRESS!!!",
-                            TimeStamp = new DateTime(2024, 5, 26, 14, 21, 35, 800, DateTimeKind.Local).AddTicks(5030),
+                            TimeStamp = new DateTime(2024, 5, 28, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(320),
                             UserProfileId = 5,
                             UserShoeId = 43
                         },
@@ -382,7 +382,7 @@ namespace OmgShoes.Migrations
                             Id = 3,
                             IsEdited = false,
                             Text = "I AM THE RAT KING",
-                            TimeStamp = new DateTime(2024, 3, 24, 14, 21, 35, 800, DateTimeKind.Local).AddTicks(5040),
+                            TimeStamp = new DateTime(2024, 3, 26, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(320),
                             UserProfileId = 5,
                             UserShoeId = 6
                         },
@@ -391,7 +391,7 @@ namespace OmgShoes.Migrations
                             Id = 4,
                             IsEdited = false,
                             Text = "bustin rats is my gig",
-                            TimeStamp = new DateTime(2024, 3, 25, 14, 21, 35, 800, DateTimeKind.Local).AddTicks(5040),
+                            TimeStamp = new DateTime(2024, 3, 27, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(330),
                             UserProfileId = 5,
                             UserShoeId = 6
                         },
@@ -400,7 +400,7 @@ namespace OmgShoes.Migrations
                             Id = 5,
                             IsEdited = false,
                             Text = "did you seriously put nair in my shampoo?!",
-                            TimeStamp = new DateTime(2024, 4, 28, 14, 21, 35, 800, DateTimeKind.Local).AddTicks(5050),
+                            TimeStamp = new DateTime(2024, 4, 30, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(340),
                             UserProfileId = 6,
                             UserShoeId = 6
                         },
@@ -409,7 +409,7 @@ namespace OmgShoes.Migrations
                             Id = 6,
                             IsEdited = false,
                             Text = "I'm playing both sides!!!!",
-                            TimeStamp = new DateTime(2024, 5, 29, 14, 21, 35, 800, DateTimeKind.Local).AddTicks(5050),
+                            TimeStamp = new DateTime(2024, 5, 31, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(340),
                             UserProfileId = 4,
                             UserShoeId = 6
                         },
@@ -418,7 +418,7 @@ namespace OmgShoes.Migrations
                             Id = 7,
                             IsEdited = false,
                             Text = "LEAVE ME ALONE CHARLIE!!!",
-                            TimeStamp = new DateTime(2024, 4, 29, 14, 21, 35, 800, DateTimeKind.Local).AddTicks(5060),
+                            TimeStamp = new DateTime(2024, 5, 1, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(350),
                             UserProfileId = 6,
                             UserShoeId = 43
                         },
@@ -427,7 +427,7 @@ namespace OmgShoes.Migrations
                             Id = 8,
                             IsEdited = false,
                             Text = "I am a 5 ⭐️ man!!!",
-                            TimeStamp = new DateTime(2024, 6, 2, 14, 21, 35, 800, DateTimeKind.Local).AddTicks(5060),
+                            TimeStamp = new DateTime(2024, 6, 4, 13, 12, 10, 960, DateTimeKind.Local).AddTicks(350),
                             UserProfileId = 2,
                             UserShoeId = 49
                         });
@@ -484,21 +484,51 @@ namespace OmgShoes.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("FriendAvatar")
-                        .HasColumnType("text");
-
-                    b.Property<int>("FriendId")
+                    b.Property<int>("InitiatorId")
                         .HasColumnType("integer");
 
-                    b.Property<string>("FriendName")
-                        .HasColumnType("text");
-
-                    b.Property<int>("UserProfileId")
+                    b.Property<int>("RecipientId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("InitiatorId");
+
+                    b.HasIndex("RecipientId");
+
                     b.ToTable("Friendships");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            InitiatorId = 6,
+                            RecipientId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            InitiatorId = 6,
+                            RecipientId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            InitiatorId = 6,
+                            RecipientId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            InitiatorId = 6,
+                            RecipientId = 4
+                        },
+                        new
+                        {
+                            Id = 5,
+                            InitiatorId = 6,
+                            RecipientId = 5
+                        });
                 });
 
             modelBuilder.Entity("OmgShoes.Models.Like", b =>
@@ -2805,6 +2835,25 @@ namespace OmgShoes.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("OmgShoes.Models.Friendship", b =>
+                {
+                    b.HasOne("OmgShoes.Models.UserProfile", "Initiator")
+                        .WithMany()
+                        .HasForeignKey("InitiatorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OmgShoes.Models.UserProfile", "Recipient")
+                        .WithMany()
+                        .HasForeignKey("RecipientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Initiator");
+
+                    b.Navigation("Recipient");
+                });
+
             modelBuilder.Entity("OmgShoes.Models.Like", b =>
                 {
                     b.HasOne("OmgShoes.Models.UserShoe", null)
@@ -2837,7 +2886,7 @@ namespace OmgShoes.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("OmgShoes.Models.UserProfile", null)
+                    b.HasOne("OmgShoes.Models.UserProfile", "User")
                         .WithMany("UserShoes")
                         .HasForeignKey("UserProfileId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -2846,6 +2895,8 @@ namespace OmgShoes.Migrations
                     b.Navigation("Condition");
 
                     b.Navigation("Shoe");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("OmgShoes.Models.UserProfile", b =>

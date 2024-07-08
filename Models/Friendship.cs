@@ -1,10 +1,14 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace OmgShoes.Models;
 
 public class Friendship
 {
     public int Id { get; set; }
-    public int UserProfileId { get; set; }
-    public int FriendId { get; set; }
-    public string? FriendName { get; set; }
-    public string? FriendAvatar { get; set; }
+    public int InitiatorId { get; set; }
+    [ForeignKey("InitiatorId")]
+    public UserProfile? Initiator { get; set; }
+    public int RecipientId { get; set; }
+    [ForeignKey("RecipientId")]
+    public UserProfile? Recipient { get; set; }
 }

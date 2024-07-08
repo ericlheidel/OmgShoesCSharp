@@ -2324,7 +2324,36 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
 
         modelBuilder.Entity<Friendship>().HasData(new Friendship[]
         {
-
+            new Friendship
+            {
+                Id = 1,
+                InitiatorId = 6,
+                RecipientId = 1,
+            },
+            new Friendship
+            {
+                Id = 2,
+                InitiatorId = 6,
+                RecipientId = 2,
+            },
+            new Friendship
+            {
+                Id = 3,
+                InitiatorId = 6,
+                RecipientId = 3,
+            },
+            new Friendship
+            {
+                Id = 4,
+                InitiatorId = 6,
+                RecipientId = 4,
+            },
+            new Friendship
+            {
+                Id = 5,
+                InitiatorId = 6,
+                RecipientId = 5,
+            },
         });
     }
 }
