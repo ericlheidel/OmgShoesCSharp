@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react"
 import "./ProfileForm.css"
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import {
   getUserById,
   updateUserProfile,
@@ -9,25 +9,30 @@ import {
 import { states } from "../../utility.jsx"
 
 export const ProfileForm = ({ loggedInUser }) => {
-  const [name, setName] = useState(loggedInUser.name)
-  const [city, setCity] = useState(loggedInUser.city)
-  const [state, setState] = useState(loggedInUser.state)
-  const [avatar, setAvatar] = useState(loggedInUser.avatar)
-  const [email, setEmail] = useState(loggedInUser.email)
-  const [bio, setBio] = useState(loggedInUser.bio)
+  const [user, setUser] = useState([])
 
   const navigate = useNavigate()
+
+  useEffect(() => {
+    getUserById(loggedInUser.id).then(setUser)
+  }, [loggedInUser.id])
+
+  const handleInputChange = (e) => {
+    const userCopy = { ...user }
+    userCopy[e.target.name] = e.target.value
+    setUser(userCopy)
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
     const updatedProfile = {
-      name,
-      city,
-      state,
-      avatar,
-      email,
-      bio,
+      name: user.name,
+      city: user.city,
+      state: user.state,
+      avatar: user.avatar,
+      email: user.email,
+      bio: user.bio,
     }
 
     updateUserProfile(updatedProfile, loggedInUser.id).then(
@@ -46,13 +51,11 @@ export const ProfileForm = ({ loggedInUser }) => {
                 type="text"
                 name="name"
                 spellCheck={false}
-                value={name}
+                value={user.name ? user.name : ""}
                 required
                 autoFocus
                 className="form-control"
-                onChange={(e) => {
-                  setName(e.target.value)
-                }}
+                onChange={handleInputChange}
               />
             </label>
           </div>
@@ -66,14 +69,12 @@ export const ProfileForm = ({ loggedInUser }) => {
                   type="text"
                   name="city"
                   spellCheck={false}
-                  value={city}
+                  value={user.city ? user.city : ""}
                   required
                   autoFocus
                   className="form-control city"
                   style={{ width: "70%" }}
-                  onChange={(e) => {
-                    setCity(e.target.value)
-                  }}
+                  onChange={handleInputChange}
                 />
               </label>
             </div>
@@ -84,14 +85,12 @@ export const ProfileForm = ({ loggedInUser }) => {
                 State:
                 <select
                   name="state"
-                  value={state}
+                  value={user.state ? user.state : ""}
                   required
                   autoFocus
                   className="form-control state-select state"
                   style={{ width: "35%" }}
-                  onChange={(e) => {
-                    setState(e.target.value)
-                  }}
+                  onChange={handleInputChange}
                 >
                   <option value={0} key={0}>
                     Select a state...
@@ -116,11 +115,11 @@ export const ProfileForm = ({ loggedInUser }) => {
                 type="text"
                 name="avatar"
                 spellCheck={false}
-                value={avatar}
+                value={user.avatar ? user.avatar : ""}
                 required
                 autoFocus
                 className="form-control"
-                onChange={() => {}}
+                onChange={handleInputChange}
               />
             </label>
           </div>
@@ -133,11 +132,11 @@ export const ProfileForm = ({ loggedInUser }) => {
                 type="text"
                 name="email"
                 spellCheck={false}
-                value={email}
+                value={user.email ? user.email : ""}
                 required
                 autoFocus
                 className="form-control"
-                onChange={() => {}}
+                onChange={handleInputChange}
               />
             </label>
           </div>
@@ -149,13 +148,11 @@ export const ProfileForm = ({ loggedInUser }) => {
               <input
                 type="text"
                 name="bio"
-                value={bio}
+                value={user.bio ? user.bio : ""}
                 required
                 autoFocus
                 className="form-control"
-                onChange={(e) => {
-                  setBio(e.target.value)
-                }}
+                onChange={handleInputChange}
               />
             </label>
           </div>
