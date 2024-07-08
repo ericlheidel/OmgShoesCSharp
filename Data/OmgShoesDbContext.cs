@@ -8,13 +8,13 @@ namespace OmgShoes.Data;
 public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
 {
     private readonly IConfiguration _configuration;
-    public DbSet<Comment> Comments { get; set; }
-    public DbSet<Condition> Conditions { get; set; }
-    public DbSet<Friendship> Friendships { get; set; }
-    public DbSet<Like> Likes { get; set; }
-    public DbSet<Shoe> Shoes { get; set; }
     public DbSet<UserProfile> UserProfiles { get; set; }
+    public DbSet<Shoe> Shoes { get; set; }
+    public DbSet<Condition> Conditions { get; set; }
     public DbSet<UserShoe> UserShoes { get; set; }
+    public DbSet<Comment> Comments { get; set; }
+    public DbSet<Like> Likes { get; set; }
+    public DbSet<Friendship> Friendships { get; set; }
 
     public OmgShoesDbContext(DbContextOptions<OmgShoesDbContext> context, IConfiguration config) : base(context)
     {
@@ -23,6 +23,18 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        // modelBuilder.Entity<Friendship>()
+        //     .HasOne(f => f.Initiator)
+        //     .WithMany(up => up.InitiatedFriendships)
+        //     .HasForeignKey(f => f.InitiatorId)
+        //     .OnDelete(DeleteBehavior.Restrict);
+
+        // modelBuilder.Entity<Friendship>()
+        //     .HasOne(f => f.Recipient)
+        //     .WithMany(up => up.ReceivedFriendships)
+        //     .HasForeignKey(f => f.RecipientId)
+        //     .OnDelete(DeleteBehavior.Restrict);
+
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.Entity<IdentityRole>().HasData(new IdentityRole[]
@@ -2353,6 +2365,12 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
                 Id = 5,
                 InitiatorId = 6,
                 RecipientId = 5,
+            },
+            new Friendship
+            {
+                Id = 6,
+                InitiatorId = 5,
+                RecipientId = 1,
             },
         });
     }

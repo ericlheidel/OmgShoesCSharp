@@ -25,7 +25,6 @@ public class UserProfileController : ControllerBase
     {
         return Ok(_dbContext
             .UserProfiles
-            // .Include(up => up.IdentityUser)
             .Select(up => new UserProfileDTO
             {
                 Id = up.Id,
@@ -35,7 +34,6 @@ public class UserProfileController : ControllerBase
                 State = up.State,
                 Avatar = up.Avatar,
                 Bio = up.Bio,
-                // IdentityUserId = up.IdentityUserId
             }).ToList());
     }
 
@@ -71,7 +69,6 @@ public class UserProfileController : ControllerBase
                 State = up.State,
                 Avatar = up.Avatar,
                 Bio = up.Bio,
-                // IdentityUserId = up.IdentityUserId,
                 Roles = _dbContext.UserRoles
                     .Where(ur => ur.UserId == up.IdentityUserId)
                     .Select(ur => _dbContext.Roles.SingleOrDefault(r => r.Id == ur.RoleId).Name).ToList()
@@ -85,6 +82,10 @@ public class UserProfileController : ControllerBase
         UserProfile userProfile = _dbContext
             .UserProfiles
             .Where(up => up.Id == id)
+            // .Include(up => up.InitiatedFriendships)
+            // .ThenInclude(f => f.Recipient)
+            // .Include(up => up.ReceivedFriendships)
+            // .ThenInclude(f => f.Initiator)
             .SingleOrDefault();
 
         if (userProfile == null)
@@ -92,7 +93,6 @@ public class UserProfileController : ControllerBase
             return NotFound();
         }
 
-        // return Ok(userProfile);
         return Ok(new UserProfileDTO
         {
             Id = userProfile.Id,
@@ -122,7 +122,6 @@ public class UserProfileController : ControllerBase
                 State = up.State,
                 Avatar = up.Avatar,
                 Bio = up.Bio,
-                // IdentityUserId = up.IdentityUserId,
                 Roles = _dbContext.UserRoles
                     .Where(ur => ur.UserId == up.IdentityUserId)
                     .Select(ur => _dbContext.Roles.SingleOrDefault(r => r.Id == ur.RoleId).Name).ToList()
@@ -153,7 +152,6 @@ public class UserProfileController : ControllerBase
                 State = up.State,
                 Avatar = up.Avatar,
                 Bio = up.Bio,
-                // IdentityUserId = up.IdentityUser.Id,
                 UserShoes = _dbContext.UserShoes
                     .Where(us => us.UserProfileId == id)
                     .Select(us => new UserShoeDTO
