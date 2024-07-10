@@ -31,8 +31,12 @@ export const Profile = ({ loggedInUser }) => {
     }
   }, [loggedInUser, userId])
 
-  useEffect(() => {
+  const getAndSetFriends = () => {
     getFriendsListByUserId(parseInt(userId)).then(setFriends)
+  }
+
+  useEffect(() => {
+    getAndSetFriends()
   }, [userId])
 
   useEffect(() => {
@@ -58,6 +62,7 @@ export const Profile = ({ loggedInUser }) => {
           userId={userId}
           loggedInUser={loggedInUser}
           friends={friends}
+          getAndSetFriends={getAndSetFriends}
         />
         {friends.length === 0 ? (
           ""
