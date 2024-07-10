@@ -31,12 +31,8 @@ export const Profile = ({ loggedInUser }) => {
     }
   }, [loggedInUser, userId])
 
-  const getAndSetFriends = () => {
-    getFriendsListByUserId(parseInt(userId)).then(setFriends)
-  }
-
   useEffect(() => {
-    getAndSetFriends()
+    getFriendsListByUserId(parseInt(userId)).then(setFriends)
   }, [userId])
 
   useEffect(() => {
@@ -61,7 +57,7 @@ export const Profile = ({ loggedInUser }) => {
         <FriendButtons
           userId={userId}
           loggedInUser={loggedInUser}
-          getAndSetFriends={getAndSetFriends}
+          friends={friends}
         />
         {friends.length === 0 ? (
           ""

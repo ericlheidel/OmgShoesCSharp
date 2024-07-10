@@ -1,24 +1,42 @@
 /* eslint-disable react/prop-types */
+import { useEffect, useState } from "react"
 import "./Friends.css"
-export const FriendButtons = ({ userId, loggedInUser, getAndSetFriends }) => {
+export const FriendButtons = ({ userId, loggedInUser, friends }) => {
+  const [showButtons, setShowButtons] = useState(false)
+
+  useEffect(() => {
+    if (loggedInUser.id !== parseInt(userId)) {
+      setShowButtons(true)
+    } else {
+      setShowButtons(false)
+    }
+  }, [loggedInUser.id, userId])
+
   return (
     <>
-      {parseInt(userId) === loggedInUser.id
-        ? ""
-        : ""
-          // <>
-          //   {foundInitiator.length === 1 && foundRecipient.length === 1 && (
-          //     <button className="remove-friend-btn" onClick={handleRemove}>
-          //       Remove Friend
-          //     </button>
-          //   )}
-          //   {foundInitiator.length === 0 && foundRecipient.length === 0 && (
-          //     <button className="add-friend-btn" onClick={handleAdd}>
-          //       Add Friend
-          //     </button>
-          //   )}
-          // </>
-      }
+      {friends === null ? (
+        "Loading..."
+      ) : (
+        <>
+          {friends.some((f) => loggedInUser.id === f.userId) && showButtons && (
+            <button
+              className="remove-friend-btn"
+              onClick={() => console.log("Remove Friend Button")}
+            >
+              Remove Friend
+            </button>
+          )}
+          {!friends.some((f) => loggedInUser.id === f.userId) &&
+            showButtons && (
+              <button
+                className="add-friend-btn"
+                onClick={() => console.log("Add Friend Button")}
+              >
+                Add Friend
+              </button>
+            )}
+        </>
+      )}
     </>
   )
 }
