@@ -19,7 +19,7 @@ export const addFriendship = (friendship) => {
 }
 
 export const removeFriendship = (idOne, idTwo) => {
-  return fetch(`${_apiUrl}?idOne=${idOne}&idTwo=${idTwo}`, {
+  return fetch(`${_apiUrl}/${idOne}/${idTwo}`, {
     method: "DELETE",
   })
 }
