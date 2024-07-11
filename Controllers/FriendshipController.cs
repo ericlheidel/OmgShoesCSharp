@@ -48,7 +48,8 @@ public class FriendshipController : ControllerBase
 
     [HttpGet("{userId}")]
     [Authorize]
-    public IActionResult GetByUserId(int userId)
+    public IActionResult GetFriendsByUserId(int userId)
+    //! This Get returns a users friends
     {
         var friendshipsByInitiator = _dbContext
             .Friendships
@@ -61,24 +62,6 @@ public class FriendshipController : ControllerBase
                 Name = fs.Recipient.Name,
                 Avatar = fs.Recipient.Avatar
             }).ToList();
-        // .Select(fs => new FriendshipDTO
-        // {
-        //     Id = fs.Id,
-        //     InitiatorId = fs.InitiatorId,
-        //     Initiator = fs.Initiator != null ? new UserProfileFriendDTO
-        //     {
-        //         Id = fs.Initiator.Id,
-        //         Name = fs.Initiator.Name,
-        //         Avatar = fs.Initiator.Avatar
-        //     } : null,
-        //     RecipientId = fs.RecipientId,
-        //     Recipient = fs.Recipient != null ? new UserProfileFriendDTO
-        //     {
-        //         Id = fs.Recipient.Id,
-        //         Name = fs.Recipient.Name,
-        //         Avatar = fs.Recipient.Avatar
-        //     } : null
-        // }).ToList();
 
         var friendshipsByRecipient = _dbContext
             .Friendships
@@ -91,24 +74,6 @@ public class FriendshipController : ControllerBase
                 Name = fs.Initiator.Name,
                 Avatar = fs.Initiator.Avatar
             }).ToList();
-        // .Select(fs => new FriendshipDTO
-        // {
-        //     Id = fs.Id,
-        //     InitiatorId = fs.InitiatorId,
-        //     Initiator = fs.Initiator != null ? new UserProfileFriendDTO
-        //     {
-        //         Id = fs.Initiator.Id,
-        //         Name = fs.Initiator.Name,
-        //         Avatar = fs.Initiator.Avatar
-        //     } : null,
-        //     RecipientId = fs.RecipientId,
-        //     Recipient = fs.Recipient != null ? new UserProfileFriendDTO
-        //     {
-        //         Id = fs.Recipient.Id,
-        //         Name = fs.Recipient.Name,
-        //         Avatar = fs.Recipient.Avatar
-        //     } : null
-        // }).ToList();
 
         var friends = friendshipsByInitiator
             .Union(friendshipsByRecipient)
@@ -117,97 +82,60 @@ public class FriendshipController : ControllerBase
         return Ok(friends.OrderBy(f => f.Name));
     }
 
-
-
-    [HttpGet("initiator/{initiatorId}")]
-    [Authorize]
-    public IActionResult GetByInitiator(int initiatorId)
-    {
-        return Ok(_dbContext
-            .Friendships
-            .Include(fs => fs.Initiator)
-            .Include(fs => fs.Recipient)
-            .Where(fs => fs.InitiatorId == initiatorId)
-            .Select(fs => new FriendshipDTO
-            {
-                Id = fs.Id,
-                InitiatorId = fs.InitiatorId,
-                Initiator = fs.Initiator != null ? new UserProfileFriendDTO
-                {
-                    Id = fs.Initiator.Id,
-                    Name = fs.Initiator.Name,
-                    Avatar = fs.Initiator.Avatar
-                } : null,
-                RecipientId = fs.RecipientId,
-                Recipient = fs.Recipient != null ? new UserProfileFriendDTO
-                {
-                    Id = fs.Recipient.Id,
-                    Name = fs.Recipient.Name,
-                    Avatar = fs.Recipient.Avatar
-                } : null
-            })
-            .ToList());
-    }
-
-    [HttpGet("recipient/{recipientId}")]
-    [Authorize]
-    public IActionResult GetByRecipient(int recipientId)
-    {
-        return Ok(_dbContext
-            .Friendships
-            .Include(fs => fs.Initiator)
-            .Include(fs => fs.Recipient)
-            .Where(fs => fs.RecipientId == recipientId)
-            .Select(fs => new FriendshipDTO
-            {
-                Id = fs.Id,
-                InitiatorId = fs.InitiatorId,
-                Initiator = fs.Initiator != null ? new UserProfileFriendDTO
-                {
-                    Id = fs.Initiator.Id,
-                    Name = fs.Initiator.Name,
-                    Avatar = fs.Initiator.Avatar
-                } : null,
-                RecipientId = fs.RecipientId,
-                Recipient = fs.Recipient != null ? new UserProfileFriendDTO
-                {
-                    Id = fs.Recipient.Id,
-                    Name = fs.Recipient.Name,
-                    Avatar = fs.Recipient.Avatar
-                } : null
-            })
-            .ToList());
-    }
-
     [HttpPost]
     [Authorize]
     public IActionResult Create(Friendship friendship)
     {
-        Friendship newFriendship = new Friendship
+        Friendship friendshipToCheckFor = _dbContext.Friendships.SingleOrDefault(fs => fs.InitiatorId == friendship.InitiatorId && fs.RecipientId == friendship.RecipientId || fs.InitiatorId == friendship.RecipientId && fs.RecipientId == friendship.InitiatorId);
+
+        if (friendshipToCheckFor == null)
         {
-            InitiatorId = friendship.InitiatorId,
-            RecipientId = friendship.RecipientId
-        };
+            Friendship newFriendship = new Friendship
+            {
+                InitiatorId = friendship.InitiatorId,
+                RecipientId = friendship.RecipientId
+            };
 
-        _dbContext.Friendships.Add(newFriendship);
-        _dbContext.SaveChanges();
+            _dbContext.Friendships.Add(newFriendship);
+            _dbContext.SaveChanges();
 
-        return Created($"api/friendship/{friendship.Id}", friendship);
+            return Created($"api/friendship/{friendship.Id}", friendship);
+        }
+
+        else
+        {
+            return BadRequest(new { message = "Friendship already exists" });
+        }
+
     }
 
-    [HttpDelete]
+    [HttpDelete("{idOne}/{idTwo}")]
     [Authorize]
-    public IActionResult Delete([FromQuery] int initiatorId, [FromQuery] int recipientId)
+    public IActionResult Delete(int idOne, int idTwo)
     {
-        Friendship friendshipToDelete = _dbContext.Friendships.SingleOrDefault(fs => fs.InitiatorId == initiatorId && fs.RecipientId == recipientId);
+        Friendship friendshipToDelete = _dbContext.Friendships.SingleOrDefault(fs => fs.InitiatorId == idOne && fs.RecipientId == idTwo);
 
         if (friendshipToDelete == null)
         {
-            return NotFound();
+            Friendship friendshipToDeleteReverse = _dbContext.Friendships.SingleOrDefault(fs => fs.InitiatorId == idTwo && fs.RecipientId == idOne);
+
+            if (friendshipToDeleteReverse == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                _dbContext.Remove(friendshipToDeleteReverse);
+                _dbContext.SaveChanges();
+            }
+        }
+        else
+        {
+            _dbContext.Remove(friendshipToDelete);
+            _dbContext.SaveChanges();
         }
 
-        _dbContext.Remove(friendshipToDelete);
-        _dbContext.SaveChanges();
+
 
         return NoContent();
     }

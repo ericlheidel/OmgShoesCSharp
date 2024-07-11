@@ -8,7 +8,7 @@ export const getFriendships = () => {
   return fetch(`${_apiUrl}`).then((res) => res.json())
 }
 
-export const postFriendship = (friendship) => {
+export const addFriendship = (friendship) => {
   return fetch(`${_apiUrl}`, {
     method: "POST",
     headers: {
@@ -18,8 +18,8 @@ export const postFriendship = (friendship) => {
   }).then((res) => res.json())
 }
 
-export const removeFriendshipById = (id) => {
-  return fetch(`${_apiUrl}/${id}`, {
+export const removeFriendship = (idOne, idTwo) => {
+  return fetch(`${_apiUrl}/${idOne}/${idTwo}`, {
     method: "DELETE",
   })
 }
