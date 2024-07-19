@@ -6,18 +6,13 @@ import { ShoeCollection } from "../shoes/ShoeCollection.jsx"
 import { getUserShoeCollectionByUserId } from "../../managers/userShoeManager.js"
 import { getUserById } from "../../managers/userProfileManager.js"
 import { FriendButtons } from "../friends/FriendButtons.jsx"
-import {
-  findFriendship,
-  getFriendsListByUserId,
-} from "../../managers/friendshipManager.js"
+import { getFriendsListByUserId } from "../../managers/friendshipManager.js"
 import { Friend } from "../friends/Friend.jsx"
 
 export const Profile = ({ loggedInUser }) => {
   const [user, setUser] = useState([])
   const [collection, setCollection] = useState([])
   const [friends, setFriends] = useState([])
-  // eslint-disable-next-line no-unused-vars
-  const [isFriend, setIsFriend] = useState(false)
 
   const { userId } = useParams()
 
@@ -38,14 +33,6 @@ export const Profile = ({ loggedInUser }) => {
   useEffect(() => {
     getAndSetFriends()
   }, [userId])
-
-  useEffect(() => {
-    findFriendship(loggedInUser.id, parseInt(userId)).then((res) => {
-      if (res.status === "friends") {
-        setIsFriend(true)
-      }
-    })
-  }, [loggedInUser.id, userId])
 
   return (
     <div className="profile">

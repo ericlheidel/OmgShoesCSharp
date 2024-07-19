@@ -29,28 +29,6 @@ export const getTodaysDateAndTime = () => {
   return now
 }
 
-let clickCount = 0
-export const handleClick = () => {
-  clickCount++
-
-  if (clickCount === 1) {
-    return "ronald@macdonald.com"
-  } else {
-    if (clickCount === 2) {
-      return "early@cuyler.com"
-    } else {
-      if (clickCount === 3) {
-        return "rusty@cuyler.com"
-      } else {
-        if (clickCount === 4) {
-          clickCount = 0
-          return ""
-        }
-      }
-    }
-  }
-}
-
 export const states = [
   { id: 1, state: "AL" },
   { id: 2, state: "AK" },

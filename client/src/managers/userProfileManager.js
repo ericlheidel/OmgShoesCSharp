@@ -12,8 +12,8 @@ export const getAllUsersWithRoles = () => {
   return fetch(`${_apiUrl}/withroles`).then((res) => res.json())
 }
 
-export const getUserById = (id) => {
-  return fetch(`${_apiUrl}/${id}`).then((res) => res.json())
+export const getUserById = async (id) => {
+  return await fetch(`${_apiUrl}/${id}`).then((res) => res.json())
 }
 
 export const getUserByIdWithRoles = (userId) => {

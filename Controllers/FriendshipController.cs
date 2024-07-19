@@ -139,22 +139,4 @@ public class FriendshipController : ControllerBase
 
         return NoContent();
     }
-
-    [HttpGet("isfriend")]
-    [Authorize]
-    public IActionResult IsFriend([FromQuery] int loggedInUserId, [FromQuery] int nonLoggedInUserId)
-    {
-        Friendship friendship = _dbContext.Friendships
-            .SingleOrDefault(f => f.InitiatorId == loggedInUserId
-                                && f.RecipientId == nonLoggedInUserId
-                                || f.InitiatorId == nonLoggedInUserId
-                                && f.RecipientId == loggedInUserId);
-
-        if (friendship == null)
-        {
-            return Ok(new { status = "not friends" });
-        }
-
-        return Ok(new { status = "friends" });
-    }
 }

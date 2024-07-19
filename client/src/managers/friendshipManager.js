@@ -23,9 +23,3 @@ export const removeFriendship = (idOne, idTwo) => {
     method: "DELETE",
   })
 }
-
-export const findFriendship = (loggedInUserId, nonLoggedInUserId) => {
-  return fetch(
-    `${_apiUrl}/isfriend?loggedInUserId=${loggedInUserId}&nonLoggedInUserId=${nonLoggedInUserId}`
-  ).then((res) => res.json())
-}
