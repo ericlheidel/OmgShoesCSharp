@@ -2340,37 +2340,55 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
             {
                 Id = 1,
                 InitiatorId = 6,
-                RecipientId = 1,
+                RecipientId = 2,
             },
             new Friendship
             {
                 Id = 2,
                 InitiatorId = 6,
-                RecipientId = 2,
+                RecipientId = 3,
             },
             new Friendship
             {
                 Id = 3,
                 InitiatorId = 6,
-                RecipientId = 3,
-            },
-            new Friendship
-            {
-                Id = 4,
-                InitiatorId = 6,
                 RecipientId = 4,
             },
             new Friendship
             {
+                Id = 4,
+                InitiatorId = 5,
+                RecipientId = 1,
+            },
+            new Friendship
+            {
                 Id = 5,
-                InitiatorId = 6,
-                RecipientId = 5,
+                InitiatorId = 5,
+                RecipientId = 3,
             },
             new Friendship
             {
                 Id = 6,
                 InitiatorId = 5,
-                RecipientId = 1,
+                RecipientId = 2,
+            },
+            new Friendship
+            {
+                Id = 7,
+                InitiatorId = 5,
+                RecipientId = 4,
+            },
+            new Friendship
+            {
+                Id = 8,
+                InitiatorId = 1,
+                RecipientId = 6,
+            },
+            new Friendship
+            {
+                Id = 9,
+                InitiatorId = 6,
+                RecipientId = 5,
             },
         });
     }
