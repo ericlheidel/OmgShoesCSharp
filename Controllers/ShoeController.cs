@@ -16,16 +16,6 @@ public class ShoeController : ControllerBase
         _dbContext = context;
     }
 
-    [HttpGet]
-    [Authorize]
-    public IActionResult Get()
-    {
-        return Ok(_dbContext
-            .Shoes
-            .ToList()
-        );
-    }
-
     [HttpGet("{id}")]
     [Authorize]
     public IActionResult GetById(int id)

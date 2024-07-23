@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 import "./LoginAndRegister.css"
 import { useState } from "react"
-// import { createUser, getUserByEmail } from "../../services/usersService.jsx"
-
 import { useNavigate } from "react-router-dom"
 import { register } from "../../managers/authManager.js"
 import { states } from "../../utility.jsx"

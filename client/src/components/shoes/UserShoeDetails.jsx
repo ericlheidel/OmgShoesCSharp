@@ -132,7 +132,6 @@ export const UserShoeDetails = ({ loggedInUser }) => {
                     className="form-btn btn-toggle"
                     hidden={!isHidden}
                     onClick={() => {
-                      // removeComments()
                       handleRemoveShoe()
                     }}
                   >

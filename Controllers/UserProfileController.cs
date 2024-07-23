@@ -82,10 +82,6 @@ public class UserProfileController : ControllerBase
         UserProfile userProfile = _dbContext
             .UserProfiles
             .Where(up => up.Id == id)
-            // .Include(up => up.InitiatedFriendships)
-            // .ThenInclude(f => f.Recipient)
-            // .Include(up => up.ReceivedFriendships)
-            // .ThenInclude(f => f.Initiator)
             .SingleOrDefault();
 
         if (userProfile == null)
