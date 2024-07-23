@@ -3,7 +3,8 @@
   margin-bottom: 2.5rem;
 }
 
-.year-dropdown {
+.year-dropdown,
+.user-dropdown {
   width: 15rem;
   margin-left: auto;
   margin-right: 15rem;

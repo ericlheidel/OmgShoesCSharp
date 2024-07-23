@@ -48,30 +48,7 @@ export const NavBar = ({ loggedInUser, setLoggedInUser }) => {
           </div>
         </nav>
       ) : (
-        <nav>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <Link to="/login">
-              <h1>Welcome to OMG,Shoes...</h1>
-              <button
-                className="form-btn-opp"
-                style={{
-                  color: "var(--color-four)",
-                  width: "55%",
-                  height: "45%",
-                  fontSize: "1.5rem",
-                }}
-                onClick={() => navigate("/login")}
-              >
-                Login
-              </button>
-            </Link>
-          </div>
-        </nav>
+        ""
       )}
     </>
   )

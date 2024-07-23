@@ -108,7 +108,6 @@ public class AuthController : ControllerBase
                 State = profile.State,
                 Avatar = profile.Avatar,
                 Bio = profile.Bio,
-                // IdentityUserId = identityUserId,
                 Roles = roles
             };
 
@@ -122,6 +121,7 @@ public class AuthController : ControllerBase
     {
         var user = new IdentityUser
         {
+            UserName = registration.UserName,
             Email = registration.Email
         };
 
@@ -140,7 +140,7 @@ public class AuthController : ControllerBase
                 State = registration.State,
                 Avatar = registration.Avatar,
                 Bio = registration.Bio,
-                // IdentityUserId = user.Id,
+                IdentityUserId = user.Id,
             });
             _dbContext.SaveChanges();
 

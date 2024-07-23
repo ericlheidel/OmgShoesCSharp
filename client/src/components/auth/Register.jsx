@@ -12,11 +12,13 @@ export const Register = ({ setLoggedInUser }) => {
   const [name, setName] = useState("")
   const [city, setCity] = useState("")
   const [state, setState] = useState("")
-  const [avatar, setAvatar] = useState("")
+  const [avatar, setAvatar] = useState("/avatars/default.jpg")
   const [bio, setBio] = useState("")
   const [password, setPassword] = useState("")
 
   const [confirmPassword, setConfirmPassword] = useState("")
+
+  const [userName, setUserName] = useState("")
 
   const navigate = useNavigate()
 
@@ -34,6 +36,7 @@ export const Register = ({ setLoggedInUser }) => {
         avatar,
         bio,
         password,
+        userName,
       }
       register(newUser).then((user) => {
         if (user) {
@@ -46,22 +49,11 @@ export const Register = ({ setLoggedInUser }) => {
     }
   }
 
-  const fillOutForm = () => {
-    setName("Sheriff")
-    setCity("Ringgold")
-    setState("GA")
-    setAvatar("/avatars/sheriff.jpg")
-    setEmail("sheriff@sheriff.com")
-    setBio("I'm the sheriff!")
-    setPassword("password")
-    setConfirmPassword("password")
-  }
-
   return (
     <main>
       <div>
         <form className="register-form color-four" onSubmit={handleSubmit}>
-          <div className="text-div" onClick={fillOutForm}>
+          <div className="text-div">
             <h1>OMG, Shoes...</h1>
             <h2>Please Register</h2>
           </div>
@@ -69,7 +61,7 @@ export const Register = ({ setLoggedInUser }) => {
             <fieldset>
               <div className="form-group">
                 <label style={{ textAlign: "left" }}>
-                  Name:
+                  Full Name:
                   <input
                     type="text"
                     id="name"
@@ -80,6 +72,7 @@ export const Register = ({ setLoggedInUser }) => {
                     className="form-control"
                     onChange={(e) => {
                       setName(e.target.value)
+                      setUserName(name.split(" ")[0])
                     }}
                   />
                 </label>
@@ -117,7 +110,7 @@ export const Register = ({ setLoggedInUser }) => {
                     required
                     spellCheck={false}
                     className="state-dropdown form-select state-two"
-                    style={{ width: "85%", height: "70%" }}
+                    style={{ width: "85%", height: "70%", fontSize: "1.25rem" }}
                     onChange={(e) => {
                       setState(e.target.value)
                     }}
@@ -143,7 +136,7 @@ export const Register = ({ setLoggedInUser }) => {
                   type="text"
                   id="avatar"
                   value={avatar}
-                  required
+                  disabled
                   autoFocus
                   spellCheck={false}
                   className="form-control"
@@ -197,7 +190,7 @@ export const Register = ({ setLoggedInUser }) => {
                 <input
                   type="password"
                   id="password"
-                  value={password}
+                  value={confirmPassword}
                   required
                   autoFocus
                   spellCheck={false}
