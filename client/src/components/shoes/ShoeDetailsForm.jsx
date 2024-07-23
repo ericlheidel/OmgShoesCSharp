@@ -76,7 +76,7 @@ export const ShoeDetailsForm = ({ loggedInUser }) => {
           <div className="shoe-detail-two">{shoe.modelNumber}</div>
           <div className="shoe-detail-two">{shoe.colorway}</div>
         </div>
-        <form className="form">
+        <form className="form" onSubmit={handleDelete}>
           <fieldset>
             <div className="form-group">
               <select
@@ -151,7 +151,6 @@ export const ShoeDetailsForm = ({ loggedInUser }) => {
           <button
             className="form-btn"
             style={{ marginBottom: "15px", marginRight: "77.5%" }}
-            onClick={handleDelete}
           >
             Delete
           </button>
