@@ -4,10 +4,6 @@ export const getFriendsListByUserId = (userId) => {
   return fetch(`${_apiUrl}/${userId}`).then((res) => res.json())
 }
 
-export const getFriendships = () => {
-  return fetch(`${_apiUrl}`).then((res) => res.json())
-}
-
 export const addFriendship = (friendship) => {
   return fetch(`${_apiUrl}`, {
     method: "POST",

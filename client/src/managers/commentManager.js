@@ -1,9 +1,5 @@
 const _apiUrl = "/api/comment"
 
-export const getCommentsByUserShoeId = (userShoeId) => {
-  return fetch(`${_apiUrl}/${userShoeId}`).then((res) => res.json())
-}
-
 export const postComment = (comment) => {
   return fetch(_apiUrl, {
     method: "POST",

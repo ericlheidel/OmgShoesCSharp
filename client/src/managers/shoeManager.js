@@ -1,9 +1,5 @@
 const _apiUrl = "/api/shoe"
 
-export const getAllShoes = () => {
-  return fetch(_apiUrl).then((res) => res.json())
-}
-
 export const getShoeById = (id) => {
   return fetch(`${_apiUrl}/${id}`).then((res) => res.json())
 }

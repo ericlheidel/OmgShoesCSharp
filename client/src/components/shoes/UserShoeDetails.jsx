@@ -62,7 +62,7 @@ export const UserShoeDetails = ({ loggedInUser }) => {
     })
   }
 
-  const handleDeleteShoe = () => {
+  const handleRemoveShoe = () => {
     deleteUserShoeFromCollection(userShoeId).then(() => {
       navigate(`/users/${loggedInUser.id}`)
     })
@@ -134,7 +134,7 @@ export const UserShoeDetails = ({ loggedInUser }) => {
                     hidden={!isHidden}
                     onClick={() => {
                       // removeComments()
-                      handleDeleteShoe()
+                      handleRemoveShoe()
                     }}
                   >
                     Remove Shoe
