@@ -1,39 +1,31 @@
 const _apiUrl = "/api/userprofile"
 
-export const getAllUsers = () => {
-  return fetch(_apiUrl).then((res) => res.json())
+export const getAllUsersWithBasicInfo = async () => {
+  return await fetch(`${_apiUrl}/basic`).then((res) => res.json())
 }
 
-export const getAllUsersWithBasicInfo = () => {
-  return fetch(`${_apiUrl}/basic`).then((res) => res.json())
-}
-
-export const getAllUsersWithRoles = () => {
-  return fetch(`${_apiUrl}/withroles`).then((res) => res.json())
+export const getAllUsersWithRoles = async () => {
+  return await fetch(`${_apiUrl}/withroles`).then((res) => res.json())
 }
 
 export const getUserById = async (id) => {
   return await fetch(`${_apiUrl}/${id}`).then((res) => res.json())
 }
 
-export const getUserByIdWithRoles = (userId) => {
-  return fetch(`${_apiUrl}/withroles/${userId}`).then((res) => res.json())
-}
-
-export const promoteUser = (userId) => {
-  return fetch(`${_apiUrl}/promote/${userId}`, {
+export const promoteUser = async (userId) => {
+  return await fetch(`${_apiUrl}/promote/${userId}`, {
     method: "POST",
   })
 }
 
-export const demoteUser = (userId) => {
-  return fetch(`${_apiUrl}/demote/${userId}`, {
+export const demoteUser = async (userId) => {
+  return await fetch(`${_apiUrl}/demote/${userId}`, {
     method: "POST",
   })
 }
 
-export const updateUserProfile = (profile, userId) => {
-  return fetch(`${_apiUrl}/${userId}`, {
+export const updateUserProfile = async (profile, userId) => {
+  return await fetch(`${_apiUrl}/${userId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

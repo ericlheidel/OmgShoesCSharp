@@ -1,7 +1,7 @@
 const _apiUrl = "/api/auth"
 
-export const login = (email, password) => {
-  return fetch(`${_apiUrl}/login`, {
+export const login = async (email, password) => {
+  return await fetch(`${_apiUrl}/login`, {
     method: "POST",
     credentials: "same-origin",
     headers: {
@@ -16,19 +16,19 @@ export const login = (email, password) => {
   })
 }
 
-export const logout = () => {
-  return fetch(`${_apiUrl}/logout`)
+export const logout = async () => {
+  return await fetch(`${_apiUrl}/logout`)
 }
 
-export const tryGetLoggedInUser = () => {
-  return fetch(`${_apiUrl}/me`).then((res) => {
+export const tryGetLoggedInUser = async () => {
+  return await fetch(`${_apiUrl}/me`).then((res) => {
     return res.status === 401 ? Promise.resolve(null) : res.json()
   })
 }
 
-export const register = (userProfile) => {
+export const register = async (userProfile) => {
   userProfile.password = btoa(userProfile.password)
-  return fetch(`${_apiUrl}/register`, {
+  return await fetch(`${_apiUrl}/register`, {
     credentials: "same-origin",
     method: "POST",
     headers: {
