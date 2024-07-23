@@ -25,7 +25,7 @@ export const Login = ({ setLoggedInUser }) => {
   return (
     <main>
       <section>
-        <form className="login-form color-four">
+        <form className="login-form color-four" onSubmit={handleSubmit}>
           <div className="text-div">
             <h1>OMG, Shoes...</h1>
             <h2>Please sign in</h2>
@@ -69,7 +69,7 @@ export const Login = ({ setLoggedInUser }) => {
               <button
                 type="submit"
                 className="btn-submit form-btn btn-login"
-                onClick={handleSubmit}
+                // onClick={handleSubmit}
               >
                 Sign in
               </button>

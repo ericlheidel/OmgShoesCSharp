@@ -30,7 +30,6 @@ export const UserShoeDetails = ({ loggedInUser }) => {
 
   useEffect(() => {
     getAndSetShoe()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {

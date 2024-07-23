@@ -42,7 +42,7 @@ export const AddShoe = () => {
 
   return (
     <div className="add-shoe">
-      <form className="add-shoe-form color-four">
+      <form className="add-shoe-form color-four" onSubmit={addShoe}>
         <h2 className="add-shoe-title" onClick={fillOutForm}>
           Add a Shoe to the Database
         </h2>
@@ -157,11 +157,7 @@ export const AddShoe = () => {
           </fieldset>
           <fieldset>
             <div className="form-group">
-              <button
-                type="submit"
-                className="btn-submit add-shoe-btn"
-                onClick={addShoe}
-              >
+              <button type="submit" className="btn-submit add-shoe-btn">
                 Add Shoe
               </button>
             </div>

@@ -149,13 +149,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ff67919f-3a3e-4dcf-8d88-8d4d62f85ba3",
+                            ConcurrencyStamp = "5eb673e1-f2be-40b3-839d-8fcbc7736200",
                             Email = "dee@reynolds.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEFMn/WJLF/yEFEc8jLsnzJJ5TUn6fdhpCkrYJn0Va1yrit5WKNoIOO5Keo3RVVtG0w==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPNwOLM04Rpuxjgg8eqXk1vP36rolNZsm2Pz1/CPaVSsL++k9xjHBZZ4lLGuOeEVYg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b7a0033c-9dd6-4029-aa64-8030b71eed2e",
+                            SecurityStamp = "1d92f002-c2df-44be-83ed-7e7e6cb0b8b8",
                             TwoFactorEnabled = false,
                             UserName = "Dee"
                         },
@@ -163,13 +163,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "frt98wr5-0223-3ww7-t6rq-028g4r521d4e",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "2ac9cb3a-4a63-4bde-b698-02f9d7602afa",
+                            ConcurrencyStamp = "d5c65ac0-166f-4599-9c80-020d5e68244b",
                             Email = "dennis@reynolds.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEKtfu36gUquDZL+06hhVUOnuZfpAXyi3F/vZGBNkkyt7GAe6JBHTH5bqoA0AOR7zuw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEK9ufSNcGzsykrHSHivDQxmPzhDWEoYuyw+kinywhtRGLDXYVxwR0F72ENhLphMvmQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2960006e-40b7-4bff-bf90-38aff25aa7aa",
+                            SecurityStamp = "e1c6b9fd-f2ec-495e-9a57-c1d4b9c7a086",
                             TwoFactorEnabled = false,
                             UserName = "Dennis"
                         },
@@ -177,13 +177,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "hdp65oa9-3053-5ap0-z0hh-235t2a098h8q",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "0313e607-aef7-4ea2-9211-ad220814a836",
+                            ConcurrencyStamp = "fab3bbfe-dc86-42e5-8856-6a79297ea0f7",
                             Email = "frank@reynolds.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEOrPPWg54QqY0ChEFuLJ8ZyK/g4JvSOOpkepZHwxe9ahzk7wx0AQOe3dsK7Glym7OA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOq7+Z9cTrSwJ6Wm2nMpZ8CP7bphVLOsEPb4QDUtNluCAalm1I664ozHYkgAk2mjqg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a4a1deb2-c006-4534-92b5-6603c9be9bbf",
+                            SecurityStamp = "f49c177d-51d5-4a86-a078-d20ce43f2894",
                             TwoFactorEnabled = false,
                             UserName = "Frank"
                         },
@@ -191,13 +191,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "rse05dd6-2058-3bg0-a3oo-204t2l308f3p",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5965315b-1788-4a8a-bb84-75f80387aa6a",
+                            ConcurrencyStamp = "eb66b8cf-10ec-4611-9dd2-6331e40f9fd8",
                             Email = "ronald@macdonald.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEOjvU18DHXcgj+ixSitG+RoN/g2TxPk1d5cMIkfLTOW1RuG2P6SpQFsqj1E2e7hXDg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAELNeWdX0UPDe0JUch56cieyEazoIk7l6RDLGKtvfxG2C7/oQ8mams1TLR7fXMar8fA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "4212585b-5768-4a69-97a0-8bcc0dca98b4",
+                            SecurityStamp = "7a63326d-c88a-4c87-99ae-cc6637135806",
                             TwoFactorEnabled = false,
                             UserName = "Ronald"
                         },
@@ -205,13 +205,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "wmo20ow7-0582-9pp1-i8sl-037h7w843j8r",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9bb6ed18-01e3-411a-80e5-fb8e4c73feb9",
+                            ConcurrencyStamp = "13e1867d-b8b4-4b76-8dec-ebaeb4948175",
                             Email = "charlie@kelly.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEIivh1YxgMmkAcLzXoTp/tAQpMiWrbda7vMuwrdYIuU38Sq6Emy9VKP9k8u4mu4DRQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEHxr7p9oHlR1E9hVAIQemncvFYZzCsyWierbcN0vUZTBnwO2q7Mcytezij1aNGbMvg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "993d13ca-b6ea-466b-a52a-24b8cd9db31e",
+                            SecurityStamp = "0e5fd046-3268-4aee-9b80-441762ea1acb",
                             TwoFactorEnabled = false,
                             UserName = "Charlie"
                         },
@@ -219,13 +219,13 @@ namespace OmgShoes.Migrations
                         {
                             Id = "rfv98hu4-3206-4gga-t8ws-457k5v543l6r",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9b703abe-3841-4bcb-be83-5cece3de15b9",
+                            ConcurrencyStamp = "6a1c9085-5a49-4b0d-bd5f-1ddcea04ee56",
                             Email = "the@waitress.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEB0X8+TB3GYGMBv+aU7OngV9tIFjUd5n+INya2+76oSjVTxWRoYjHr6PsN3PNjXwEA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAELN7pl9fRexmTkENyz5d+zmZvwn5FOA11RJu6ri6uGcQtu0uNSC+2RV8M1JAzB8VeA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "efff98b3-988e-4392-b37f-7738a785d4c7",
+                            SecurityStamp = "200b148b-5280-4e80-9361-454b71d5fee0",
                             TwoFactorEnabled = false,
                             UserName = "Waitress"
                         });
@@ -361,7 +361,7 @@ namespace OmgShoes.Migrations
                             Id = 1,
                             IsEdited = false,
                             Text = "I love you!!",
-                            TimeStamp = new DateTime(2024, 5, 19, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4360),
+                            TimeStamp = new DateTime(2024, 6, 3, 12, 34, 10, 201, DateTimeKind.Local).AddTicks(5780),
                             UserProfileId = 5,
                             UserShoeId = 43
                         },
@@ -370,7 +370,7 @@ namespace OmgShoes.Migrations
                             Id = 2,
                             IsEdited = false,
                             Text = "WAITRESS!!!",
-                            TimeStamp = new DateTime(2024, 6, 1, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4460),
+                            TimeStamp = new DateTime(2024, 6, 16, 12, 34, 10, 201, DateTimeKind.Local).AddTicks(5870),
                             UserProfileId = 5,
                             UserShoeId = 43
                         },
@@ -379,7 +379,7 @@ namespace OmgShoes.Migrations
                             Id = 3,
                             IsEdited = false,
                             Text = "I AM THE RAT KING",
-                            TimeStamp = new DateTime(2024, 3, 30, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4470),
+                            TimeStamp = new DateTime(2024, 4, 14, 12, 34, 10, 201, DateTimeKind.Local).AddTicks(5870),
                             UserProfileId = 5,
                             UserShoeId = 6
                         },
@@ -388,7 +388,7 @@ namespace OmgShoes.Migrations
                             Id = 4,
                             IsEdited = false,
                             Text = "bustin rats is my gig",
-                            TimeStamp = new DateTime(2024, 3, 31, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4480),
+                            TimeStamp = new DateTime(2024, 4, 15, 12, 34, 10, 201, DateTimeKind.Local).AddTicks(5880),
                             UserProfileId = 5,
                             UserShoeId = 6
                         },
@@ -397,7 +397,7 @@ namespace OmgShoes.Migrations
                             Id = 5,
                             IsEdited = false,
                             Text = "did you seriously put nair in my shampoo?!",
-                            TimeStamp = new DateTime(2024, 5, 4, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4490),
+                            TimeStamp = new DateTime(2024, 5, 19, 12, 34, 10, 201, DateTimeKind.Local).AddTicks(5890),
                             UserProfileId = 6,
                             UserShoeId = 6
                         },
@@ -406,7 +406,7 @@ namespace OmgShoes.Migrations
                             Id = 6,
                             IsEdited = false,
                             Text = "I'm playing both sides!!!!",
-                            TimeStamp = new DateTime(2024, 6, 4, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4490),
+                            TimeStamp = new DateTime(2024, 6, 19, 12, 34, 10, 201, DateTimeKind.Local).AddTicks(5890),
                             UserProfileId = 4,
                             UserShoeId = 6
                         },
@@ -415,7 +415,7 @@ namespace OmgShoes.Migrations
                             Id = 7,
                             IsEdited = false,
                             Text = "LEAVE ME ALONE CHARLIE!!!",
-                            TimeStamp = new DateTime(2024, 5, 5, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4500),
+                            TimeStamp = new DateTime(2024, 5, 20, 12, 34, 10, 201, DateTimeKind.Local).AddTicks(5890),
                             UserProfileId = 6,
                             UserShoeId = 43
                         },
@@ -424,7 +424,7 @@ namespace OmgShoes.Migrations
                             Id = 8,
                             IsEdited = false,
                             Text = "I am a 5 ⭐️ man!!!",
-                            TimeStamp = new DateTime(2024, 6, 8, 16, 9, 53, 660, DateTimeKind.Local).AddTicks(4500),
+                            TimeStamp = new DateTime(2024, 6, 23, 12, 34, 10, 201, DateTimeKind.Local).AddTicks(5900),
                             UserProfileId = 2,
                             UserShoeId = 49
                         });
@@ -500,37 +500,55 @@ namespace OmgShoes.Migrations
                         {
                             Id = 1,
                             InitiatorId = 6,
-                            RecipientId = 1
+                            RecipientId = 2
                         },
                         new
                         {
                             Id = 2,
                             InitiatorId = 6,
-                            RecipientId = 2
+                            RecipientId = 3
                         },
                         new
                         {
                             Id = 3,
                             InitiatorId = 6,
-                            RecipientId = 3
-                        },
-                        new
-                        {
-                            Id = 4,
-                            InitiatorId = 6,
                             RecipientId = 4
                         },
                         new
                         {
+                            Id = 4,
+                            InitiatorId = 5,
+                            RecipientId = 1
+                        },
+                        new
+                        {
                             Id = 5,
-                            InitiatorId = 6,
-                            RecipientId = 5
+                            InitiatorId = 5,
+                            RecipientId = 3
                         },
                         new
                         {
                             Id = 6,
                             InitiatorId = 5,
-                            RecipientId = 1
+                            RecipientId = 2
+                        },
+                        new
+                        {
+                            Id = 7,
+                            InitiatorId = 5,
+                            RecipientId = 4
+                        },
+                        new
+                        {
+                            Id = 8,
+                            InitiatorId = 1,
+                            RecipientId = 6
+                        },
+                        new
+                        {
+                            Id = 9,
+                            InitiatorId = 6,
+                            RecipientId = 5
                         });
                 });
 
@@ -2158,7 +2176,7 @@ namespace OmgShoes.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 6,
+                            Id = 1,
                             ConditionId = 4,
                             Description = "Completely unwearable!!!",
                             ShoeId = 3,
@@ -2167,7 +2185,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 7,
+                            Id = 2,
                             ConditionId = 2,
                             Description = "Great condition for age",
                             ShoeId = 9,
@@ -2176,7 +2194,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 8,
+                            Id = 3,
                             ConditionId = 3,
                             Description = "Great condition, a bit faded",
                             ShoeId = 10,
@@ -2185,7 +2203,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 9,
+                            Id = 4,
                             ConditionId = 4,
                             Description = "FOR SALE!!!",
                             ShoeId = 19,
@@ -2194,7 +2212,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 10,
+                            Id = 5,
                             ConditionId = 3,
                             Description = "Soles have recently been replaced/swapped with brand new soles",
                             ShoeId = 24,
@@ -2203,7 +2221,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 11,
+                            Id = 6,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 30,
@@ -2212,7 +2230,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 12,
+                            Id = 7,
                             ConditionId = 3,
                             Description = "Good lookin shoe",
                             ShoeId = 36,
@@ -2221,7 +2239,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 13,
+                            Id = 8,
                             ConditionId = 3,
                             Description = "Hard to find",
                             ShoeId = 38,
@@ -2230,7 +2248,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 14,
+                            Id = 9,
                             ConditionId = 3,
                             Description = "Great Condition, fits like an 11.5",
                             ShoeId = 39,
@@ -2239,7 +2257,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 15,
+                            Id = 10,
                             ConditionId = 4,
                             Description = "Kick around shoe",
                             ShoeId = 48,
@@ -2248,7 +2266,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 16,
+                            Id = 11,
                             ConditionId = 3,
                             Description = "Good for everyday wear",
                             ShoeId = 52,
@@ -2257,7 +2275,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 17,
+                            Id = 12,
                             ConditionId = 3,
                             Description = "Sock Liner Tears",
                             ShoeId = 54,
@@ -2266,7 +2284,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 18,
+                            Id = 13,
                             ConditionId = 2,
                             Description = "Has 1 replacement insole from a pair of Blue Lobster",
                             ShoeId = 66,
@@ -2275,7 +2293,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 19,
+                            Id = 14,
                             ConditionId = 3,
                             Description = "Great condition!",
                             ShoeId = 68,
@@ -2284,7 +2302,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 20,
+                            Id = 15,
                             ConditionId = 3,
                             Description = "Very very faded",
                             ShoeId = 73,
@@ -2293,7 +2311,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 21,
+                            Id = 16,
                             ConditionId = 3,
                             Description = "Runs a little big",
                             ShoeId = 75,
@@ -2302,7 +2320,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 22,
+                            Id = 17,
                             ConditionId = 2,
                             Description = "Black laces only",
                             ShoeId = 81,
@@ -2311,7 +2329,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 23,
+                            Id = 18,
                             ConditionId = 4,
                             Description = "These don't look very used at all",
                             ShoeId = 97,
@@ -2320,7 +2338,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 24,
+                            Id = 19,
                             ConditionId = 2,
                             Description = "Almost brand new",
                             ShoeId = 99,
@@ -2329,7 +2347,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 25,
+                            Id = 20,
                             ConditionId = 3,
                             Description = "Great condition, one tongue strap falling apart",
                             ShoeId = 100,
@@ -2338,7 +2356,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 26,
+                            Id = 21,
                             ConditionId = 2,
                             Description = "$$$$$",
                             ShoeId = 101,
@@ -2347,7 +2365,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 27,
+                            Id = 22,
                             ConditionId = 4,
                             Description = "Everyday work shoes, sock liner tears",
                             ShoeId = 103,
@@ -2356,7 +2374,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 28,
+                            Id = 23,
                             ConditionId = 2,
                             Description = "Clean. No inner tag",
                             ShoeId = 104,
@@ -2365,7 +2383,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 29,
+                            Id = 24,
                             ConditionId = 5,
                             Description = "Old and beat!",
                             ShoeId = 109,
@@ -2374,7 +2392,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 36,
+                            Id = 25,
                             ConditionId = 5,
                             Description = "thrashed...",
                             ShoeId = 108,
@@ -2383,7 +2401,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 37,
+                            Id = 26,
                             ConditionId = 3,
                             Description = "Great condition!",
                             ShoeId = 113,
@@ -2392,7 +2410,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 38,
+                            Id = 27,
                             ConditionId = 4,
                             Description = "Need new soles",
                             ShoeId = 87,
@@ -2401,7 +2419,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 39,
+                            Id = 28,
                             ConditionId = 3,
                             Description = "uesd!!@",
                             ShoeId = 73,
@@ -2410,7 +2428,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 40,
+                            Id = 29,
                             ConditionId = 1,
                             Description = "testestest",
                             ShoeId = 123,
@@ -2419,7 +2437,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 41,
+                            Id = 30,
                             ConditionId = 1,
                             Description = "Needs a re-glue",
                             ShoeId = 30,
@@ -2428,7 +2446,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 42,
+                            Id = 31,
                             ConditionId = 4,
                             Description = "Too small!",
                             ShoeId = 123,
@@ -2437,7 +2455,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 43,
+                            Id = 32,
                             ConditionId = 3,
                             Description = "Kick arounds!",
                             ShoeId = 11,
@@ -2446,7 +2464,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 44,
+                            Id = 33,
                             ConditionId = 1,
                             Description = "1 of 202 ever made.",
                             ShoeId = 23,
@@ -2455,7 +2473,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 45,
+                            Id = 34,
                             ConditionId = 3,
                             Description = "Has the original box",
                             ShoeId = 38,
@@ -2464,7 +2482,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 46,
+                            Id = 35,
                             ConditionId = 1,
                             Description = "Willing to trade",
                             ShoeId = 35,
@@ -2473,7 +2491,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 47,
+                            Id = 36,
                             ConditionId = 5,
                             Description = "Heavily Skated",
                             ShoeId = 120,
@@ -2482,7 +2500,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 48,
+                            Id = 37,
                             ConditionId = 1,
                             Description = "Another 1 of 202 ever made.",
                             ShoeId = 23,
@@ -2491,7 +2509,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 49,
+                            Id = 38,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 25,
@@ -2500,7 +2518,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 50,
+                            Id = 39,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 26,
@@ -2509,7 +2527,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 51,
+                            Id = 40,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 27,
@@ -2518,7 +2536,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 52,
+                            Id = 41,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 7,
@@ -2527,7 +2545,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 53,
+                            Id = 42,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 8,
@@ -2536,7 +2554,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 54,
+                            Id = 43,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 59,
@@ -2545,7 +2563,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 55,
+                            Id = 44,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 60,
@@ -2554,7 +2572,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 56,
+                            Id = 45,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 44,
@@ -2563,7 +2581,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 57,
+                            Id = 46,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 43,
@@ -2572,7 +2590,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 58,
+                            Id = 47,
                             ConditionId = 3,
                             Description = "Needs a scrubbing",
                             ShoeId = 34,
@@ -2581,7 +2599,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 59,
+                            Id = 48,
                             ConditionId = 1,
                             Description = "sffsa",
                             ShoeId = 75,
@@ -2590,7 +2608,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 60,
+                            Id = 49,
                             ConditionId = 1,
                             Description = "Missing the box",
                             ShoeId = 10,
@@ -2599,7 +2617,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 61,
+                            Id = 50,
                             ConditionId = 4,
                             Description = "Pretty torn apart",
                             ShoeId = 9,
@@ -2608,7 +2626,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 62,
+                            Id = 51,
                             ConditionId = 2,
                             Description = "Has all the extras included! Looking to move!",
                             ShoeId = 102,
@@ -2617,7 +2635,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 63,
+                            Id = 52,
                             ConditionId = 2,
                             Description = "Has all the extras included! Looking to move!",
                             ShoeId = 107,
@@ -2626,7 +2644,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 64,
+                            Id = 53,
                             ConditionId = 4,
                             Description = "I bleached these and I like the way they turned out!",
                             ShoeId = 106,
@@ -2635,7 +2653,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 65,
+                            Id = 54,
                             ConditionId = 2,
                             Description = "🔪🔪🔪",
                             ShoeId = 96,
@@ -2644,7 +2662,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 66,
+                            Id = 55,
                             ConditionId = 1,
                             Description = "💰💰💰💃🏻🕺🏻💰💰💰",
                             ShoeId = 77,
@@ -2653,7 +2671,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 67,
+                            Id = 56,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 18,
@@ -2662,7 +2680,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 68,
+                            Id = 57,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 17,
@@ -2671,7 +2689,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 69,
+                            Id = 58,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 31,
@@ -2680,7 +2698,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 70,
+                            Id = 59,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 30,
@@ -2689,7 +2707,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 71,
+                            Id = 60,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 102,
@@ -2698,7 +2716,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 72,
+                            Id = 61,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 107,
@@ -2707,7 +2725,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 73,
+                            Id = 62,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 94,
@@ -2716,7 +2734,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 74,
+                            Id = 63,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 94,
@@ -2725,7 +2743,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 75,
+                            Id = 64,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 64,
@@ -2734,7 +2752,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 76,
+                            Id = 65,
                             ConditionId = 1,
                             Description = "Brand New",
                             ShoeId = 65,
@@ -2743,7 +2761,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 77,
+                            Id = 66,
                             ConditionId = 5,
                             Description = "100% used",
                             ShoeId = 54,
@@ -2752,7 +2770,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 78,
+                            Id = 67,
                             ConditionId = 1,
                             Description = "Great Condition!",
                             ShoeId = 19,
@@ -2761,7 +2779,7 @@ namespace OmgShoes.Migrations
                         },
                         new
                         {
-                            Id = 79,
+                            Id = 68,
                             ConditionId = 3,
                             Description = "🤑🤑🤑🤑🤑",
                             ShoeId = 89,
