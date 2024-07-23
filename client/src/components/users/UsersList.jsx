@@ -11,13 +11,7 @@ export const UsersList = ({ loggedInUser }) => {
   const [allUsers, setAllUsers] = useState([])
 
   useEffect(() => {
-    // if (loggedInUser.roles.includes("Admin")) {
-    //   getAllUsersWithRoles().then(setAllUsers)
-    // } else {
-    //   getAllUsersWithBasicInfo().then(setAllUsers)
-    // }
     getAndSetAllUsers()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const getAndSetAllUsers = () => {
@@ -31,7 +25,6 @@ export const UsersList = ({ loggedInUser }) => {
   return (
     <div className="users-container">
       <h2>All Users</h2>
-      {/* <UsersFilterBar setSearchTerm={setSearchTerm} /> */}
       <article className="users">
         {allUsers.map((user) => {
           return (
@@ -40,7 +33,6 @@ export const UsersList = ({ loggedInUser }) => {
               key={user.id}
               loggedInUser={loggedInUser}
               getAndSetAllUsers={getAndSetAllUsers}
-              // setSortedUsers={setSortedUsers}
             />
           )
         })}
