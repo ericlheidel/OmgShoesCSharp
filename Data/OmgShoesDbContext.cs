@@ -23,18 +23,6 @@ public class OmgShoesDbContext : IdentityDbContext<IdentityUser>
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // modelBuilder.Entity<Friendship>()
-        //     .HasOne(f => f.Initiator)
-        //     .WithMany(up => up.InitiatedFriendships)
-        //     .HasForeignKey(f => f.InitiatorId)
-        //     .OnDelete(DeleteBehavior.Restrict);
-
-        // modelBuilder.Entity<Friendship>()
-        //     .HasOne(f => f.Recipient)
-        //     .WithMany(up => up.ReceivedFriendships)
-        //     .HasForeignKey(f => f.RecipientId)
-        //     .OnDelete(DeleteBehavior.Restrict);
-
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.Entity<IdentityRole>().HasData(new IdentityRole[]
