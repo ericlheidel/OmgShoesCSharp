@@ -3,6 +3,7 @@ import "./LoginAndRegister.css"
 import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import { login } from "../../managers/authManager.js"
+import { UserSelect } from "./UserSelect.jsx"
 
 export const Login = ({ setLoggedInUser }) => {
   const [email, setEmail] = useState("")
@@ -32,23 +33,12 @@ export const Login = ({ setLoggedInUser }) => {
           <br></br>
           Feel free to register yourself below as well.<br></br>
         </h2>
-        <select
-          style={{
-            marginRight: "0",
-            marginTop: "1rem",
-            padding: ".75rem",
-            width: "auto",
-          }}
-          className="user-dropdown"
-        >
-          <option value={0}>Users</option>
-          <option value={1}>Dee Reynolds</option>
-          <option value={2}>Dennis Reynolds</option>
-          <option value={3}>Frank Reynolds</option>
-          <option value={4}>Mac McDonald</option>
-          <option value={5}>Charlie Kelly (Admin)</option>
-          <option value={6}>The Waitress (Admin)</option>
-        </select>
+        <UserSelect
+          email={email}
+          setEmail={setEmail}
+          password={password}
+          setPassword={setPassword}
+        />
       </section>
       <section>
         <form className="login-form color-four" onSubmit={handleSubmit}>

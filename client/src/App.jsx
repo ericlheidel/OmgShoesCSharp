@@ -2,12 +2,9 @@ import { useEffect, useState } from "react"
 import { tryGetLoggedInUser } from "./managers/authManager.js"
 import { NavBar } from "./components/NavBar.jsx"
 import { ApplicationViews } from "./components/ApplicationViews.jsx"
-import { useNavigate } from "react-router-dom"
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState()
-
-  const navigate = useNavigate()
 
   useEffect(() => {
     // user will be null if not authenticated
@@ -23,7 +20,6 @@ function App() {
 
   return (
     <>
-      {!loggedInUser && navigate("/login")}
       <NavBar loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} />
       <ApplicationViews
         loggedInUser={loggedInUser}
