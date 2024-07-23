@@ -1,15 +1,11 @@
 const _apiUrl = "/api/friendship"
 
-export const getFriendsListByUserId = (userId) => {
-  return fetch(`${_apiUrl}/${userId}`).then((res) => res.json())
+export const getFriendsListByUserId = async (userId) => {
+  return await fetch(`${_apiUrl}/${userId}`).then((res) => res.json())
 }
 
-export const getFriendships = () => {
-  return fetch(`${_apiUrl}`).then((res) => res.json())
-}
-
-export const addFriendship = (friendship) => {
-  return fetch(`${_apiUrl}`, {
+export const addFriendship = async (friendship) => {
+  return await fetch(`${_apiUrl}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -18,14 +14,8 @@ export const addFriendship = (friendship) => {
   }).then((res) => res.json())
 }
 
-export const removeFriendship = (idOne, idTwo) => {
-  return fetch(`${_apiUrl}/${idOne}/${idTwo}`, {
+export const removeFriendship = async (idOne, idTwo) => {
+  return await fetch(`${_apiUrl}/${idOne}/${idTwo}`, {
     method: "DELETE",
   })
-}
-
-export const findFriendship = (loggedInUserId, nonLoggedInUserId) => {
-  return fetch(
-    `${_apiUrl}/isfriend?loggedInUserId=${loggedInUserId}&nonLoggedInUserId=${nonLoggedInUserId}`
-  ).then((res) => res.json())
 }

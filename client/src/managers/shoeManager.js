@@ -1,11 +1,7 @@
 const _apiUrl = "/api/shoe"
 
-export const getAllShoes = () => {
-  return fetch(_apiUrl).then((res) => res.json())
-}
-
-export const getShoeById = (id) => {
-  return fetch(`${_apiUrl}/${id}`).then((res) => res.json())
+export const getShoeById = async (id) => {
+  return await fetch(`${_apiUrl}/${id}`).then((res) => res.json())
 }
 
 export const createShoe = async (shoe) => {
@@ -18,14 +14,14 @@ export const createShoe = async (shoe) => {
   }).then((res) => res.json())
 }
 
-export const getShoesBySearch = (searchTerm, filterYear) => {
-  return fetch(
+export const getShoesBySearch = async (searchTerm, filterYear) => {
+  return await fetch(
     `${_apiUrl}/search?searchTerm=${searchTerm}&filterYear=${filterYear}`
   ).then((res) => res.json())
 }
 
-export const deleteShoe = (shoeId) => {
-  return fetch(`${_apiUrl}/${shoeId}`, {
+export const deleteShoe = async (shoeId) => {
+  return await fetch(`${_apiUrl}/${shoeId}`, {
     method: "DELETE",
   })
 }

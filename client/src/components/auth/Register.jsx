@@ -68,7 +68,7 @@ export const Register = ({ setLoggedInUser }) => {
           <div className="name-div">
             <fieldset>
               <div className="form-group">
-                <label>
+                <label style={{ textAlign: "left" }}>
                   Name:
                   <input
                     type="text"
@@ -89,7 +89,7 @@ export const Register = ({ setLoggedInUser }) => {
           <div className="location-div flex">
             <fieldset>
               <div className="form-group">
-                <label>
+                <label style={{ textAlign: "left" }}>
                   City:
                   <input
                     type="text"
@@ -109,7 +109,7 @@ export const Register = ({ setLoggedInUser }) => {
             </fieldset>
             <fieldset>
               <div className="form-group">
-                <label>
+                <label style={{ textAlign: "left" }}>
                   State:
                   <select
                     id="state"
@@ -137,7 +137,7 @@ export const Register = ({ setLoggedInUser }) => {
           </div>
           <fieldset>
             <div className="form-group">
-              <label>
+              <label style={{ textAlign: "left" }}>
                 Avatar Url:
                 <input
                   type="text"
@@ -156,7 +156,7 @@ export const Register = ({ setLoggedInUser }) => {
           </fieldset>
           <fieldset>
             <div className="form-group">
-              <label>
+              <label style={{ textAlign: "left" }}>
                 Email:
                 <input
                   type="email"
@@ -173,7 +173,7 @@ export const Register = ({ setLoggedInUser }) => {
           </fieldset>
           <fieldset>
             <div className="form-group">
-              <label>
+              <label style={{ textAlign: "left" }}>
                 Password:
                 <input
                   type="password"
@@ -192,7 +192,7 @@ export const Register = ({ setLoggedInUser }) => {
           </fieldset>
           <fieldset>
             <div className="form-group">
-              <label>
+              <label style={{ textAlign: "left" }}>
                 Confirm Password:
                 <input
                   type="password"
@@ -211,7 +211,7 @@ export const Register = ({ setLoggedInUser }) => {
           </fieldset>
           <fieldset>
             <div className="form-group">
-              <label>
+              <label style={{ textAlign: "left" }}>
                 Bio:
                 <input
                   type="text"

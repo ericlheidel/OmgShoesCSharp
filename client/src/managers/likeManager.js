@@ -1,7 +1,7 @@
 const _apiUrl = "/api/like"
 
-export const postLike = (like) => {
-  return fetch(`${_apiUrl}`, {
+export const postLike = async (like) => {
+  return await fetch(`${_apiUrl}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -10,8 +10,8 @@ export const postLike = (like) => {
   })
 }
 
-export const removeLike = (userShoeId, userId) => {
-  return fetch(`${_apiUrl}?userShoeId=${userShoeId}&userId=${userId}`, {
+export const removeLike = async (userShoeId, userId) => {
+  return await fetch(`${_apiUrl}?userShoeId=${userShoeId}&userId=${userId}`, {
     method: "DELETE",
   })
 }
