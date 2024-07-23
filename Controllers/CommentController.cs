@@ -16,18 +16,18 @@ public class CommentController : ControllerBase
         _dbContext = context;
     }
 
-    [HttpGet("{id}")]
-    [Authorize]
-    public IActionResult GetByUserShoeId(int id)
-    {
-        return Ok(_dbContext
-            .Comments
-            .Where(c => c.UserShoeId == id)
-            .Include(c => c.User)
-            .OrderByDescending(c => c.TimeStamp)
-            .ToList()
-        );
-    }
+    // [HttpGet("{id}")]
+    // [Authorize]
+    // public IActionResult GetByUserShoeId(int id)
+    // {
+    //     return Ok(_dbContext
+    //         .Comments
+    //         .Where(c => c.UserShoeId == id)
+    //         .Include(c => c.User)
+    //         .OrderByDescending(c => c.TimeStamp)
+    //         .ToList()
+    //     );
+    // }
 
     [HttpPost]
     [Authorize]

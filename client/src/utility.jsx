@@ -113,32 +113,3 @@ export const sizes = [
   { id: 16, size: 13 },
   { id: 17, size: 14 },
 ]
-
-// !!! old default Login <button> from NavBar with !loggedInUser
-//! <nav>
-//!   <div
-//!     style={{
-//!       display: "flex",
-//!       justifyContent: "center",
-//!     }}
-//!   >
-//!     <Link to="/login">
-//!       <button
-//!         className="form-btn-opp"
-//!         style={{
-//!           color: "var(--color-four)",
-//!           // width: "55%",
-//!           // height: "45%",
-//!           paddingLeft: "1.5rem",
-//!           paddingRight: "1.5rem",
-//!           paddingTop: "1rem",
-//!           paddingBottom: "1rem",
-//!           fontSize: "1.5rem",
-//!         }}
-//!         onClick={() => navigate("/login")}
-//!       >
-//!         Login
-//!       </button>
-//!     </Link>
-//!   </div>
-//! </nav>

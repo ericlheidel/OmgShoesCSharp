@@ -3,9 +3,8 @@ import { Link } from "react-router-dom"
 import "./ShoeCollection.css"
 
 export const ShoeCollection = ({ collection }) => {
-  // const navigate = useNavigate()
-
   let count = 1
+
   return (
     <div className="shoe-collection">
       {collection.map((userShoe) => {
