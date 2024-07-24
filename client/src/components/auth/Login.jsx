@@ -71,7 +71,6 @@ export const Login = ({ setLoggedInUser }) => {
                   type="password"
                   value={password}
                   required
-                  autoFocus
                   className="form-control"
                   onChange={(e) => {
                     setPassword(e.target.value)
