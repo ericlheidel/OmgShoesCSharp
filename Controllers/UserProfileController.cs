@@ -19,24 +19,6 @@ public class UserProfileController : ControllerBase
         _dbContext = context;
     }
 
-    [HttpGet]
-    [Authorize(Roles = "Admin")]
-    public IActionResult Get()
-    {
-        return Ok(_dbContext
-            .UserProfiles
-            .Select(up => new UserProfileDTO
-            {
-                Id = up.Id,
-                Email = up.Email,
-                Name = up.Name,
-                City = up.City,
-                State = up.State,
-                Avatar = up.Avatar,
-                Bio = up.Bio,
-            }).ToList());
-    }
-
     [HttpGet("basic")]
     [Authorize]
     public IActionResult GetBasicInfo()
@@ -99,96 +81,6 @@ public class UserProfileController : ControllerBase
             Avatar = userProfile.Avatar,
             Bio = userProfile.Bio
         });
-    }
-
-    [HttpGet("withroles/{id}")]
-    [Authorize]
-    public IActionResult GetByIdWithRoles(int id)
-    {
-        UserProfileDTO userProfile = _dbContext
-            .UserProfiles
-            .Where(up => up.Id == id)
-            .Include(up => up.IdentityUser)
-            .Select(up => new UserProfileDTO
-            {
-                Id = up.Id,
-                Email = up.Email,
-                Name = up.Name,
-                City = up.City,
-                State = up.State,
-                Avatar = up.Avatar,
-                Bio = up.Bio,
-                Roles = _dbContext.UserRoles
-                    .Where(ur => ur.UserId == up.IdentityUserId)
-                    .Select(ur => _dbContext.Roles.SingleOrDefault(r => r.Id == ur.RoleId).Name).ToList()
-            }).SingleOrDefault();
-
-        if (userProfile == null)
-        {
-            return NotFound();
-        }
-
-        return Ok(userProfile);
-    }
-
-    [HttpGet("{id}/everything")]
-    [Authorize]
-    public IActionResult GetByIdWithShoeCollection(int id)
-    {
-        UserProfileDTO userProfileDTO = _dbContext
-            .UserProfiles
-            .Include(up => up.IdentityUser)
-            .Where(up => up.Id == id)
-            .Select(up => new UserProfileDTO
-            {
-                Id = up.Id,
-                Email = up.Email,
-                Name = up.Name,
-                City = up.City,
-                State = up.State,
-                Avatar = up.Avatar,
-                Bio = up.Bio,
-                UserShoes = _dbContext.UserShoes
-                    .Where(us => us.UserProfileId == id)
-                    .Select(us => new UserShoeDTO
-                    {
-                        Id = us.Id,
-                        UserProfileId = us.UserProfileId,
-                        ShoeId = us.ShoeId,
-                        Shoe = new ShoeDTO
-                        {
-                            Id = us.Shoe.Id,
-                            Name = us.Shoe.Name,
-                            Style = us.Shoe.Style,
-                            Year = us.Shoe.Year,
-                            ModelNumber = us.Shoe.ModelNumber,
-                            Colorway = us.Shoe.Colorway,
-                            Image = us.Shoe.Image
-                        },
-                        ConditionId = us.ConditionId,
-                        Condition = new ConditionDTO
-                        {
-                            Id = us.Condition.Id,
-                            Description = us.Condition.Description
-                        },
-                        ShoeSize = us.ShoeSize,
-                        Description = us.Description,
-                        Likes = us.Likes.Select(l => new LikeDTO
-                        {
-                            Id = l.Id,
-                            UserShoeId = l.UserShoeId,
-                            UserProfileId = l.UserProfileId
-                        }).ToList()
-                    }).ToList()
-            })
-            .SingleOrDefault();
-
-        if (userProfileDTO == null)
-        {
-            return NotFound();
-        }
-
-        return Ok(userProfileDTO);
     }
 
     [HttpPut("{id}")]
