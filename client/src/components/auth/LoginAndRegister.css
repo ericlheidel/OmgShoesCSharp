@@ -5,6 +5,7 @@
   background-color: var(--color-two);
   border-radius: 12.5px;
   padding: 3rem;
+  color: var(--color-four);
 }
 
 .register-form > h1,
