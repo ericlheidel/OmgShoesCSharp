@@ -50,7 +50,7 @@ export const Register = ({ setLoggedInUser }) => {
   return (
     <main>
       <div>
-        <form className="register-form color-four" onSubmit={handleSubmit}>
+        <form className="register-form" onSubmit={handleSubmit}>
           <div className="text-div">
             <h1>OMG, Shoes...</h1>
             <h2>Please Register</h2>

@@ -41,7 +41,7 @@ export const Login = ({ setLoggedInUser }) => {
         />
       </section>
       <section>
-        <form className="login-form color-four" onSubmit={handleSubmit}>
+        <form className="login-form" onSubmit={handleSubmit}>
           <div className="text-div">
             <h1>OMG, Shoes...</h1>
             <h2>Please sign in</h2>
