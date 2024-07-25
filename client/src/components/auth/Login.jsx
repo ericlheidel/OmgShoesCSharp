@@ -31,7 +31,7 @@ export const Login = ({ setLoggedInUser }) => {
           functionality,<br></br>please select an existing user.
           <br></br>
           <br></br>
-          Feel free to register yourself below as well.<br></br>
+          Or feel free to register yourself below to begin browsing.<br></br>
         </h2>
         <UserSelect
           email={email}
