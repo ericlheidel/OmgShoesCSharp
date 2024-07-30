@@ -48,3 +48,13 @@
   cursor: pointer;
   text-align: center;
 }
+
+.disclaimer {
+  position: absolute;
+  bottom: 0;
+  left: 5;
+  text-align: left;
+  text-indent: 2em;
+  width: 25%;
+  color: black;
+}
