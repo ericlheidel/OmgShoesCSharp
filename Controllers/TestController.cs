@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OmgShoes.Data;
-using OmgShoes.Migrations;
 using OmgShoes.Models;
 
 namespace OmgShoes.Controllers;
@@ -27,5 +26,37 @@ public class TestController : ControllerBase
         };
 
         return Ok(testResponseDTO);
+    }
+
+    [HttpGet("shoe")]
+    // [Authorize]
+    public IActionResult ShoeTest()
+    {
+        Shoe shoe = _dbContext
+            .Shoes
+            .SingleOrDefault(s => s.Id == 1);
+
+        if (shoe == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(shoe);
+    }
+
+    [HttpGet("comment")]
+    // [Authorize]
+    public IActionResult CommentTest()
+    {
+        Comment comment = _dbContext
+            .Comments
+            .SingleOrDefault(c => c.Id == 1);
+
+        if (comment == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(comment);
     }
 }
