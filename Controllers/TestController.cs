@@ -32,31 +32,47 @@ public class TestController : ControllerBase
     // [Authorize]
     public IActionResult ShoeTest()
     {
-        Shoe shoe = _dbContext
+        try
+        {
+            Shoe shoe = _dbContext
             .Shoes
             .SingleOrDefault(s => s.Id == 1);
 
-        if (shoe == null)
+            if (shoe == null)
+            {
+                return NotFound();
+            }
+            return Ok(shoe);
+        }
+        catch (Exception ex)
         {
-            return NotFound();
+            return StatusCode(StatusCodes.Status500InternalServerError, $"Internal server error: {ex.Message}");
         }
 
-        return Ok(shoe);
+
     }
 
     [HttpGet("comment")]
     // [Authorize]
     public IActionResult CommentTest()
     {
-        Comment comment = _dbContext
-            .Comments
-            .SingleOrDefault(c => c.Id == 1);
-
-        if (comment == null)
+        try
         {
-            return NotFound();
-        }
+            Comment comment = _dbContext
+                .Comments
+                .SingleOrDefault(c => c.Id == 1);
 
-        return Ok(comment);
+            if (comment == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(comment);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, $"Internal server error: {ex.Message}");
+        }
     }
 }
+
