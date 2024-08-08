@@ -8,10 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.ConfigureKestrel(serverOptions =>
 {
     serverOptions.ListenAnyIP(5000);
-    serverOptions.ListenAnyIP(5001, listenOptions =>
-    {
-        listenOptions.UseHttps("/etc/letsencrypt/omgshoes.eheidel.com.pfx", "iridescent");
-    });
+    // serverOptions.ListenAnyIP(5001, listenOptions =>
+    // {
+    // listenOptions.UseHttps("/etc/letsencrypt/omgshoes.eheidel.com.pfx", "iridescent");
+    // });
 });
 
 // Add services to the container.
