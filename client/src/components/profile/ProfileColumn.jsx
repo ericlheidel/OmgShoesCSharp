@@ -1,16 +1,8 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { getUserById } from "../../managers/userProfileManager"
 import { _DOMAIN } from "../../utility.jsx"
 
-export const ProfileColumn = ({ userShoe, loggedInUser }) => {
-  const [user, setUser] = useState([])
-
-  useEffect(() => {
-    getUserById(loggedInUser.id).then(setUser)
-  }, [loggedInUser])
-
+export const ProfileColumn = ({ userShoe }) => {
   return (
     <div className="profile">
       <div className="profile-div">
