@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import "./LoginAndRegister.css"
-import { Link, useNavigate } from "react-router-dom"
+import { /* Link,  */ useNavigate } from "react-router-dom"
 import { useState } from "react"
 import { login } from "../../managers/authManager.js"
 import { UserSelect } from "./UserSelect.jsx"
@@ -27,11 +27,10 @@ export const Login = ({ setLoggedInUser }) => {
     <main>
       <section>
         <h2>
-          Thank you for visiting OMG, Shoes...<br></br>If you are here to browse
-          functionality,<br></br>please select an existing user.
+          Thank you for visiting OMG, Shoes...<br></br>Please sign in as an one
+          of the existing users!
           <br></br>
           <br></br>
-          Or feel free to register yourself below to begin browsing.<br></br>
         </h2>
         <UserSelect
           email={email}
@@ -89,7 +88,7 @@ export const Login = ({ setLoggedInUser }) => {
         </form>
       </section>
       <section className="register-link">
-        <Link to="/register">Register as a New User</Link>
+        {/* <Link to="/register" disable>Register as a New User</Link> */}
       </section>
       <section>
         <h4 className="disclaimer">

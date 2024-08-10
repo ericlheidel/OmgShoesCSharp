@@ -2,6 +2,7 @@
 import "./NavBar.css"
 import { Link, useNavigate } from "react-router-dom"
 import { logout } from "../managers/authManager.js"
+import { _DOMAIN } from "../utility.jsx"
 
 export const NavBar = ({ loggedInUser, setLoggedInUser }) => {
   const navigate = useNavigate()
@@ -15,7 +16,7 @@ export const NavBar = ({ loggedInUser, setLoggedInUser }) => {
               <Link to={`/users/${loggedInUser.id}`}>
                 <img
                   className="navbar-user-img"
-                  src={`https://localhost:5212/${loggedInUser.avatar}`}
+                  src={`${_DOMAIN}${loggedInUser.avatar}`}
                   alt="User avatar"
                 />
               </Link>

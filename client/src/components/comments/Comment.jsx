@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react"
 import "./Comments.css"
-import { formatDate } from "../../utility.jsx"
+import { _DOMAIN, formatDate } from "../../utility.jsx"
 import {
   removeCommentById,
   updateComment,
@@ -60,7 +60,7 @@ export const Comment = ({ loggedInUser, comment, userShoe, getAndSetShoe }) => {
       <div className="commenter flex row">
         <img
           className="commenter-img"
-          src={`https://localhost:5212/${comment.user.avatar}`}
+          src={`${_DOMAIN}${comment.user.avatar}`}
           alt="commenter"
         ></img>
         <div className="commenter-name">{comment.user.name}</div>
