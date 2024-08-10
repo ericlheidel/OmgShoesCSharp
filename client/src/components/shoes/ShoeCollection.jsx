@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom"
 import "./ShoeCollection.css"
+import { _DOMAIN } from "../../utility.jsx"
 
 export const ShoeCollection = ({ collection }) => {
   let count = 1
@@ -13,7 +14,7 @@ export const ShoeCollection = ({ collection }) => {
             <Link to={`/usershoe/${userShoe.id}`}>
               <div className="user-shoe-img-div">
                 <img
-                  src={`https://localhost:5212/${userShoe.shoe.image}`}
+                  src={`${_DOMAIN}${userShoe.shoe.image}`}
                   alt="detailed view of shoe"
                   className="user-shoe-img"
                 />

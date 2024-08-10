@@ -4,7 +4,7 @@ import "./ShoeDetails.css"
 import { useEffect, useState } from "react"
 import { deleteShoe, getShoeById } from "../../managers/shoeManager.js"
 import { getAllConditions } from "../../managers/conditionManager"
-import { sizes } from "../../utility.jsx"
+import { _DOMAIN, sizes } from "../../utility.jsx"
 import { addShoeToUserCollection } from "../../managers/userShoeManager.js"
 
 export const ShoeDetailsForm = ({ loggedInUser }) => {
@@ -66,7 +66,7 @@ export const ShoeDetailsForm = ({ loggedInUser }) => {
       <div className="shoe-details-div">
         <div className="shoe-details">
           <img
-            src={`https://localhost:5212/${shoe?.image}`}
+            src={`${_DOMAIN}${shoe?.image}`}
             alt="shoe shown in detail"
             className="shoe-details-img"
           />

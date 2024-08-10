@@ -11,6 +11,7 @@ import {
 import { ProfileColumn } from "../profile/ProfileColumn.jsx"
 import { LikesDiv } from "../likes/LikesDiv.jsx"
 import { Comments } from "../comments/Comments.jsx"
+import { _DOMAIN } from "../../utility.jsx"
 
 export const UserShoeDetails = ({ loggedInUser }) => {
   const [userShoe, setUserShoe] = useState([])
@@ -78,7 +79,7 @@ export const UserShoeDetails = ({ loggedInUser }) => {
               <div className="shoe-details-div">
                 <div className="shoe-details">
                   <img
-                    src={`https://localhost:5212/${userShoe.shoe?.image}`}
+                    src={`${_DOMAIN}${userShoe.shoe?.image}`}
                     alt="detailed view of shoe class"
                     className="shoe-details-img"
                   />
@@ -198,7 +199,7 @@ export const UserShoeDetails = ({ loggedInUser }) => {
               <div className="shoe-details-div" key={count++}>
                 <div className="shoe-details">
                   <img
-                    src={`https://localhost:5212/${userShoe.shoe?.image}`}
+                    src={`${_DOMAIN}${userShoe.shoe?.image}`}
                     alt="detailed view of shoe"
                     className="shoe-details-img"
                   />

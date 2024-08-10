@@ -8,6 +8,7 @@ import { getUserById } from "../../managers/userProfileManager.js"
 import { FriendButtons } from "../friends/FriendButtons.jsx"
 import { getFriendsListByUserId } from "../../managers/friendshipManager.js"
 import { Friend } from "../friends/Friend.jsx"
+import { _DOMAIN } from "../../utility.jsx"
 
 export const Profile = ({ loggedInUser }) => {
   const [user, setUser] = useState([])
@@ -39,7 +40,7 @@ export const Profile = ({ loggedInUser }) => {
       <div className="profile-div">
         <div className="profile-img-div">
           <img
-            src={`https://localhost:5212/${user.avatar}`}
+            src={`${_DOMAIN}${user.avatar}`}
             alt="User Avatar"
             className="profile-img"
           />

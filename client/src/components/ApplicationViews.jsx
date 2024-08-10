@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom"
 import { AuthorizedRoute } from "./auth/AuthorizedRoute.jsx"
 import { Welcome } from "./home/Welcome.jsx"
 import { Login } from "./auth/Login.jsx"
-import { Register } from "./auth/Register.jsx"
+// import { Register } from "./auth/Register.jsx"
 import { AllShoesList } from "./shoes/AllShoesList.jsx"
 import { ShoeDetailsForm } from "./shoes/ShoeDetailsForm.jsx"
 import { Profile } from "./profile/Profile.jsx"
@@ -28,10 +28,10 @@ export const ApplicationViews = ({ loggedInUser, setLoggedInUser }) => {
           path="login"
           element={<Login setLoggedInUser={setLoggedInUser} />}
         />
-        <Route
+        {/* <Route
           path="register"
           element={<Register setLoggedInUser={setLoggedInUser} />}
-        />
+        /> */}
         <Route path="shoes">
           <Route
             index

@@ -5,6 +5,7 @@ import { getUserShoeCollectionByUserId } from "../../managers/userShoeManager.js
 import { Link } from "react-router-dom"
 import { MakeAdmin } from "../admin/MakeAdmin.jsx"
 import { RemoveAdmin } from "../admin/RemoveAdmin.jsx"
+import { _DOMAIN } from "../../utility.jsx"
 
 export const User = ({ user, loggedInUser, getAndSetAllUsers }) => {
   const [collectionAmount, setCollectionAmount] = useState(0)
@@ -20,7 +21,7 @@ export const User = ({ user, loggedInUser, getAndSetAllUsers }) => {
       <div className="user-img-div">
         <Link to={`/users/${user.id}`}>
           <img
-            src={`https://localhost:5212/${user.avatar}`}
+            src={`${_DOMAIN}${user.avatar}`}
             alt="User"
             className="user-img"
           />

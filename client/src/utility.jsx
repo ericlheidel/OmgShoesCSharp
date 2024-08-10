@@ -1,3 +1,5 @@
+export const _DOMAIN = "https://www.omgshoes.eheidel.com"
+
 export const getCurrentYear = () => {
   const getYear = new Date()
   const thisYear = getYear.getFullYear()
