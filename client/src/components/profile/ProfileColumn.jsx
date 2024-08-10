@@ -17,19 +17,19 @@ export const ProfileColumn = ({ userShoe, loggedInUser }) => {
         <div className="profile-img-div">
           <Link to={`/users/${userShoe.userProfileId}`}>
             <img
-              src={`${_DOMAIN}${user.avatar}`}
+              src={`${_DOMAIN}${userShoe.user.avatar}`}
               alt="User Avatar"
               className="profile-img"
             />
           </Link>
         </div>
-        <div className="user-name">{user.name}</div>
+        <div className="user-name">{userShoe.user.name}</div>
         <div className="user-info-div">
-          <div className="user-bio">{user.bio}</div>
+          <div className="user-bio">{userShoe.user.bio}</div>
         </div>
         <div className="user-info-div">
           <div className="user-location">
-            {user.city}, {user.state}
+            {userShoe.user.city}, {userShoe.user.state}
           </div>
         </div>
       </div>
