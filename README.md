@@ -1,3 +1,46 @@
+OMG, Shoes... is currently deployed,
+[www.omgshoes.eheidel.com](http://www.omgshoes.eheidel.com), please give it e
+visit and read more about the deployment down below.
+
+# Welcome to OMG, Shoes...
+
+OMG, Shoes... is a community for sneaker enthusiasts to keep track of their
+sneaker collection and view and discuss collections with other users.
+
+# Technical
+
+This version of OMG, Shoes... is a C#/.NET api version of my Nashville Software
+School front end, JSON server, [capstone project](https://github.com/ericlheidel/omg-shoes). The front end is
+written in Reactjs, the back end is written in C#/.NET, and the database is
+through PostgreSQL16.
+
+Having written this project's front end in Reactjs, it currently acts as an SPA
+(Single Page Application). I am currently working on a Next.js version of this
+project that I will also deploy, in hopes to showcase my React growth into non-SPA's.
+
+# Deployment
+
+This was my first real-deal deployment and I worked through it by myself, failing,
+triumphing, and failing again. After enough trial and error, researching, and reading docs,
+I accomplished my goal. I feel confident in my ability to complete this process.
+
+I decided to dive into learning how to deploy and host my own domain and projects myself.
+I landed on using a DigitalOcean Droplet running Ubuntu 24.04.
+- Frontend Deployment
+  - The Reactjs portion of the project was built with `npm`
+  - `Nginx 1.24.0` is being used as a reverse proxy, is serving the files,
+   and is routing the API requests.
+- Backend Deployment
+  - `dotnet` to build and publish the API.
+  - `dotnet efcore` for Migrations.
+  - `systemd` manages the API lifecycle.
+- Database
+  - `postgresql@16` is running a dedicated cluster for the database.
+- SSL/TLS Configuration
+  - `certbot` created my `.pem` files for certification
+  - `letsencrypt` to secure my frontend and backend endpoints
+  - `nginx` to configure my project to use `HTTPS`
+
 <small style="font-size: 0.6em; color: gray;">**Disclaimer:**
 
 This project, including all images, characters, and content, is intended solely
